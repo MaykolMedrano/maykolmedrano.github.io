@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maykolmedrano.github.io/sitemap.xml

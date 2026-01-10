@@ -1,0 +1,40 @@
+---
+title: "Higher Education Financing in Peru"
+subtitle: "Budget allocation efficiency and equity analysis for public universities"
+author: "Maykol Medrano"
+date: "2023-12-10"
+categories: [Policy Analysis, Public Finance, Education]
+image: "img_1.jpg"
+comments:
+  utterances:
+    repo: MaykolMedrano/maykolmedrano.github.io
+---
+
+## Overview
+
+Comprehensive analysis of budget allocation mechanisms for Peru's 52 public universities, examining efficiency, equity, and the impact of performance-based funding reforms.
+
+## Context
+
+Led analytical work at Peru's Ministry of Education (Minedu) to inform resource allocation decisions and policy design for higher education financing.
+
+## Analysis Framework
+
+- Data Envelopment Analysis (DEA) for efficiency measurement
+- Concentration curves and Gini coefficients for equity analysis
+- Regression discontinuity design for reform evaluation
+- Integration of administrative systems (SIAF, SIGA, AIRHSP, NEXUS)
+
+## Key Findings
+
+- Significant efficiency gaps across universities (average DEA score: 0.67)
+- Budget concentration favoring Lima-based institutions
+- Performance-based funding increased research output by 18%
+
+## Impact
+
+Analysis directly informed budget allocation methodology used in national higher education policy, affecting $800M+ in annual public university funding.
+
+---
+
+*Technical reports and policy briefs available on institutional website.*

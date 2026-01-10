@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/hola.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/mining-analysis.html",
+      "/projects/social-conflict-education.html",
+      "/projects/university-funding.html"
+    ]
+  }
+]

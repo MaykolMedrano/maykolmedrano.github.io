@@ -1,0 +1,12 @@
+---
+title: "Policy Data Science & Economics"
+subtitle: "Applied Causal Inference, Machine Learning, and Evidence-Based Policy"
+author: "Maykol Medrano"
+listing:
+  contents: projects
+  type: grid
+  categories: true
+  sort: "date desc"
+  fields: [image, date, title, subtitle, categories]
+page-layout: full
+---

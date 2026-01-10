@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(quarto preview:*)",
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "Bash(quarto render:*)",
+      "Bash(ls:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout:*)",
+      "Bash(tree:*)",
+      "Bash(grep:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nComplete personal website: Maykol Medrano - Policy Data Scientist\n\n- Personal branding with real contact info and CV\n- 3 research projects with custom images\n- Python/Stata software packages showcase\n- SEO optimized \\(Open Graph, Schema.org, sitemap\\)\n- GitHub Issues comments via utterances\n- CC-BY-NC 4.0 license\n- GitHub Actions automatic deployment\n- Clean professional design with Manrope font\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(gh run list:*)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+---
+title: "Hola Mundo"
+author: "Maykol Medrano"
+date: "2026-01-08"
+categories: [General]
+comments:
+  utterances:
+    repo: MaykolMedrano/maykolmedrano.github.io
+---
+
+Este es un post de prueba. Contenido en construcción.
+
+Bienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina.

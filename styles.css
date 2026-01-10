@@ -1,0 +1,263 @@
+/* css styles */
+
+/* Expandir TODO el contenido al ancho completo */
+#quarto-content {
+  max-width: 100% !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.quarto-about-trestles .about-entity {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.quarto-about-trestles {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Contenedor principal sin restricciones */
+main.content {
+  max-width: 100% !important;
+}
+
+.page-columns {
+  max-width: 100% !important;
+}
+
+/* Fuente limpia y estética: Manrope */
+body {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fuente del navbar */
+.navbar {
+  font-size: 0.9rem !important;
+}
+
+.navbar-brand {
+  font-size: 1.1rem !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 0.9rem !important;
+}
+
+/* Fuentes de contenido */
+.quarto-about-trestles .about-entity .about-contents p,
+#quarto-content p {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents h2,
+#quarto-content h2 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents h4,
+#quarto-content h4 {
+  font-size: 1rem !important;
+}
+
+/* Títulos de página */
+#quarto-content .quarto-title h1.title {
+  font-size: 2rem !important;
+}
+
+#quarto-content .quarto-title .quarto-title-meta {
+  font-size: 0.85rem !important;
+}
+
+/* El nombre en el sidebar */
+.quarto-about-trestles .about-entity .about-image h2.about-entity-heading {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em;
+}
+
+/* Mejorar navbar con Inter */
+.navbar-brand {
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-weight: 500 !important;
+  letter-spacing: -0.01em;
+}
+
+/* Código con JetBrains Mono */
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+/* Sistema de columnas como el original de Mike Mahoney */
+.quarto-about-trestles .about-entity {
+  display: flex !important;
+  gap: min(4vw, 1.5em) !important;
+}
+
+.quarto-about-trestles .about-entity .about-image {
+  flex: 0 0 40% !important;
+  max-width: 40% !important;
+  min-width: 360px !important;
+  overflow: visible !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem !important;
+  padding-right: 2rem !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quarto-about-trestles .about-entity .about-image img {
+  width: 320px !important;
+  height: 160px !important;
+  min-width: 320px !important;
+  min-height: 160px !important;
+  max-width: 320px !important;
+  max-height: 160px !important;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+  aspect-ratio: 2/1 !important;
+}
+
+.quarto-about-trestles .about-entity .about-image .about-link {
+  text-align: center !important;
+}
+
+.quarto-about-trestles .about-entity .about-image h2.about-entity-heading {
+  text-align: center !important;
+  width: 100%;
+  margin-bottom: 1.5rem !important;
+}
+
+.quarto-about-trestles .about-entity .about-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents {
+  flex: 0 0 60% !important;
+  overflow: visible !important;
+  max-width: 60% !important;
+  min-width: 0;
+}
+
+/* Mejorar espaciado y diseño profesional del home */
+.quarto-about-trestles .about-entity .about-contents > p:first-child {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  margin: 2rem 0 !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents h2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 1rem !important;
+  color: #93c54b !important;
+  letter-spacing: -0.02em;
+  font-weight: 600 !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents p strong:first-child {
+  color: #93c54b !important;
+  font-weight: 600 !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents p {
+  margin-bottom: 0.9rem !important;
+}
+
+/* Mejorar los enlaces de los paquetes */
+.quarto-about-trestles .about-entity .about-contents a {
+  color: #29abe0 !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(41, 171, 224, 0.3);
+  transition: all 0.2s ease;
+}
+
+.quarto-about-trestles .about-entity .about-contents a:hover {
+  color: #ffffff !important;
+  border-bottom-color: #29abe0;
+}
+
+/* Mejorar botones del sidebar */
+.quarto-about-trestles .about-entity .about-link {
+  font-size: 0.85rem !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.quarto-about-trestles .about-entity .about-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la página de Software */
+#quarto-content h3 {
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  color: #29abe0 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.8rem !important;
+  letter-spacing: -0.02em;
+}
+
+/* Mejorar los subtítulos de página */
+#quarto-content .quarto-title .description {
+  font-size: 1rem !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Estilos específicos solo para la página de Software */
+body:has([data-quarto-source-file="software.qmd"]) #quarto-content p strong:first-child {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  display: block;
+  margin-bottom: 0.3rem !important;
+}
+
+body:has([data-quarto-source-file="software.qmd"]) #quarto-content p strong + a {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 0.85rem !important;
+  border-bottom: none !important;
+  transition: color 0.2s ease;
+}
+
+body:has([data-quarto-source-file="software.qmd"]) #quarto-content p strong + a:hover {
+  color: #29abe0 !important;
+}
+
+body:has([data-quarto-source-file="software.qmd"]) #quarto-content p {
+  line-height: 1.5 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+body:has([data-quarto-source-file="software.qmd"]) #quarto-content h2 + p {
+  margin-bottom: 1.2rem !important;
+}

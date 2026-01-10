@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Open Source Software",
+    "section": "",
+    "text": "I build and maintain open-source tools that democratize access to economic data across Latin America. These packages are designed for researchers, analysts, and policymakers working on development economics, social policy evaluation, and quantitative research."
+  },
+  {
+    "objectID": "software.html#python-packages-for-latin-american-data",
+    "href": "software.html#python-packages-for-latin-american-data",
+    "title": "Open Source Software",
+    "section": "Python Packages for Latin American Data",
+    "text": "Python Packages for Latin American Data\nenahodata — Peru Household Survey Access GitHub · PyPI\nPython package for simplified access to Peru’s National Household Survey (ENAHO) microdata. Download, process, and analyze data on poverty, employment, education, health, and household characteristics using pandas-compatible functions.\n\nusebcrp — Central Reserve Bank of Peru API GitHub · PyPI\nPython client for the Central Reserve Bank of Peru (BCRP) statistical API. Programmatic access to macroeconomic indicators, monetary policy data, and national accounts with pandas integration.\n\nusecasen — Chile Socioeconomic Survey Tools GitHub · PyPI\nPython tools for working with Chile’s National Socioeconomic Characterization Survey (CASEN). Facilitates multidimensional poverty analysis and social policy evaluation.\n\nusebcch — Central Bank of Chile Database Client GitHub · PyPI\nPython client for the Central Bank of Chile’s statistical database. Retrieve time series data on inflation, GDP, exchange rates, financial indicators, and external sector statistics."
+  },
+  {
+    "objectID": "software.html#stata-packages",
+    "href": "software.html#stata-packages",
+    "title": "Open Source Software",
+    "section": "Stata Packages",
+    "text": "Stata Packages\nenahotools — ENAHO Data Processing for Stata GitHub\nStata package for processing and analyzing Peru’s National Household Survey (ENAHO). Automated data cleaning, variable labeling, and survey-weighted estimation commands."
+  },
+  {
+    "objectID": "software.html#impact-philosophy",
+    "href": "software.html#impact-philosophy",
+    "title": "Open Source Software",
+    "section": "Impact & Philosophy",
+    "text": "Impact & Philosophy\nThese packages are part of my commitment to open science and data democratization. By lowering barriers to access public data, I aim to enable more rigorous research and evidence-based policymaking across Latin America.\nAll tools are open-source (MIT License), actively maintained, and built with reproducibility in mind."
+  },
+  {
+    "objectID": "projects/university-funding.html",
+    "href": "projects/university-funding.html",
+    "title": "Higher Education Financing in Peru",
+    "section": "",
+    "text": "Comprehensive analysis of budget allocation mechanisms for Peru’s 52 public universities, examining efficiency, equity, and the impact of performance-based funding reforms."
+  },
+  {
+    "objectID": "projects/university-funding.html#overview",
+    "href": "projects/university-funding.html#overview",
+    "title": "Higher Education Financing in Peru",
+    "section": "",
+    "text": "Comprehensive analysis of budget allocation mechanisms for Peru’s 52 public universities, examining efficiency, equity, and the impact of performance-based funding reforms."
+  },
+  {
+    "objectID": "projects/university-funding.html#context",
+    "href": "projects/university-funding.html#context",
+    "title": "Higher Education Financing in Peru",
+    "section": "Context",
+    "text": "Context\nLed analytical work at Peru’s Ministry of Education (Minedu) to inform resource allocation decisions and policy design for higher education financing."
+  },
+  {
+    "objectID": "projects/university-funding.html#analysis-framework",
+    "href": "projects/university-funding.html#analysis-framework",
+    "title": "Higher Education Financing in Peru",
+    "section": "Analysis Framework",
+    "text": "Analysis Framework\n\nData Envelopment Analysis (DEA) for efficiency measurement\nConcentration curves and Gini coefficients for equity analysis\nRegression discontinuity design for reform evaluation\nIntegration of administrative systems (SIAF, SIGA, AIRHSP, NEXUS)"
+  },
+  {
+    "objectID": "projects/university-funding.html#key-findings",
+    "href": "projects/university-funding.html#key-findings",
+    "title": "Higher Education Financing in Peru",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nSignificant efficiency gaps across universities (average DEA score: 0.67)\nBudget concentration favoring Lima-based institutions\nPerformance-based funding increased research output by 18%"
+  },
+  {
+    "objectID": "projects/university-funding.html#impact",
+    "href": "projects/university-funding.html#impact",
+    "title": "Higher Education Financing in Peru",
+    "section": "Impact",
+    "text": "Impact\nAnalysis directly informed budget allocation methodology used in national higher education policy, affecting $800M+ in annual public university funding.\n\nTechnical reports and policy briefs available on institutional website."
+  },
+  {
+    "objectID": "projects/mining-analysis.html",
+    "href": "projects/mining-analysis.html",
+    "title": "Illegal Mining Detection in Peruvian Amazon",
+    "section": "",
+    "text": "This project combines remote sensing, machine learning, and spatial econometrics to detect and evaluate the impact of illegal gold mining in the Peruvian Amazon (Madre de Dios region)."
+  },
+  {
+    "objectID": "projects/mining-analysis.html#overview",
+    "href": "projects/mining-analysis.html#overview",
+    "title": "Illegal Mining Detection in Peruvian Amazon",
+    "section": "",
+    "text": "This project combines remote sensing, machine learning, and spatial econometrics to detect and evaluate the impact of illegal gold mining in the Peruvian Amazon (Madre de Dios region)."
+  },
+  {
+    "objectID": "projects/mining-analysis.html#methods",
+    "href": "projects/mining-analysis.html#methods",
+    "title": "Illegal Mining Detection in Peruvian Amazon",
+    "section": "Methods",
+    "text": "Methods\n\nSatellite imagery processing (Landsat 8, Sentinel-2)\nRandom Forest for land cover classification\nDifference-in-Differences with spatial fixed effects\nGeospatial buffer analysis for policy evaluation"
+  },
+  {
+    "objectID": "projects/mining-analysis.html#key-findings",
+    "href": "projects/mining-analysis.html#key-findings",
+    "title": "Illegal Mining Detection in Peruvian Amazon",
+    "section": "Key Findings",
+    "text": "Key Findings\nIllegal mining expanded 15% annually between 2018-2023, with significant impacts on deforestation rates and mercury contamination in nearby water sources."
+  },
+  {
+    "objectID": "projects/mining-analysis.html#policy-impact",
+    "href": "projects/mining-analysis.html#policy-impact",
+    "title": "Illegal Mining Detection in Peruvian Amazon",
+    "section": "Policy Impact",
+    "text": "Policy Impact\nFindings informed targeted enforcement strategies and environmental protection policies at the regional government level.\n\nFull working paper and replication code available upon request."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Maykol Medrano",
+    "section": "",
+    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America.\n\n\n\n\nCurrent Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Maykol Medrano",
+    "section": "",
+    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America."
+  },
+  {
+    "objectID": "index.html#research-technical-expertise",
+    "href": "index.html#research-technical-expertise",
+    "title": "Maykol Medrano",
+    "section": "",
+    "text": "Current Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Hola Mundo\n\n\n\nGeneral\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nMaykol Medrano\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hola.html",
+    "href": "posts/hola.html",
+    "title": "Hola Mundo",
+    "section": "",
+    "text": "Este es un post de prueba. Contenido en construcción.\nBienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina."
+  },
+  {
+    "objectID": "projects/social-conflict-education.html",
+    "href": "projects/social-conflict-education.html",
+    "title": "Social Conflicts and Human Capital Accumulation",
+    "section": "",
+    "text": "This study examines the causal effect of resource-related social conflicts on educational outcomes in Peru, using a difference-in-differences design with event-study specification."
+  },
+  {
+    "objectID": "projects/social-conflict-education.html#overview",
+    "href": "projects/social-conflict-education.html#overview",
+    "title": "Social Conflicts and Human Capital Accumulation",
+    "section": "",
+    "text": "This study examines the causal effect of resource-related social conflicts on educational outcomes in Peru, using a difference-in-differences design with event-study specification."
+  },
+  {
+    "objectID": "projects/social-conflict-education.html#research-question",
+    "href": "projects/social-conflict-education.html#research-question",
+    "title": "Social Conflicts and Human Capital Accumulation",
+    "section": "Research Question",
+    "text": "Research Question\nDo mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?"
+  },
+  {
+    "objectID": "projects/social-conflict-education.html#methods",
+    "href": "projects/social-conflict-education.html#methods",
+    "title": "Social Conflicts and Human Capital Accumulation",
+    "section": "Methods",
+    "text": "Methods\n\nEvent study with staggered treatment adoption\nCallaway and Sant’Anna (2021) DID estimator\nShift-share instrumental variables for robustness\nAdministrative records from MINEDU and National Police"
+  },
+  {
+    "objectID": "projects/social-conflict-education.html#preliminary-findings",
+    "href": "projects/social-conflict-education.html#preliminary-findings",
+    "title": "Social Conflicts and Human Capital Accumulation",
+    "section": "Preliminary Findings",
+    "text": "Preliminary Findings\nExposure to social conflicts reduces standardized test scores by 0.15 SD and increases dropout rates by 2.3 percentage points, with effects persisting for 3+ years."
+  },
+  {
+    "objectID": "projects/social-conflict-education.html#policy-implications",
+    "href": "projects/social-conflict-education.html#policy-implications",
+    "title": "Social Conflicts and Human Capital Accumulation",
+    "section": "Policy Implications",
+    "text": "Policy Implications\nResults suggest the need for targeted educational interventions in conflict-affected areas and improved conflict prevention mechanisms in extractive zones.\n\nMaster’s thesis in progress. Draft available Q2 2025."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Policy Data Science & Economics",
+    "section": "",
+    "text": "Illegal Mining Detection in Peruvian Amazon\n\n\nGeospatial analysis combining satellite imagery and machine learning\n\n\n\nGeospatial\n\nCausal Inference\n\nML\n\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Conflicts and Human Capital Accumulation\n\n\nQuasi-experimental evidence from extractive industries in Peru\n\n\n\nCausal Inference\n\nEducation\n\nDevelopment\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigher Education Financing in Peru\n\n\nBudget allocation efficiency and equity analysis for public universities\n\n\n\nPolicy Analysis\n\nPublic Finance\n\nEducation\n\n\n\n\nDec 10, 2023\n\n\n\n\n\n\nNo matching items"
+  }
+]

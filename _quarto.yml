@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  google-analytics: "G-XXXXXXXXXX"
+  site-path: "/"
+  repo-url: https://github.com/MaykolMedrano/maykolmedrano.github.io
+  repo-actions: [edit, issue]
+  title: "Maykol Medrano"
+  description: "Policy Data Scientist | Applied Economist | Research Engineer"
+  site-url: "https://maykolmedrano.github.io"
+  open-graph:
+    locale: en_US
+    site-name: "Maykol Medrano - Policy Data Scientist"
+  twitter-card:
+    creator: "@maykolmedrano"
+    site: "@maykolmedrano"
+  navbar:
+    right:
+      - text: "Home"
+        href: index.html
+      - text: "Software"
+        href: software.qmd
+      - text: "Policy & Research"
+        href: projects.qmd
+      - text: "Blog"
+        href: blog.html
+  page-footer:
+    left: "© 2026 Maykol Medrano. Except where otherwise noted, all text and images licensed [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)."
+    right: "Built with [Quarto](https://quarto.org)"
+format:
+  html:
+    theme: [sandstone, _variables.scss]
+    css: styles.css
+    mainfont: "Manrope"
+    comments:
+      utterances:
+        repo: MaykolMedrano/maykolmedrano.github.io
+        theme: github-dark
+        issue-term: pathname
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+          <meta name="author" content="Maykol Medrano">
+          <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, BCRP, Python, Stata, R">
+          <meta name="robots" content="index, follow">
+          <link rel="canonical" href="https://maykolmedrano.github.io">
+    include-after-body:
+      - text: |
+          <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Maykol Medrano",
+            "url": "https://maykolmedrano.github.io",
+            "sameAs": [
+              "https://www.linkedin.com/in/maykolmedrano",
+              "https://github.com/MaykolMedrano"
+            ],
+            "jobTitle": "Policy Data Scientist",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Pontificia Universidad Católica de Chile"
+            },
+            "alumniOf": "Pontificia Universidad Católica de Chile",
+            "description": "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation",
+            "email": "mmedrano2@uc.cl"
+          }
+          </script>

@@ -1,0 +1,34 @@
+---
+title: "Illegal Mining Detection in Peruvian Amazon"
+subtitle: "Geospatial analysis combining satellite imagery and machine learning"
+author: "Maykol Medrano"
+date: "2024-11-15"
+categories: [Geospatial, Causal Inference, ML]
+image: "img_3.png"
+comments:
+  utterances:
+    repo: MaykolMedrano/maykolmedrano.github.io
+---
+
+## Overview
+
+This project combines remote sensing, machine learning, and spatial econometrics to detect and evaluate the impact of illegal gold mining in the Peruvian Amazon (Madre de Dios region).
+
+## Methods
+
+- Satellite imagery processing (Landsat 8, Sentinel-2)
+- Random Forest for land cover classification
+- Difference-in-Differences with spatial fixed effects
+- Geospatial buffer analysis for policy evaluation
+
+## Key Findings
+
+Illegal mining expanded 15% annually between 2018-2023, with significant impacts on deforestation rates and mercury contamination in nearby water sources.
+
+## Policy Impact
+
+Findings informed targeted enforcement strategies and environmental protection policies at the regional government level.
+
+---
+
+*Full working paper and replication code available upon request.*

@@ -1,0 +1,54 @@
+---
+title: "Open Source Software"
+subtitle: "Python and Stata packages for economic data access and reproducible research"
+page-layout: full
+---
+
+I build and maintain open-source tools that democratize access to economic data across Latin America. These packages are designed for researchers, analysts, and policymakers working on development economics, social policy evaluation, and quantitative research.
+
+---
+
+## Python Packages for Latin American Data
+
+**enahodata** — Peru Household Survey Access
+[GitHub](https://github.com/MaykolMedrano/enahodata) · [PyPI](https://pypi.org/project/enahodata)
+
+Python package for simplified access to Peru's National Household Survey (ENAHO) microdata. Download, process, and analyze data on poverty, employment, education, health, and household characteristics using pandas-compatible functions.
+
+---
+
+**usebcrp** — Central Reserve Bank of Peru API
+[GitHub](https://github.com/MaykolMedrano/usebcrp) · [PyPI](https://pypi.org/project/usebcrp)
+
+Python client for the Central Reserve Bank of Peru (BCRP) statistical API. Programmatic access to macroeconomic indicators, monetary policy data, and national accounts with pandas integration.
+
+---
+
+**usecasen** — Chile Socioeconomic Survey Tools
+[GitHub](https://github.com/MaykolMedrano/usecasen) · [PyPI](https://pypi.org/project/usecasen)
+
+Python tools for working with Chile's National Socioeconomic Characterization Survey (CASEN). Facilitates multidimensional poverty analysis and social policy evaluation.
+
+---
+
+**usebcch** — Central Bank of Chile Database Client
+[GitHub](https://github.com/MaykolMedrano/usebcch) · [PyPI](https://pypi.org/project/usebcch)
+
+Python client for the Central Bank of Chile's statistical database. Retrieve time series data on inflation, GDP, exchange rates, financial indicators, and external sector statistics.
+
+---
+
+## Stata Packages
+
+**enahotools** — ENAHO Data Processing for Stata
+[GitHub](https://github.com/MaykolMedrano/enahotools)
+
+Stata package for processing and analyzing Peru's National Household Survey (ENAHO). Automated data cleaning, variable labeling, and survey-weighted estimation commands.
+
+---
+
+## Impact & Philosophy
+
+These packages are part of my commitment to **open science** and **data democratization**. By lowering barriers to access public data, I aim to enable more rigorous research and evidence-based policymaking across Latin America.
+
+All tools are open-source (MIT License), actively maintained, and built with reproducibility in mind.

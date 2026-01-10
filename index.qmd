@@ -1,0 +1,59 @@
+---
+title: "Maykol Medrano"
+description: "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master's candidate at Pontificia Universidad Católica de Chile."
+image: profile.jpg
+page-layout: full
+open-graph:
+  title: "Maykol Medrano - Policy Data Scientist"
+  description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
+  image: profile.jpg
+twitter-card:
+  title: "Maykol Medrano - Policy Data Scientist"
+  description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
+  image: profile.jpg
+about:
+  template: trestles
+  links:
+    - text: LinkedIn
+      icon: linkedin
+      url: "https://www.linkedin.com/in/maykolmedrano"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/MaykolMedrano"
+    - text: Email
+      icon: envelope
+      url: "mailto:mmedrano2@uc.cl"
+    - text: Blog
+      icon: newspaper
+      url: "blog.html"
+    - text: CV
+      icon: file-pdf
+      url: "CV_Maykol_Medrano.pdf"
+comments: false
+---
+
+::: {.column-page}
+
+## Bio
+
+I'm a **Policy Data Scientist** specializing in causal inference and machine learning for public policy evaluation. Master's candidate at **Pontificia Universidad Católica de Chile** researching natural resource economics and social conflict, with 4+ years at Peru's **Ministry of Education** developing data infrastructure for evidence-based policy decisions.
+
+I combine **applied economics research**, **open-source software development**, and **public policy evaluation** to democratize access to economic data and inform intervention design across Latin America.
+
+---
+
+## Research & Technical Expertise
+
+**Current Research** | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.
+
+**Open Source** | Creator of [enahodata](https://github.com/MaykolMedrano/enahodata), [usebcrp](https://github.com/MaykolMedrano/usebcrp), [usecasen](https://github.com/MaykolMedrano/usecasen), and [usebcch](https://github.com/MaykolMedrano/usebcch) — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.
+
+**Methods** | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference
+
+**Stack** | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker
+
+---
+
+View my [research portfolio](projects.qmd) · Explore my [software](software.qmd) · Read my [blog](blog.html)
+
+:::
