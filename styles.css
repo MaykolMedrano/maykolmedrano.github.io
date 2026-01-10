@@ -759,6 +759,39 @@ input:focus-visible {
   margin-bottom: 1rem !important;
 }
 
+/* Sidebar de categorías - FONDO TRANSPARENTE, ADAPTADO AL MODO */
+#quarto-margin-sidebar,
+.quarto-margin-sidebar,
+div[id*="quarto-margin-sidebar"] {
+  background: transparent !important;
+}
+
+/* Categorías del sidebar en LIGHT mode - texto oscuro */
+:not([data-theme="dark"]) #quarto-margin-sidebar .quarto-listing-category .category,
+:not([data-theme="dark"]) .quarto-margin-sidebar .quarto-listing-category .category {
+  background: transparent !important;
+  color: #333333 !important;
+  border: 1px solid #d0d0d0 !important;
+  box-shadow: none !important;
+}
+
+/* Categorías del sidebar en DARK mode - texto blanco */
+[data-theme="dark"] #quarto-margin-sidebar .quarto-listing-category .category,
+[data-theme="dark"] .quarto-margin-sidebar .quarto-listing-category .category {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: none !important;
+}
+
+/* Hover en sidebar categorías */
+#quarto-margin-sidebar .quarto-listing-category .category:hover,
+.quarto-margin-sidebar .quarto-listing-category .category:hover {
+  background: #325d88 !important;
+  color: #ffffff !important;
+  border-color: #325d88 !important;
+}
+
 /* Metadata de proyectos (autor, fecha) */
 .listing-author,
 .listing-date,
