@@ -720,14 +720,30 @@ input:focus-visible {
   box-shadow: 0 0 0 1px #325d88 !important;
 }
 
-/* Hover effect consistente */
+/* Hover effect VISIBLE - azul oscuro */
 .listing-category:hover,
 .quarto-category:hover,
-.category:hover {
-  background: #325d88 !important;
+.category:hover,
+.listing-categories .category:hover,
+.categories .category:hover,
+[class*="category"]:not(.quarto-category-link):hover {
+  background: #1a3a52 !important;
   color: #ffffff !important;
-  border-color: #325d88 !important;
-  box-shadow: none !important;
+  border-color: #1a3a52 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Dark mode hover también visible */
+[data-theme="dark"] .listing-category:hover,
+[data-theme="dark"] .quarto-category:hover,
+[data-theme="dark"] .category:hover,
+[data-theme="dark"] .listing-categories .category:hover,
+[data-theme="dark"] [class*="category"]:not(.quarto-category-link):hover {
+  background: #1a3a52 !important;
+  color: #ffffff !important;
+  border-color: #1a3a52 !important;
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.5) !important;
 }
 
 /* Ocultar números en categorías del sidebar - COMPLETAMENTE */
