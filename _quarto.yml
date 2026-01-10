@@ -1,25 +1,25 @@
 project:
   type: website
-  output-dir: docs #
+  output-dir: docs
 
 execute:
-  freeze: auto #
+  freeze: auto
 
-lang: en # Moviendo 'lang' a la raíz para corregir el error
+lang: en
 
 website:
   title: "Maykol Medrano"
-  description: "Policy Data Scientist | Applied Economist | Research Engineer" #
+  description: "Policy Data Scientist | Applied Economist | Research Engineer"
   site-url: "https://maykolmedrano.github.io"
-  repo-url: https://github.com/MaykolMedrano/maykolmedrano.github.io #
+  repo-url: https://github.com/MaykolMedrano/maykolmedrano.github.io
   repo-actions: [edit, issue]
-  google-analytics: "G-XXXXXXXXXX" #
-  search: true #
+  google-analytics: "G-XXXXXXXXXX"
+  search: true
   
   open-graph:
     locale: en_US
     site-name: "Maykol Medrano - Policy Data Scientist"
-    image: profile.jpg #
+    image: profile.jpg
 
   twitter-card:
     creator: "@maykolmedrano"
@@ -35,7 +35,9 @@ website:
         href: projects.qmd
       - text: "Blog"
         href: blog.html
-      - icon: github #
+      - icon: rss
+        href: blog.xml
+      - icon: github
         href: https://github.com/MaykolMedrano
       - icon: linkedin
         href: https://www.linkedin.com/in/maykolmedrano
@@ -43,14 +45,37 @@ website:
         href: mailto:mmedrano2@uc.cl
 
   page-footer:
-    left: "© 2026 Maykol Medrano. Except where otherwise noted, all text and images licensed [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)." #
+    left: "© 2026 Maykol Medrano. Licensed under [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)."
     right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
-    theme: [sandstone, _variables.scss] #
+    theme: [sandstone, _variables.scss]
     css: styles.css
-    mainfont: "Manrope" #
+    mainfont: "Manrope"
+    
+    # --- UX & COMPORTAMIENTO (NIVEL PRO) ---
+    toc: true               # Tabla de contenidos lateral
+    toc-title: On this page
+    
+    smooth-scroll: true     # Desplazamiento suave
+    anchor-sections: true   # Links directos a títulos (#)
+    
+    link-external-icon: true      # Icono de flecha en links externos
+    link-external-newwindow: true # Abre links externos en nueva pestaña
+    
+    code-copy: true         
+    code-overflow: wrap     
+    highlight-style: github 
+    code-fold: show         
+    code-tools: true        
+    
+    lightbox: true          # Zoom en imágenes
+    
+    html-math-method: mathjax # Ecuaciones matemáticas perfectas
+    citation-hover: true      # Popups en citas bibliográficas
+    # ---------------------------------------
+
     comments:
       utterances:
         repo: MaykolMedrano/maykolmedrano.github.io
@@ -63,10 +88,10 @@ format:
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
           <meta name="author" content="Maykol Medrano">
-          <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, BCRP, Python, Stata, R">
+          <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata">
           <meta name="robots" content="index, follow">
           <link rel="canonical" href="https://maykolmedrano.github.io">
-          <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml"> #
+          <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
 
     include-after-body:
       - text: |
@@ -85,8 +110,7 @@ format:
               "@type": "Organization",
               "name": "Pontificia Universidad Católica de Chile"
             },
-            "alumniOf": "Pontificia Universidad Católica de Chile",
-            "description": "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation",
+            "description": "Policy Data Scientist specializing in causal inference",
             "email": "mmedrano2@uc.cl"
           }
           </script>

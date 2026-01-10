@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Maykol Medrano">
-<meta name="dcterms.date" content="2024-09-20">
+<meta name="dcterms.date" content="2025-10-20">
+<meta name="description" content="Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences.">
 
-<title>Social Conflicts and Human Capital Accumulation – Maykol Medrano</title>
+<title>Gold Price Shocks and Social Conflict – Maykol Medrano</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,14 +126,14 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Social Conflicts and Human Capital Accumulation – Maykol Medrano">
-<meta property="og:description" content="Quasi-experimental evidence from extractive industries in Peru">
-<meta property="og:image" content="https://maykolmedrano.github.io/projects/img_2.gif">
+<meta property="og:title" content="Gold Price Shocks and Social Conflict – Maykol Medrano">
+<meta property="og:description" content="Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
 <meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
 <meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Social Conflicts and Human Capital Accumulation – Maykol Medrano">
-<meta name="twitter:description" content="Quasi-experimental evidence from extractive industries in Peru">
-<meta name="twitter:image" content="https://maykolmedrano.github.io/projects/img_2.gif">
+<meta name="twitter:title" content="Gold Price Shocks and Social Conflict – Maykol Medrano">
+<meta name="twitter:description" content="Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
 <meta name="twitter:creator" content="@maykolmedrano">
 <meta name="twitter:site" content="@maykolmedrano">
 <meta name="twitter:card" content="summary_large_image">
@@ -208,43 +208,44 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#preliminary-findings" id="toc-preliminary-findings" class="nav-link" data-scroll-target="#preliminary-findings">Preliminary Findings</a></li>
-  <li><a href="#policy-implications" id="toc-policy-implications" class="nav-link" data-scroll-target="#policy-implications">Policy Implications</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results">Preliminary Results</a></li>
+  <li><a href="#stack" id="toc-stack" class="nav-link" data-scroll-target="#stack">Stack</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/social-conflict-education.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/mining-conflict.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Social Conflicts and Human Capital Accumulation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Quasi-experimental evidence from extractive industries in Peru</p>
+<div class="quarto-title-block"><div><h1 class="title">Gold Price Shocks and Social Conflict</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Causal evidence from the Peruvian Amazon</p>
   <div class="quarto-categories">
+    <div class="quarto-category">Economics</div>
     <div class="quarto-category">Causal Inference</div>
-    <div class="quarto-category">Education</div>
-    <div class="quarto-category">Development</div>
+    <div class="quarto-category">Mining</div>
+    <div class="quarto-category">Peru</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Maykol Medrano </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 20, 2024</p>
+      <p class="date">October 20, 2025</p>
     </div>
   </div>
   
@@ -258,34 +259,29 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This study examines the causal effect of resource-related social conflicts on educational outcomes in Peru, using a difference-in-differences design with event-study specification.</p>
+<p>This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.</p>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<p>Using a <strong>Shift-Share IV</strong> approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.</p>
 </section>
-<section id="research-question" class="level2">
-<h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>Do mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?</p>
-</section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="preliminary-results" class="level3">
+<h3 class="anchored" data-anchor-id="preliminary-results">Preliminary Results</h3>
 <ul>
-<li>Event study with staggered treatment adoption</li>
-<li>Callaway and Sant’Anna (2021) DID estimator</li>
-<li>Shift-share instrumental variables for robustness</li>
-<li>Administrative records from MINEDU and National Police</li>
+<li><strong>Key Finding 1:</strong> A 10% increase in gold prices leads to a…</li>
+<li><strong>Key Finding 2:</strong> The effect is concentrated in districts with weak institutional presence.</li>
 </ul>
 </section>
-<section id="preliminary-findings" class="level2">
-<h2 class="anchored" data-anchor-id="preliminary-findings">Preliminary Findings</h2>
-<p>Exposure to social conflicts reduces standardized test scores by 0.15 SD and increases dropout rates by 2.3 percentage points, with effects persisting for 3+ years.</p>
-</section>
-<section id="policy-implications" class="level2">
-<h2 class="anchored" data-anchor-id="policy-implications">Policy Implications</h2>
-<p>Results suggest the need for targeted educational interventions in conflict-affected areas and improved conflict prevention mechanisms in extractive zones.</p>
-<hr>
-<p><em>Master’s thesis in progress. Draft available Q2 2025.</em></p>
+<section id="stack" class="level3">
+<h3 class="anchored" data-anchor-id="stack">Stack</h3>
+<ul>
+<li><strong>Stata:</strong> Panel data estimation (<code>reghdfe</code>)</li>
+<li><strong>Python:</strong> Spatial visualization (<code>geopandas</code>)</li>
+</ul>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -750,43 +746,30 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <script src="https://utteranc.es/client.js" repo="MaykolMedrano/maykolmedrano.github.io" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async="">
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Social Conflicts and Human Capital Accumulation"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Quasi-experimental evidence from extractive industries in Peru"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maykol Medrano"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2024-09-20"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Causal Inference, Education, Development]</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "img_2.gif"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="an">comments:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  utterances:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    repo: MaykolMedrano/maykolmedrano.github.io</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>This study examines the causal effect of resource-related social conflicts on educational outcomes in Peru, using a difference-in-differences design with event-study specification.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Do mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methods</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Gold Price Shocks and Social Conflict"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Causal evidence from the Peruvian Amazon"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences."</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-10-20"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Economics, Causal Inference, Mining, Peru]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800" # Puedes cambiar esto por una foto tuya local</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Methodology</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Using a **Shift-Share IV** approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preliminary Results</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Key Finding 1:** A 10% increase in gold prices leads to a...</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Key Finding 2:** The effect is concentrated in districts with weak institutional presence.</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Event study with staggered treatment adoption</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Callaway and Sant'Anna (2021) DID estimator</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shift-share instrumental variables for robustness</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Administrative records from MINEDU and National Police</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preliminary Findings</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Exposure to social conflicts reduces standardized test scores by 0.15 SD and increases dropout rates by 2.3 percentage points, with effects persisting for 3+ years.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Policy Implications</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Results suggest the need for targeted educational interventions in conflict-affected areas and improved conflict prevention mechanisms in extractive zones.</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>*Master's thesis in progress. Draft available Q2 2025.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### Stack</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Stata:** Panel data estimation (<span class="in">`reghdfe`</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Python:** Spatial visualization (<span class="in">`geopandas`</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -796,7 +779,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/social-conflict-education.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/mining-conflict.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>

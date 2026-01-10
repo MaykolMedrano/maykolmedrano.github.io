@@ -1,0 +1,25 @@
+---
+title: "Gold Price Shocks and Social Conflict"
+subtitle: "Causal evidence from the Peruvian Amazon"
+description: "Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences."
+date: "2025-10-20"
+categories: [Economics, Causal Inference, Mining, Peru]
+image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800" # Puedes cambiar esto por una foto tuya local
+---
+
+## Overview
+
+This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.
+
+### Methodology
+
+Using a **Shift-Share IV** approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.
+
+### Preliminary Results
+
+* **Key Finding 1:** A 10% increase in gold prices leads to a...
+* **Key Finding 2:** The effect is concentrated in districts with weak institutional presence.
+
+### Stack
+* **Stata:** Panel data estimation (`reghdfe`)
+* **Python:** Spatial visualization (`geopandas`)

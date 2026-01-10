@@ -70,6 +70,55 @@
     "text": "Impact\nAnalysis directly informed budget allocation methodology used in national higher education policy, affecting $800M+ in annual public university funding.\n\nTechnical reports and policy briefs available on institutional website."
   },
   {
+    "objectID": "projects/mining-conflict.html",
+    "href": "projects/mining-conflict.html",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "",
+    "text": "This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.\n\n\nUsing a Shift-Share IV approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.\n\n\n\n\nKey Finding 1: A 10% increase in gold prices leads to a…\nKey Finding 2: The effect is concentrated in districts with weak institutional presence.\n\n\n\n\n\nStata: Panel data estimation (reghdfe)\nPython: Spatial visualization (geopandas)"
+  },
+  {
+    "objectID": "projects/mining-conflict.html#overview",
+    "href": "projects/mining-conflict.html#overview",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "",
+    "text": "This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.\n\n\nUsing a Shift-Share IV approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.\n\n\n\n\nKey Finding 1: A 10% increase in gold prices leads to a…\nKey Finding 2: The effect is concentrated in districts with weak institutional presence.\n\n\n\n\n\nStata: Panel data estimation (reghdfe)\nPython: Spatial visualization (geopandas)"
+  },
+  {
+    "objectID": "posts/hola.html",
+    "href": "posts/hola.html",
+    "title": "Hola Mundo",
+    "section": "",
+    "text": "Este es un post de prueba. Contenido en construcción.\nBienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Hola Mundo\n\n\n\nGeneral\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nMaykol Medrano\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Maykol Medrano",
+    "section": "",
+    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America.\n\n\n\n\nCurrent Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Maykol Medrano",
+    "section": "",
+    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America."
+  },
+  {
+    "objectID": "index.html#research-technical-expertise",
+    "href": "index.html#research-technical-expertise",
+    "title": "Maykol Medrano",
+    "section": "",
+    "text": "Current Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+  },
+  {
     "objectID": "projects/mining-analysis.html",
     "href": "projects/mining-analysis.html",
     "title": "Illegal Mining Detection in Peruvian Amazon",
@@ -103,41 +152,6 @@
     "title": "Illegal Mining Detection in Peruvian Amazon",
     "section": "Policy Impact",
     "text": "Policy Impact\nFindings informed targeted enforcement strategies and environmental protection policies at the regional government level.\n\nFull working paper and replication code available upon request."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Maykol Medrano",
-    "section": "",
-    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America.\n\n\n\n\nCurrent Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Maykol Medrano",
-    "section": "",
-    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America."
-  },
-  {
-    "objectID": "index.html#research-technical-expertise",
-    "href": "index.html#research-technical-expertise",
-    "title": "Maykol Medrano",
-    "section": "",
-    "text": "Current Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Hola Mundo\n\n\n\nGeneral\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nMaykol Medrano\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/hola.html",
-    "href": "posts/hola.html",
-    "title": "Hola Mundo",
-    "section": "",
-    "text": "Este es un post de prueba. Contenido en construcción.\nBienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina."
   },
   {
     "objectID": "projects/social-conflict-education.html",
@@ -186,6 +200,6 @@
     "href": "projects.html",
     "title": "Policy Data Science & Economics",
     "section": "",
-    "text": "Illegal Mining Detection in Peruvian Amazon\n\n\nGeospatial analysis combining satellite imagery and machine learning\n\n\n\nGeospatial\n\nCausal Inference\n\nML\n\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Conflicts and Human Capital Accumulation\n\n\nQuasi-experimental evidence from extractive industries in Peru\n\n\n\nCausal Inference\n\nEducation\n\nDevelopment\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigher Education Financing in Peru\n\n\nBudget allocation efficiency and equity analysis for public universities\n\n\n\nPolicy Analysis\n\nPublic Finance\n\nEducation\n\n\n\n\nDec 10, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Gold Price Shocks and Social Conflict\n\n\nCausal evidence from the Peruvian Amazon\n\n\n\nEconomics\n\nCausal Inference\n\nMining\n\nPeru\n\n\n\n\nOct 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIllegal Mining Detection in Peruvian Amazon\n\n\nGeospatial analysis combining satellite imagery and machine learning\n\n\n\nGeospatial\n\nCausal Inference\n\nML\n\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Conflicts and Human Capital Accumulation\n\n\nQuasi-experimental evidence from extractive industries in Peru\n\n\n\nCausal Inference\n\nEducation\n\nDevelopment\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigher Education Financing in Peru\n\n\nBudget allocation efficiency and equity analysis for public universities\n\n\n\nPolicy Analysis\n\nPublic Finance\n\nEducation\n\n\n\n\nDec 10, 2023\n\n\n\n\n\n\nNo matching items"
   }
 ]
