@@ -5,6 +5,8 @@
   max-width: 100% !important;
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
+  padding-top: 2rem !important; /* Espacio arriba del header */
+  padding-bottom: 1rem !important;
   margin: 0 !important;
 }
 
@@ -12,6 +14,7 @@
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0.5rem !important;
+  margin-top: 1.5rem !important; /* Separación del navbar */
 }
 
 .quarto-about-trestles {
@@ -19,6 +22,7 @@
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  padding-top: 1.5rem !important;
 }
 
 /* Contenedor principal sin restricciones */
@@ -26,6 +30,8 @@ main.content {
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0.5rem !important;
+  padding-top: 2rem !important; /* Espacio desde el navbar */
+  min-height: 80vh !important; /* Evitar espacio vacío abajo */
 }
 
 .page-columns {
@@ -37,6 +43,20 @@ main.content {
 body {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+/* Navbar con espacio apropiado */
+.navbar {
+  margin-bottom: 0 !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Footer más cerca del contenido */
+.page-footer {
+  margin-top: 2rem !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 /* ============================================
