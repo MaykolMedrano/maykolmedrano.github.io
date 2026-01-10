@@ -1,69 +1,88 @@
 /* css styles */
 
-/* Expandir TODO el contenido al ancho completo */
+/* Expandir TODO el contenido al ancho completo - ULTRA COMPACTO */
 #quarto-content {
   max-width: 100% !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  margin: 0 !important;
 }
 
 .quarto-about-trestles .about-entity {
   max-width: 100% !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0.5rem !important;
 }
 
 .quarto-about-trestles {
   max-width: 100% !important;
   width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Contenedor principal sin restricciones */
 main.content {
   max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0.5rem !important;
 }
 
 .page-columns {
   max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* ============================================
    GLOBAL TYPOGRAPHY & SPACING (Desktop & Mobile)
+   ULTRA COMPACTO
    ============================================ */
 
-/* 1. Base Text Size & Spacing */
+/* 1. Base Text Size & Spacing - MÁS PEQUEÑO */
 html, body {
-  font-size: 15px !important; /* Compact size for all screens */
+  font-size: 13px !important; /* Más compacto */
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-weight: 400;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 p, li, .about-contents, .description {
-  line-height: 1.5 !important; /* Tighter spacing, standard for reading */
-  margin-bottom: 1rem !important;
+  line-height: 1.4 !important; /* Más apretado */
+  margin-bottom: 0.6rem !important; /* Menos espacio */
 }
 
-/* 2. Headings (Scaled down globally) */
+/* 2. Headings (Escalados más pequeños) */
 h1.title {
-  font-size: 2.0rem !important; /* Smaller main title */
-  margin-top: 1rem !important;
+  font-size: 1.6rem !important; /* Más pequeño */
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 h2 {
-  font-size: 1.5rem !important;
-  margin-top: 1.5rem !important;
+  font-size: 1.3rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
   font-weight: 600 !important;
 }
 
 h3 {
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.4rem !important;
 }
 
 h4 {
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.3rem !important;
 }
 
 /* Navbar typography */
@@ -83,62 +102,87 @@ h4 {
   letter-spacing: -0.01em;
 }
 
-/* Content typography */
+/* Content typography - COMPACTO */
 .quarto-about-trestles .about-entity .about-contents p,
 #quarto-content p {
-  font-size: 15px !important;
-  line-height: 1.5 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.6rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents h2,
 #quarto-content h2 {
-  font-size: 1.5rem !important;
+  font-size: 1.3rem !important;
   font-weight: 600 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents h4,
 #quarto-content h4 {
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.3rem !important;
 }
 
 /* Page titles */
 #quarto-content .quarto-title h1.title {
-  font-size: 2.0rem !important;
-  margin-top: 1rem !important;
+  font-size: 1.6rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 #quarto-content .quarto-title .quarto-title-meta {
-  font-size: 0.85rem !important;
+  font-size: 0.75rem !important;
 }
 
 /* 3. Mobile-Specific Layout Adjustments (Only for small screens) */
 @media (max-width: 768px) {
-  /* Recover screen space on mobile only */
+  /* Máximo aprovechamiento en mobile */
   body, .page-columns, .content {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
 
   #quarto-content {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
 
-  /* Even tighter titles for mobile */
+  main.content {
+    padding: 8px !important;
+  }
+
+  /* Títulos aún más compactos en mobile */
   h1.title {
-    font-size: 1.7rem !important;
+    font-size: 1.4rem !important;
   }
 
   #quarto-content .quarto-title h1.title {
-    font-size: 1.7rem !important;
+    font-size: 1.4rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
   }
 }
 
-/* El nombre en el sidebar */
+/* El nombre en el sidebar - COMPACTO */
 .quarto-about-trestles .about-entity .about-image h2.about-entity-heading {
-  font-size: 1.6rem !important;
+  font-size: 1.3rem !important;
   font-weight: 700 !important;
   letter-spacing: -0.03em;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Links del sidebar más compactos */
+.about-links {
+  gap: 0.3rem !important;
+}
+
+.about-link {
+  font-size: 0.8rem !important;
+  padding: 0.3rem 0.6rem !important;
 }
 
 /* Código con JetBrains Mono */
@@ -146,37 +190,37 @@ code, pre {
   font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
 }
 
-/* Sistema de columnas como el original de Mike Mahoney */
+/* Sistema de columnas ULTRA COMPACTO */
 .quarto-about-trestles .about-entity {
   display: flex !important;
-  gap: min(4vw, 1.5em) !important;
+  gap: 0.5rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-image {
-  flex: 0 0 40% !important;
-  max-width: 40% !important;
-  min-width: 360px !important;
+  flex: 0 0 35% !important;
+  max-width: 35% !important;
+  min-width: 280px !important;
   overflow: visible !important;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 1rem !important;
-  padding-right: 2rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .quarto-about-trestles .about-entity .about-image img {
-  width: 320px !important;
-  height: 160px !important;
-  min-width: 320px !important;
-  min-height: 160px !important;
-  max-width: 320px !important;
-  max-height: 160px !important;
-  margin-bottom: 1.5rem;
+  width: 240px !important;
+  height: 120px !important;
+  min-width: 240px !important;
+  min-height: 120px !important;
+  max-width: 240px !important;
+  max-height: 120px !important;
+  margin-bottom: 0.8rem !important;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 8px !important;
+  border-radius: 6px !important;
   object-fit: cover !important;
   aspect-ratio: 2/1 !important;
 }
@@ -188,43 +232,45 @@ code, pre {
 .quarto-about-trestles .about-entity .about-image h2.about-entity-heading {
   text-align: center !important;
   width: 100%;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 0.8rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-links {
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
-  gap: 0.5rem !important;
+  gap: 0.3rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents {
-  flex: 0 0 60% !important;
+  flex: 0 0 65% !important;
   overflow: visible !important;
-  max-width: 60% !important;
+  max-width: 65% !important;
   min-width: 0;
+  padding-left: 0.5rem !important;
 }
 
-/* Mejorar espaciado y diseño profesional del home */
+/* Mejorar espaciado COMPACTO del home */
 .quarto-about-trestles .about-entity .about-contents > p:first-child {
-  font-size: 1.05rem !important;
-  line-height: 1.7 !important;
-  margin-bottom: 1.2rem !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.6rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents hr {
   border: 0;
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
-  margin: 2rem 0 !important;
+  margin: 1rem 0 !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents h2 {
   margin-top: 0.5rem !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.5rem !important;
   color: #93c54b !important;
   letter-spacing: -0.02em;
   font-weight: 600 !important;
+  font-size: 1.3rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents p strong:first-child {
@@ -233,7 +279,9 @@ code, pre {
 }
 
 .quarto-about-trestles .about-entity .about-contents p {
-  margin-bottom: 0.9rem !important;
+  margin-bottom: 0.6rem !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
 }
 
 /* Mejorar los enlaces de los paquetes */
