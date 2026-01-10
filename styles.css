@@ -692,6 +692,9 @@ input:focus-visible {
 .category,
 .listing-categories .category,
 .categories .category,
+.quarto-title .quarto-categories .quarto-category,
+.quarto-title-meta .quarto-categories .quarto-category,
+header .quarto-categories .quarto-category,
 [class*="category"]:not(.quarto-category-link) {
   display: inline-block !important;
   padding: 0.15rem 0.45rem !important;
@@ -713,6 +716,9 @@ input:focus-visible {
 [data-theme="dark"] .quarto-category,
 [data-theme="dark"] .category,
 [data-theme="dark"] .listing-categories .category,
+[data-theme="dark"] .quarto-title .quarto-categories .quarto-category,
+[data-theme="dark"] .quarto-title-meta .quarto-categories .quarto-category,
+[data-theme="dark"] header .quarto-categories .quarto-category,
 [data-theme="dark"] [class*="category"]:not(.quarto-category-link) {
   background: #ffffff !important;
   color: #325d88 !important;
@@ -720,12 +726,15 @@ input:focus-visible {
   box-shadow: 0 0 0 1px #325d88 !important;
 }
 
-/* Hover effect VISIBLE - azul oscuro */
+/* Hover effect VISIBLE - azul oscuro - TODOS LOS CONTEXTOS */
 .listing-category:hover,
 .quarto-category:hover,
 .category:hover,
 .listing-categories .category:hover,
 .categories .category:hover,
+.quarto-title .quarto-categories .quarto-category:hover,
+.quarto-title-meta .quarto-categories .quarto-category:hover,
+header .quarto-categories .quarto-category:hover,
 [class*="category"]:not(.quarto-category-link):hover {
   background: #1a3a52 !important;
   color: #ffffff !important;
@@ -734,11 +743,14 @@ input:focus-visible {
   transform: translateY(-1px) !important;
 }
 
-/* Dark mode hover también visible */
+/* Dark mode hover también visible - TODOS LOS CONTEXTOS */
 [data-theme="dark"] .listing-category:hover,
 [data-theme="dark"] .quarto-category:hover,
 [data-theme="dark"] .category:hover,
 [data-theme="dark"] .listing-categories .category:hover,
+[data-theme="dark"] .quarto-title .quarto-categories .quarto-category:hover,
+[data-theme="dark"] .quarto-title-meta .quarto-categories .quarto-category:hover,
+[data-theme="dark"] header .quarto-categories .quarto-category:hover,
 [data-theme="dark"] [class*="category"]:not(.quarto-category-link):hover {
   background: #1a3a52 !important;
   color: #ffffff !important;
