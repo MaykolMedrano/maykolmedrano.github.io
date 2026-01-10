@@ -37,4 +37,22 @@ Analysis directly informed budget allocation methodology used in national higher
 
 ---
 
+## Citation
+
+```bibtex
+@techreport{medrano2023higher,
+  title={Higher Education Financing in Peru: Budget Allocation Efficiency and Equity Analysis for Public Universities},
+  author={Medrano, Maykol},
+  year={2023},
+  institution={Ministry of Education of Peru},
+  type={Policy Analysis},
+  url={https://maykolmedrano.github.io/projects/university-funding.html}
+}
+```
+
+**APA Format:**
+Medrano, M. (2023). *Higher Education Financing in Peru: Budget Allocation Efficiency and Equity Analysis for Public Universities* [Policy Analysis]. Ministry of Education of Peru. https://maykolmedrano.github.io/projects/university-funding.html
+
+---
+
 *Technical reports and policy briefs available on institutional website.*

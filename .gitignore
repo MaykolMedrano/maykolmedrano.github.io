@@ -124,3 +124,5 @@ elevators.db
 _site
 
 **/*.quarto_ipynb
+
+.claude/

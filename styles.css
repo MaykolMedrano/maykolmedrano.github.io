@@ -261,3 +261,264 @@ body:has([data-quarto-source-file="software.qmd"]) #quarto-content p {
 body:has([data-quarto-source-file="software.qmd"]) #quarto-content h2 + p {
   margin-bottom: 1.2rem !important;
 }
+
+/* ============================================
+   ANIMATIONS & MICRO-INTERACTIONS
+   ============================================ */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation for page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#quarto-content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Card hover effects for projects */
+.quarto-listing-default .listing-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+}
+
+.quarto-listing-default .listing-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Link underline animation */
+#quarto-content a:not(.btn):not(.navbar-brand) {
+  position: relative;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.3s ease;
+}
+
+#quarto-content a:not(.btn):not(.navbar-brand):hover {
+  background-size: 100% 1px;
+}
+
+/* Button hover effects */
+.btn, .about-link {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before, .about-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before, .about-link:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Navbar scroll effect */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Code block copy button animation */
+.code-copy-button {
+  transition: all 0.2s ease;
+}
+
+.code-copy-button:hover {
+  transform: scale(1.1);
+}
+
+.code-copy-button:active {
+  transform: scale(0.95);
+}
+
+/* Image hover effects */
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Badge animations */
+.badge, img[src*="shields.io"] {
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.badge:hover, img[src*="shields.io"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Table of contents smooth highlighting */
+.sidebar nav[role="doc-toc"] ul li a {
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  padding-left: 1rem;
+}
+
+.sidebar nav[role="doc-toc"] ul li a.active,
+.sidebar nav[role="doc-toc"] ul li a:hover {
+  border-left-color: var(--bs-link-color);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Search input focus effect */
+#quarto-search input {
+  transition: all 0.3s ease;
+}
+
+#quarto-search input:focus {
+  box-shadow: 0 0 0 3px rgba(50, 93, 136, 0.1);
+  transform: scale(1.02);
+}
+
+/* Footer fade-in on scroll */
+.page-footer {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Parallax effect for profile image */
+.about-image img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-image:hover img {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Loading skeleton for images */
+img[loading="lazy"] {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent transitions on page load */
+.no-transition {
+  transition: none !important;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 3px solid var(--bs-link-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+/* Touch targets - minimum 48x48px for mobile */
+@media (max-width: 768px) {
+  .btn, .about-link, .nav-link, .theme-toggle {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 12px 16px !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 16px 20px !important;
+  }
+}
+
+/* Better focus indicators */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--bs-link-color) !important;
+  outline-offset: 3px !important;
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Improve readability with proper line length */
+#quarto-content p,
+#quarto-content li {
+  max-width: 70ch;
+}
+
+/* Better spacing for lists */
+#quarto-content ul,
+#quarto-content ol {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile touch targets for social links */
+.about-links a {
+  min-width: 48px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

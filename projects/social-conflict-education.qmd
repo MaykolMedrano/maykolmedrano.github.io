@@ -35,4 +35,23 @@ Results suggest the need for targeted educational interventions in conflict-affe
 
 ---
 
+## Citation
+
+```bibtex
+@mastersthesis{medrano2025conflicts,
+  title={Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru},
+  author={Medrano, Maykol},
+  year={2025},
+  school={Pontificia Universidad Católica de Chile},
+  type={Master's Thesis},
+  note={In progress},
+  url={https://maykolmedrano.github.io/projects/social-conflict-education.html}
+}
+```
+
+**APA Format:**
+Medrano, M. (2025). *Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru* [Master's thesis, Pontificia Universidad Católica de Chile]. https://maykolmedrano.github.io/projects/social-conflict-education.html
+
+---
+
 *Master's thesis in progress. Draft available Q2 2025.*

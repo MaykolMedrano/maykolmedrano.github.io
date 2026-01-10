@@ -31,4 +31,23 @@ Findings informed targeted enforcement strategies and environmental protection p
 
 ---
 
+## Citation
+
+If you use this research, please cite:
+
+```bibtex
+@unpublished{medrano2024illegal,
+  title={Illegal Mining Detection in Peruvian Amazon: Geospatial Analysis Combining Satellite Imagery and Machine Learning},
+  author={Medrano, Maykol},
+  year={2024},
+  note={Working Paper},
+  url={https://maykolmedrano.github.io/projects/mining-analysis.html}
+}
+```
+
+**APA Format:**
+Medrano, M. (2024). *Illegal Mining Detection in Peruvian Amazon: Geospatial Analysis Combining Satellite Imagery and Machine Learning* [Working Paper]. Retrieved from https://maykolmedrano.github.io/projects/mining-analysis.html
+
+---
+
 *Full working paper and replication code available upon request.*

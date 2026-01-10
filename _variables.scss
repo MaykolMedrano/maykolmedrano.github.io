@@ -142,3 +142,147 @@ $breadcrumb-border-radius:          .25rem !default;
 $btn-close-color:            $white !default;
 $btn-close-opacity:          .8 !default;
 $btn-close-hover-opacity:    1 !default;
+
+/*-- scss:rules --*/
+
+// ============================================
+// DARK MODE IMPLEMENTATION
+// ============================================
+
+// Dark mode variables
+[data-theme="dark"] {
+  // Colors
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #e8e8e8;
+  --bs-emphasis-color: #ffffff;
+
+  // Grays for dark mode
+  --bs-gray-100: #2a2a2a;
+  --bs-gray-200: #333333;
+  --bs-gray-300: #404040;
+  --bs-gray-400: #555555;
+  --bs-gray-500: #888888;
+  --bs-gray-600: #aaaaaa;
+  --bs-gray-700: #cccccc;
+  --bs-gray-800: #e0e0e0;
+
+  // Links
+  --bs-link-color: #5da9e8;
+  --bs-link-hover-color: #82c0f5;
+
+  // Accent colors for dark mode
+  --accent-primary: #5da9e8;
+  --accent-success: #a8d96f;
+  --accent-info: #4fc3e8;
+  --accent-warning: #ff9966;
+  --accent-danger: #ff6b6b;
+
+  // Backgrounds
+  --card-bg: #242424;
+  --navbar-bg: #1f1f1f;
+  --code-bg: #2d2d2d;
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  // Shadows
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+// Light mode variables (default)
+[data-theme="light"] {
+  --bs-body-bg: #f8f5f0;
+  --bs-body-color: #111;
+  --bs-emphasis-color: #000;
+
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #f8f5f0;
+  --bs-gray-300: #dfd7ca;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #98978b;
+  --bs-gray-600: #8e8c84;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #3e3f3a;
+
+  --bs-link-color: #325d88;
+  --bs-link-hover-color: #254770;
+
+  --accent-primary: #325d88;
+  --accent-success: #93c54b;
+  --accent-info: #29abe0;
+  --accent-warning: #f47c3c;
+  --accent-danger: #d9534f;
+
+  --card-bg: #ffffff;
+  --navbar-bg: #f8f5f0;
+  --code-bg: #f6f6f6;
+  --border-color: rgba(0, 0, 0, 0.1);
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+// Apply theme variables to body
+body {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Dark mode toggle button styles
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+// Update navbar for dark mode
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+// Update cards
+.card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+// Update code blocks
+pre, code {
+  background-color: var(--code-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+// Update links
+a {
+  color: var(--bs-link-color) !important;
+}
+
+a:hover {
+  color: var(--bs-link-hover-color) !important;
+}
