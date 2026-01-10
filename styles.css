@@ -45,11 +45,14 @@ body {
   padding: 0 !important;
 }
 
-/* Navbar con espacio apropiado */
+/* Navbar con espacio apropiado y color de fondo */
 .navbar {
   margin-bottom: 0 !important;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
+  background: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Footer más cerca del contenido */
@@ -239,9 +242,10 @@ code, pre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem !important;
+  border-right: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: 8px 0 0 8px;
 }
 
 .quarto-about-trestles .about-entity .about-image img {
@@ -650,4 +654,97 @@ input:focus-visible {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+/* ============================================
+   PROYECTOS Y LISTINGS - CON RESPIRO
+   ============================================ */
+
+/* Cards de proyectos con espacio */
+.quarto-listing .listing-item,
+.card {
+  margin-bottom: 1.5rem !important;
+  padding: 1.5rem !important;
+  border-radius: 8px !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.listing-item .listing-title {
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.listing-item .listing-description {
+  margin-bottom: 0.8rem !important;
+  line-height: 1.5 !important;
+}
+
+.listing-item .listing-categories {
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Etiquetas/Categories visibles en ambos modos */
+.listing-category,
+.quarto-category,
+[class*="category"] {
+  display: inline-block !important;
+  padding: 0.25rem 0.6rem !important;
+  margin: 0.2rem !important;
+  font-size: 0.75rem !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Light mode - etiquetas con fondo oscuro */
+[data-theme="light"] .listing-category,
+[data-theme="light"] .quarto-category,
+[data-theme="light"] [class*="category"] {
+  background: #325d88 !important;
+  color: #ffffff !important;
+  border: 1px solid #254770 !important;
+}
+
+/* Dark mode - etiquetas con fondo claro */
+[data-theme="dark"] .listing-category,
+[data-theme="dark"] .quarto-category,
+[data-theme="dark"] [class*="category"] {
+  background: #5da9e8 !important;
+  color: #1a1a1a !important;
+  border: 1px solid #82c0f5 !important;
+}
+
+/* Hover effect para etiquetas */
+.listing-category:hover,
+.quarto-category:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Metadata de proyectos (autor, fecha) */
+.listing-author,
+.listing-date,
+.quarto-title-meta-contents {
+  font-size: 0.8rem !important;
+  color: var(--bs-gray-600) !important;
+  margin-top: 0.5rem !important;
+}
+
+/* ============================================
+   DARK MODE TOGGLE - MÁS PEQUEÑO
+   ============================================ */
+
+.theme-toggle {
+  width: 40px !important;  /* antes 50px */
+  height: 40px !important; /* antes 50px */
+  font-size: 1.1rem !important; /* antes 1.3rem */
+  bottom: 1.5rem !important; /* antes 2rem */
+  right: 1.5rem !important;  /* antes 2rem */
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08) rotate(12deg) !important; /* menos rotación */
 }
