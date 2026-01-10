@@ -1,18 +1,24 @@
 ---
 title: "Maykol Medrano"
 description: "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master's candidate at Pontificia Universidad Católica de Chile."
-image: profile.jpg
+image: profile.png
 page-layout: full
+toc: false 
+
 open-graph:
   title: "Maykol Medrano - Policy Data Scientist"
   description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
-  image: profile.jpg
+  image: profile.png
 twitter-card:
   title: "Maykol Medrano - Policy Data Scientist"
   description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
-  image: profile.jpg
+  image: profile.png
 about:
   template: trestles
+  image-shape: rounded
+  image-width: 13em 
+
+  
   links:
     - text: LinkedIn
       icon: linkedin
@@ -32,8 +38,6 @@ about:
 comments: false
 ---
 
-::: {.column-page}
-
 ## Bio
 
 I'm a **Policy Data Scientist** specializing in causal inference and machine learning for public policy evaluation. Master's candidate at **Pontificia Universidad Católica de Chile** researching natural resource economics and social conflict, with 4+ years at Peru's **Ministry of Education** developing data infrastructure for evidence-based policy decisions.
@@ -48,12 +52,8 @@ I combine **applied economics research**, **open-source software development**, 
 
 **Open Source** | Creator of [enahodata](https://github.com/MaykolMedrano/enahodata), [usebcrp](https://github.com/MaykolMedrano/usebcrp), [usecasen](https://github.com/MaykolMedrano/usecasen), and [usebcch](https://github.com/MaykolMedrano/usebcch) — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.
 
-**Methods** | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference
-
 **Stack** | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker
 
 ---
 
 View my [research portfolio](projects.qmd) · Explore my [software](software.qmd) · Read my [blog](blog.html)
-
-:::

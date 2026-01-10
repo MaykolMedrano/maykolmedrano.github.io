@@ -48,40 +48,45 @@ website:
     left: "© 2026 Maykol Medrano. Licensed under [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)."
     right: "Built with [Quarto](https://quarto.org)"
 
+filters:
+  - shinylive
+
 format:
   html:
     theme: [sandstone, _variables.scss]
     css: styles.css
     mainfont: "Manrope"
     
-    # --- UX & COMPORTAMIENTO (NIVEL PRO) ---
-    toc: true               # Tabla de contenidos lateral
+    # UX & Comportamiento
+    toc: true
     toc-title: On this page
-    
-    smooth-scroll: true     # Desplazamiento suave
-    anchor-sections: true   # Links directos a títulos (#)
-    
-    link-external-icon: true      # Icono de flecha en links externos
-    link-external-newwindow: true # Abre links externos en nueva pestaña
+    smooth-scroll: true
+    anchor-sections: true
+    link-external-icon: true
+    link-external-newwindow: true
     
     code-copy: true         
     code-overflow: wrap     
     highlight-style: github 
     code-fold: show         
     code-tools: true        
-    
-    lightbox: true          # Zoom en imágenes
-    
-    html-math-method: mathjax # Ecuaciones matemáticas perfectas
-    citation-hover: true      # Popups en citas bibliográficas
-    # ---------------------------------------
+    lightbox: true
+    html-math-method: mathjax
+    citation-hover: true
 
+    # Configuración de Comentarios
     comments:
-      utterances:
+      giscus:
         repo: MaykolMedrano/maykolmedrano.github.io
-        theme: github-dark
-        issue-term: pathname
+        repo-id: "R_kgDOQ296zQ"
+        category: General
+        category-id: "DIC_kwDOQ296zc4C0x47"
+        mapping: pathname
+        reactions-enabled: true
+        input-position: top
+        theme: light
 
+    # Header
     include-in-header:
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">

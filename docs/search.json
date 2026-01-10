@@ -84,25 +84,53 @@
     "text": "This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.\n\n\nUsing a Shift-Share IV approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.\n\n\n\n\nKey Finding 1: A 10% increase in gold prices leads to a…\nKey Finding 2: The effect is concentrated in districts with weak institutional presence.\n\n\n\n\n\nStata: Panel data estimation (reghdfe)\nPython: Spatial visualization (geopandas)"
   },
   {
-    "objectID": "posts/hola.html",
-    "href": "posts/hola.html",
-    "title": "Hola Mundo",
+    "objectID": "projects/gold-shocks.html",
+    "href": "projects/gold-shocks.html",
+    "title": "Gold Price Shocks and Social Conflict",
     "section": "",
-    "text": "Este es un post de prueba. Contenido en construcción.\nBienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina."
+    "text": "NoteProject Status\n\n\n\nThis paper is currently under review. The preliminary version was presented at the LACEA 2024 Annual Meeting."
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Hola Mundo\n\n\n\nGeneral\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nMaykol Medrano\n\n\n\n\n\nNo matching items"
+    "objectID": "projects/gold-shocks.html#overview",
+    "href": "projects/gold-shocks.html#overview",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "1. Overview",
+    "text": "1. Overview\nDoes the boom in extractive industries fuel social unrest? Focusing on the Peruvian Amazon, we exploit exogenous variation in international gold prices combined with local mineral endowments to predict conflict probability at the district level.\nWe leverage data from three main sources: 1. Ombudsman’s Office (Defensoría del Pueblo): Monthly panel of social conflicts. 2. Sentinel-2 Satellite Imagery: To measure illegal mining deforestation. 3. MEF (SIAF): For local canon transfers analysis."
+  },
+  {
+    "objectID": "projects/gold-shocks.html#methodology",
+    "href": "projects/gold-shocks.html#methodology",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "2. Methodology",
+    "text": "2. Methodology\nWe employ a Shift-Share Instrumental Variable (SSIV) strategy. The logic is to isolate the component of local economic growth driven purely by external price shocks.\n\\[\nZ_{dt} = \\text{Endowment}_d \\times \\log(\\text{Price}_{t})\n\\]\nWhere \\(Z_{dt}\\) is the instrument for district \\(d\\) at time \\(t\\)."
+  },
+  {
+    "objectID": "projects/gold-shocks.html#implementation-code",
+    "href": "projects/gold-shocks.html#implementation-code",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "3. Implementation Code",
+    "text": "3. Implementation Code\nHere is how we construct the instrument and run the core specification. Notice how we handle the spatial lag.\n\nStata (Estimation)Python (Spatial Viz)\n\n\n* 1. Define the Shift-Share Instrument\ngen shift_share_iv = gold_endowment * log(gold_price_int)\n\n* 2. Main Specification (Fixed Effects)\nreghdfe conflict_dummy shift_share_iv canon_transfers ///\n    population_density, ///\n    absorb(district_id year_month) ///\n    vce(cluster district_id)\n\n* 3. Export Results\noutreg2 using \"results/main_table.tex\", replace tex\n\n\nimport geopandas as gpd\nimport matplotlib.pyplot as plt\n\n# Load District Data with Conflict Intensity\nperu_map = gpd.read_file(\"data/peru_districts.geojson\")\n\n# Plot\nfig, ax = plt.subplots(1, 1, figsize=(10, 10))\nperu_map.plot(column='conflict_intensity', \n              ax=ax, \n              legend=True,\n              cmap='OrRd',\n              scheme='quantiles')\n\nplt.title(\"Spatial Distribution of Social Conflicts (2023)\")\nplt.show()"
+  },
+  {
+    "objectID": "projects/gold-shocks.html#preliminary-results",
+    "href": "projects/gold-shocks.html#preliminary-results",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "4. Preliminary Results",
+    "text": "4. Preliminary Results\nThe results suggest that a 10% increase in gold prices leads to a 2.5 percentage point increase in the probability of a socio-environmental conflict emerging in the subsequent quarter.\n\n“The effect is driven primarily by competition for land rights rather than direct labor disputes.”"
+  },
+  {
+    "objectID": "projects/gold-shocks.html#references",
+    "href": "projects/gold-shocks.html#references",
+    "title": "Gold Price Shocks and Social Conflict",
+    "section": "References",
+    "text": "References\n\nDell, M. (2010). The Persistent Effects of Peru’s Mining Mita. Econometrica.\nDube, O., & Vargas, J. F. (2013). Commodity Price Shocks and Civil Conflict. Review of Economic Studies."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Maykol Medrano",
     "section": "",
-    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America.\n\n\n\n\nCurrent Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+    "text": "I’m a Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master’s candidate at Pontificia Universidad Católica de Chile researching natural resource economics and social conflict, with 4+ years at Peru’s Ministry of Education developing data infrastructure for evidence-based policy decisions.\nI combine applied economics research, open-source software development, and public policy evaluation to democratize access to economic data and inform intervention design across Latin America."
   },
   {
     "objectID": "index.html#bio",
@@ -115,8 +143,22 @@
     "objectID": "index.html#research-technical-expertise",
     "href": "index.html#research-technical-expertise",
     "title": "Maykol Medrano",
+    "section": "Research & Technical Expertise",
+    "text": "Research & Technical Expertise\nCurrent Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "Current Research | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.\nOpen Source | Creator of enahodata, usebcrp, usecasen, and usebcch — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.\nMethods | Causal inference (RDD, DiD, IV, synthetic controls), causal ML (double ML, causal forests), spatial econometrics, Bayesian inference\nStack | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker\n\nView my research portfolio · Explore my software · Read my blog"
+    "text": "Hola Mundo\n\n\n\nGeneral\n\n\n\n\n\n\n\n\n\nJan 8, 2026\n\n\nMaykol Medrano\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hola.html",
+    "href": "posts/hola.html",
+    "title": "Hola Mundo",
+    "section": "",
+    "text": "Este es un post de prueba. Contenido en construcción.\nBienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina."
   },
   {
     "objectID": "projects/mining-analysis.html",
@@ -200,6 +242,6 @@
     "href": "projects.html",
     "title": "Policy Data Science & Economics",
     "section": "",
-    "text": "Gold Price Shocks and Social Conflict\n\n\nCausal evidence from the Peruvian Amazon\n\n\n\nEconomics\n\nCausal Inference\n\nMining\n\nPeru\n\n\n\n\nOct 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIllegal Mining Detection in Peruvian Amazon\n\n\nGeospatial analysis combining satellite imagery and machine learning\n\n\n\nGeospatial\n\nCausal Inference\n\nML\n\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Conflicts and Human Capital Accumulation\n\n\nQuasi-experimental evidence from extractive industries in Peru\n\n\n\nCausal Inference\n\nEducation\n\nDevelopment\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigher Education Financing in Peru\n\n\nBudget allocation efficiency and equity analysis for public universities\n\n\n\nPolicy Analysis\n\nPublic Finance\n\nEducation\n\n\n\n\nDec 10, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Gold Price Shocks and Social Conflict\n\n\nCausal evidence from the Peruvian Amazon (2008-2023)\n\n\n\nCausal Inference\n\nStata\n\nPython\n\nMining\n\nSpatial Econometrics\n\n\n\n\nOct 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nGold Price Shocks and Social Conflict\n\n\nCausal evidence from the Peruvian Amazon\n\n\n\nEconomics\n\nCausal Inference\n\nMining\n\nPeru\n\n\n\n\nOct 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIllegal Mining Detection in Peruvian Amazon\n\n\nGeospatial analysis combining satellite imagery and machine learning\n\n\n\nGeospatial\n\nCausal Inference\n\nML\n\n\n\n\nNov 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSocial Conflicts and Human Capital Accumulation\n\n\nQuasi-experimental evidence from extractive industries in Peru\n\n\n\nCausal Inference\n\nEducation\n\nDevelopment\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigher Education Financing in Peru\n\n\nBudget allocation efficiency and equity analysis for public universities\n\n\n\nPolicy Analysis\n\nPublic Finance\n\nEducation\n\n\n\n\nDec 10, 2023\n\n\n\n\n\n\nNo matching items"
   }
 ]
