@@ -730,10 +730,22 @@ input:focus-visible {
   box-shadow: none !important;
 }
 
-/* Ocultar números en categorías del sidebar */
+/* Ocultar números en categorías del sidebar - COMPLETAMENTE */
 .quarto-listing-category .category-count,
-.quarto-listing-category-title .category-count {
+.quarto-listing-category-title .category-count,
+.category-count,
+[class*="category-count"],
+#quarto-margin-sidebar .category-count,
+.quarto-margin-sidebar .category-count {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: none !important;
 }
 
 /* Sidebar de categorías - MÁS COMPACTO HORIZONTALMENTE */
@@ -744,9 +756,9 @@ input:focus-visible {
 }
 
 .quarto-listing-category .category {
-  font-size: 0.75rem !important;
-  padding: 0.3rem 0.5rem !important;
-  margin: 0 !important;
+  font-size: 0.85rem !important;
+  padding: 0.25rem 0 !important;
+  margin: 0 0.6rem 0 0 !important;
   display: inline-block !important;
 }
 
