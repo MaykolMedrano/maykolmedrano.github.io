@@ -79,30 +79,33 @@ p, li, .about-contents, .description {
   margin-bottom: 0.6rem !important; /* Menos espacio */
 }
 
-/* 2. Headings (Escalados más pequeños) */
-h1.title {
-  font-size: 1.6rem !important; /* Más pequeño */
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
+/* 2. Headings (Escalados más pequeños) - CON RESPIRO */
+h1, h1.title {
+  font-size: 1.6rem !important;
+  margin-top: 1.5rem !important; /* Más espacio arriba */
+  margin-bottom: 1rem !important; /* Más espacio abajo */
+  padding-top: 1rem !important; /* Respiro adicional */
 }
 
 h2 {
   font-size: 1.3rem !important;
-  margin-top: 1rem !important;
-  margin-bottom: 0.5rem !important;
+  margin-top: 1.5rem !important; /* Más espacio arriba */
+  margin-bottom: 0.8rem !important; /* Más espacio abajo */
+  padding-top: 0.5rem !important;
   font-weight: 600 !important;
 }
 
 h3 {
   font-size: 1.1rem !important;
-  margin-top: 0.8rem !important;
-  margin-bottom: 0.4rem !important;
+  margin-top: 1.2rem !important; /* Más espacio */
+  margin-bottom: 0.6rem !important;
+  padding-top: 0.3rem !important;
 }
 
 h4 {
   font-size: 0.95rem !important;
-  margin-top: 0.6rem !important;
-  margin-bottom: 0.3rem !important;
+  margin-top: 1rem !important; /* Más espacio */
+  margin-bottom: 0.5rem !important;
 }
 
 /* Navbar typography */
@@ -122,7 +125,7 @@ h4 {
   letter-spacing: -0.01em;
 }
 
-/* Content typography - COMPACTO */
+/* Content typography - COMPACTO CON RESPIRO */
 .quarto-about-trestles .about-entity .about-contents p,
 #quarto-content p {
   font-size: 13px !important;
@@ -134,26 +137,38 @@ h4 {
 #quarto-content h2 {
   font-size: 1.3rem !important;
   font-weight: 600 !important;
-  margin-top: 1rem !important;
-  margin-bottom: 0.5rem !important;
+  margin-top: 1.5rem !important; /* Más espacio arriba */
+  margin-bottom: 0.8rem !important; /* Más espacio abajo */
+  padding-top: 0.5rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents h4,
 #quarto-content h4 {
   font-size: 0.95rem !important;
-  margin-top: 0.6rem !important;
-  margin-bottom: 0.3rem !important;
+  margin-top: 1rem !important; /* Más espacio */
+  margin-bottom: 0.5rem !important;
 }
 
-/* Page titles */
+/* Page titles - CON RESPIRO */
 #quarto-content .quarto-title h1.title {
   font-size: 1.6rem !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
+  margin-top: 1.5rem !important; /* Respiro arriba */
+  margin-bottom: 1rem !important; /* Respiro abajo */
+  padding-top: 1rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 #quarto-content .quarto-title .quarto-title-meta {
   font-size: 0.75rem !important;
+  margin-bottom: 1rem !important; /* Espacio antes del contenido */
+}
+
+/* Títulos de listado (blog, projects) */
+.quarto-listing .listing-title,
+.listing-item h3.no-anchor {
+  margin-top: 1rem !important;
+  margin-bottom: 0.6rem !important;
+  padding-top: 0.5rem !important;
 }
 
 /* 3. Mobile-Specific Layout Adjustments (Only for small screens) */
