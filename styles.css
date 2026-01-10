@@ -759,37 +759,48 @@ input:focus-visible {
   margin-bottom: 1rem !important;
 }
 
-/* Sidebar de categorías - FONDO TRANSPARENTE, ADAPTADO AL MODO */
+/* Sidebar de categorías - SIN BORDES, SIN CONTENEDOR */
 #quarto-margin-sidebar,
 .quarto-margin-sidebar,
-div[id*="quarto-margin-sidebar"] {
+div[id*="quarto-margin-sidebar"],
+#quarto-margin-sidebar > *,
+.quarto-margin-sidebar > * {
   background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* Categorías del sidebar en LIGHT mode - texto oscuro */
-:not([data-theme="dark"]) #quarto-margin-sidebar .quarto-listing-category .category,
-:not([data-theme="dark"]) .quarto-margin-sidebar .quarto-listing-category .category {
+/* Categorías del sidebar - SOLO TEXTO, SIN BORDES */
+#quarto-margin-sidebar .quarto-listing-category .category,
+.quarto-margin-sidebar .quarto-listing-category .category,
+#quarto-margin-sidebar .category,
+.quarto-margin-sidebar .category {
   background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.2rem 0 !important;
+  margin: 0.2rem 0.5rem 0.2rem 0 !important;
+}
+
+/* Light mode - texto oscuro */
+:not([data-theme="dark"]) #quarto-margin-sidebar .category,
+:not([data-theme="dark"]) .quarto-margin-sidebar .category {
   color: #333333 !important;
-  border: 1px solid #d0d0d0 !important;
-  box-shadow: none !important;
 }
 
-/* Categorías del sidebar en DARK mode - texto blanco */
-[data-theme="dark"] #quarto-margin-sidebar .quarto-listing-category .category,
-[data-theme="dark"] .quarto-margin-sidebar .quarto-listing-category .category {
+/* Dark mode - texto blanco */
+[data-theme="dark"] #quarto-margin-sidebar .category,
+[data-theme="dark"] .quarto-margin-sidebar .category {
+  color: #ffffff !important;
+}
+
+/* Hover - subrayado simple */
+#quarto-margin-sidebar .category:hover,
+.quarto-margin-sidebar .category:hover {
   background: transparent !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  box-shadow: none !important;
-}
-
-/* Hover en sidebar categorías */
-#quarto-margin-sidebar .quarto-listing-category .category:hover,
-.quarto-margin-sidebar .quarto-listing-category .category:hover {
-  background: #325d88 !important;
-  color: #ffffff !important;
-  border-color: #325d88 !important;
+  color: #325d88 !important;
+  border: none !important;
+  text-decoration: underline !important;
 }
 
 /* Metadata de proyectos (autor, fecha) */
