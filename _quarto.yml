@@ -29,6 +29,7 @@ website:
   page-footer:
     left: "© 2026 Maykol Medrano. Except where otherwise noted, all text and images licensed [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)."
     right: "Built with [Quarto](https://quarto.org)"
+
 format:
   html:
     theme: [sandstone, _variables.scss]
@@ -48,6 +49,7 @@ format:
           <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, BCRP, Python, Stata, R">
           <meta name="robots" content="index, follow">
           <link rel="canonical" href="https://maykolmedrano.github.io">
+          <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
     include-after-body:
       - text: |
           <script type="application/ld+json">
