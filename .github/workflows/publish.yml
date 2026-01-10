@@ -33,7 +33,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          # CAMBIO CLAVE: Ahora el robot buscará en docs, no en _site
+          path: docs 
 
   deploy:
     environment:
