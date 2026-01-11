@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>improvements_summary – Maykol Medrano</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-aefeaf50ece0138c59bc18869bb6ba40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+
+<meta name="author" content="Maykol Medrano">
+<meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata, Econometrics, Data Science">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://maykolmedrano.github.io">
+
+<meta name="theme-color" content="#325d88" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Maykol Medrano">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="apple-touch-icon" sizes="180x180" href="profile.png">
+
+<link rel="manifest" href="manifest.json">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<link rel="preload" as="image" href="profile.png" type="image/png">
+
+<meta name="citation_author" content="Medrano, Maykol">
+<meta name="citation_title" content="Maykol Medrano - Policy Data Scientist">
+<meta name="DC.creator" content="Maykol Medrano">
+<meta name="DC.language" content="en">
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Maykol Medrano">
+<meta property="og:image" content="https://maykolmedrano.github.io/profile.jpg">
+<meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="Maykol Medrano">
+<meta name="twitter:creator" content="@maykolmedrano">
+<meta name="twitter:site" content="@maykolmedrano">
+<meta name="twitter:card" content="summary">
+<meta name="citation_fulltext_html_url" content="https://maykolmedrano.github.io/IMPROVEMENTS_SUMMARY.html">
+<meta name="citation_language" content="en">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Maykol Medrano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./software.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Policy &amp; Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/MaykolMedrano"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/maykolmedrano"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:mmedrano2@uc.cl"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#expert-level-improvements-summary" id="toc-expert-level-improvements-summary" class="nav-link active" data-scroll-target="#expert-level-improvements-summary">🚀 Expert-Level Improvements Summary</a>
+  <ul class="collapse">
+  <li><a href="#all-improvements-successfully-implemented" id="toc-all-improvements-successfully-implemented" class="nav-link" data-scroll-target="#all-improvements-successfully-implemented">✅ All Improvements Successfully Implemented</a>
+  <ul class="collapse">
+  <li><a href="#performance-optimizations" id="toc-performance-optimizations" class="nav-link" data-scroll-target="#performance-optimizations">📊 Performance Optimizations</a></li>
+  <li><a href="#dark-mode-implementation" id="toc-dark-mode-implementation" class="nav-link" data-scroll-target="#dark-mode-implementation">🎨 Dark Mode Implementation</a></li>
+  <li><a href="#pwa-mobile-optimization" id="toc-pwa-mobile-optimization" class="nav-link" data-scroll-target="#pwa-mobile-optimization">📱 PWA &amp; Mobile Optimization</a></li>
+  <li><a href="#seo-structured-data" id="toc-seo-structured-data" class="nav-link" data-scroll-target="#seo-structured-data">🔍 SEO &amp; Structured Data</a></li>
+  <li><a href="#analytics-tracking" id="toc-analytics-tracking" class="nav-link" data-scroll-target="#analytics-tracking">📊 Analytics &amp; Tracking</a></li>
+  <li><a href="#animations-ux" id="toc-animations-ux" class="nav-link" data-scroll-target="#animations-ux">🎭 Animations &amp; UX</a></li>
+  <li><a href="#accessibility-wcag-2.1-aa" id="toc-accessibility-wcag-2.1-aa" class="nav-link" data-scroll-target="#accessibility-wcag-2.1-aa">♿ Accessibility (WCAG 2.1 AA+)</a></li>
+  <li><a href="#badges-social-proof" id="toc-badges-social-proof" class="nav-link" data-scroll-target="#badges-social-proof">📈 Badges &amp; Social Proof</a></li>
+  <li><a href="#academic-citations" id="toc-academic-citations" class="nav-link" data-scroll-target="#academic-citations">📚 Academic Citations</a></li>
+  <li><a href="#security-performance" id="toc-security-performance" class="nav-link" data-scroll-target="#security-performance">🔒 Security &amp; Performance</a></li>
+  <li><a href="#continuous-integration" id="toc-continuous-integration" class="nav-link" data-scroll-target="#continuous-integration">🧪 Continuous Integration</a></li>
+  </ul></li>
+  <li><a href="#what-you-need-to-do" id="toc-what-you-need-to-do" class="nav-link" data-scroll-target="#what-you-need-to-do">📋 What You Need to Do</a>
+  <ul class="collapse">
+  <li><a href="#critical-do-now" id="toc-critical-do-now" class="nav-link" data-scroll-target="#critical-do-now">🔥 Critical (Do Now)</a></li>
+  <li><a href="#important-do-soon" id="toc-important-do-soon" class="nav-link" data-scroll-target="#important-do-soon">⚡ Important (Do Soon)</a></li>
+  <li><a href="#monitor-after-deployment" id="toc-monitor-after-deployment" class="nav-link" data-scroll-target="#monitor-after-deployment">📊 Monitor (After Deployment)</a></li>
+  </ul></li>
+  <li><a href="#expected-results" id="toc-expected-results" class="nav-link" data-scroll-target="#expected-results">🎯 Expected Results</a>
+  <ul class="collapse">
+  <li><a href="#before-improvements" id="toc-before-improvements" class="nav-link" data-scroll-target="#before-improvements">Before Improvements:</a></li>
+  <li><a href="#after-improvements" id="toc-after-improvements" class="nav-link" data-scroll-target="#after-improvements">After Improvements:</a></li>
+  </ul></li>
+  <li><a href="#new-files-created" id="toc-new-files-created" class="nav-link" data-scroll-target="#new-files-created">📂 New Files Created</a></li>
+  <li><a href="#modified-files" id="toc-modified-files" class="nav-link" data-scroll-target="#modified-files">🔧 Modified Files</a></li>
+  <li><a href="#deployment-instructions" id="toc-deployment-instructions" class="nav-link" data-scroll-target="#deployment-instructions">🚀 Deployment Instructions</a></li>
+  <li><a href="#performance-metrics-to-track" id="toc-performance-metrics-to-track" class="nav-link" data-scroll-target="#performance-metrics-to-track">📊 Performance Metrics to Track</a>
+  <ul class="collapse">
+  <li><a href="#core-web-vitals" id="toc-core-web-vitals" class="nav-link" data-scroll-target="#core-web-vitals">Core Web Vitals</a></li>
+  <li><a href="#custom-metrics" id="toc-custom-metrics" class="nav-link" data-scroll-target="#custom-metrics">Custom Metrics</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">🎉 Summary</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/IMPROVEMENTS_SUMMARY.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+
+
+
+
+<section id="expert-level-improvements-summary" class="level1">
+<h1>🚀 Expert-Level Improvements Summary</h1>
+<section id="all-improvements-successfully-implemented" class="level2">
+<h2 class="anchored" data-anchor-id="all-improvements-successfully-implemented">✅ All Improvements Successfully Implemented</h2>
+<section id="performance-optimizations" class="level3">
+<h3 class="anchored" data-anchor-id="performance-optimizations">📊 Performance Optimizations</h3>
+<section id="image-optimization-guide-created" class="level4">
+<h4 class="anchored" data-anchor-id="image-optimization-guide-created">1. <strong>Image Optimization Guide Created</strong></h4>
+<ul>
+<li>✅ Created <code>IMAGE_OPTIMIZATION.md</code> with detailed instructions</li>
+<li><strong>ACTION REQUIRED:</strong> Convert images using the guide:
+<ul>
+<li><code>img_2.gif</code> (4.9MB) → MP4/WebM video (~500KB = 90% reduction)</li>
+<li><code>profile.png</code> (377KB) → WebP/AVIF (~30KB = 92% reduction)</li>
+<li><code>img_3.png</code> (568KB) → WebP/AVIF (~60KB = 89% reduction)</li>
+</ul></li>
+<li><strong>Expected Performance Gain:</strong> 40-60% improvement in LCP (Largest Contentful Paint)</li>
+</ul>
+</section>
+<section id="preloadprefetch-for-critical-resources" class="level4">
+<h4 class="anchored" data-anchor-id="preloadprefetch-for-critical-resources">2. <strong>Preload/Prefetch for Critical Resources</strong></h4>
+<ul>
+<li>✅ DNS prefetch for Google Analytics and Fonts</li>
+<li>✅ Preconnect to external resources</li>
+<li>✅ Preload for profile image</li>
+<li>✅ Font display=swap for better rendering</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="dark-mode-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="dark-mode-implementation">🎨 Dark Mode Implementation</h3>
+<section id="complete-dark-mode-system" class="level4">
+<h4 class="anchored" data-anchor-id="complete-dark-mode-system">3. <strong>Complete Dark Mode System</strong></h4>
+<ul>
+<li>✅ Full dark/light theme with CSS variables</li>
+<li>✅ Floating toggle button (bottom-right)</li>
+<li>✅ LocalStorage persistence</li>
+<li>✅ System preference detection (<code>prefers-color-scheme</code>)</li>
+<li>✅ Smooth transitions (0.3s)</li>
+<li>✅ GA4 tracking for theme changes</li>
+</ul>
+<p><strong>Features:</strong> - 🌙/☀️ Animated toggle button - Remembers user preference - Respects system settings - Auto-switches with OS theme</p>
+<hr>
+</section>
+</section>
+<section id="pwa-mobile-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="pwa-mobile-optimization">📱 PWA &amp; Mobile Optimization</h3>
+<section id="progressive-web-app-support" class="level4">
+<h4 class="anchored" data-anchor-id="progressive-web-app-support">4. <strong>Progressive Web App Support</strong></h4>
+<ul>
+<li>✅ Created <code>manifest.json</code> with:
+<ul>
+<li>App icons and shortcuts</li>
+<li>Standalone display mode</li>
+<li>Themed splash screen</li>
+</ul></li>
+<li>✅ Apple touch icons</li>
+<li>✅ Mobile web app capable meta tags</li>
+<li>✅ Theme color for status bar (adaptive)</li>
+</ul>
+</section>
+<section id="advanced-meta-tags" class="level4">
+<h4 class="anchored" data-anchor-id="advanced-meta-tags">5. <strong>Advanced Meta Tags</strong></h4>
+<ul>
+<li>✅ Academic metadata (Dublin Core, Citation tags)</li>
+<li>✅ Enhanced Open Graph tags</li>
+<li>✅ Twitter Card metadata</li>
+<li>✅ Googlebot directives</li>
+<li>✅ Security headers (X-Content-Type-Options, Referrer-Policy)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="seo-structured-data" class="level3">
+<h3 class="anchored" data-anchor-id="seo-structured-data">🔍 SEO &amp; Structured Data</h3>
+<section id="expanded-schema.org" class="level4">
+<h4 class="anchored" data-anchor-id="expanded-schema.org">6. <strong>Expanded Schema.org</strong></h4>
+<ul>
+<li>✅ Person schema with knowsAbout fields</li>
+<li>✅ WebSite schema with search action</li>
+<li>✅ SoftwareApplication schema for each package</li>
+<li>✅ Structured data in <code>software.qmd</code></li>
+<li>✅ Enhanced with offers, licenses, repositories</li>
+</ul>
+<p><strong>Benefits:</strong> - Rich snippets in search results - Better discovery for packages - Enhanced knowledge panel</p>
+<hr>
+</section>
+</section>
+<section id="analytics-tracking" class="level3">
+<h3 class="anchored" data-anchor-id="analytics-tracking">📊 Analytics &amp; Tracking</h3>
+<section id="advanced-google-analytics-events" class="level4">
+<h4 class="anchored" data-anchor-id="advanced-google-analytics-events">7. <strong>Advanced Google Analytics Events</strong></h4>
+<ul>
+<li>✅ <strong>CV downloads</strong> - Track PDF clicks</li>
+<li>✅ <strong>Software package clicks</strong> - PyPI/GitHub tracking</li>
+<li>✅ <strong>Project views</strong> - Individual project analytics</li>
+<li>✅ <strong>Social media clicks</strong> - LinkedIn, GitHub, Twitter</li>
+<li>✅ <strong>Email clicks</strong> - Contact engagement</li>
+<li>✅ <strong>Scroll depth</strong> - 25%, 50%, 75%, 100% milestones</li>
+<li>✅ <strong>Time on page</strong> - Engagement metrics</li>
+<li>✅ <strong>Search usage</strong> - Internal search tracking</li>
+<li>✅ <strong>Badge clicks</strong> - Shield.io badge interactions</li>
+</ul>
+<p><strong>Events in GA4:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> theme_change</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> file_download</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> software_click</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> project_view</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> social_click</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> email_click</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> scroll_depth</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> time_on_page</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> search</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> badge_click</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="animations-ux" class="level3">
+<h3 class="anchored" data-anchor-id="animations-ux">🎭 Animations &amp; UX</h3>
+<section id="micro-interactions" class="level4">
+<h4 class="anchored" data-anchor-id="micro-interactions">8. <strong>Micro-Interactions</strong></h4>
+<ul>
+<li>✅ Page fade-in animation (0.6s)</li>
+<li>✅ Card hover effects (translateY + shadow)</li>
+<li>✅ Link underline animation (0.3s)</li>
+<li>✅ Button ripple effect</li>
+<li>✅ Navbar scroll shadow</li>
+<li>✅ Badge hover lift</li>
+<li>✅ Image zoom on hover</li>
+<li>✅ Search input focus scale</li>
+<li>✅ Loading skeleton for lazy images</li>
+<li>✅ Smooth scroll behavior</li>
+<li>✅ <strong>Respects <code>prefers-reduced-motion</code></strong></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="accessibility-wcag-2.1-aa" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility-wcag-2.1-aa">♿ Accessibility (WCAG 2.1 AA+)</h3>
+<section id="touch-targets-aria" class="level4">
+<h4 class="anchored" data-anchor-id="touch-targets-aria">9. <strong>Touch Targets &amp; ARIA</strong></h4>
+<ul>
+<li>✅ Minimum 48x48px touch targets on mobile</li>
+<li>✅ Enhanced focus indicators (3px outline)</li>
+<li>✅ Screen reader only class (.sr-only)</li>
+<li>✅ Proper line length (70ch max)</li>
+<li>✅ Better list spacing (1.8 line-height)</li>
+<li>✅ High contrast mode support</li>
+<li>✅ Keyboard navigation improvements</li>
+<li>✅ Focus-visible styles</li>
+</ul>
+<p><strong>Mobile Optimizations:</strong> - All buttons: 48x48px minimum - Navbar links: 16px padding - Social icons: proper spacing</p>
+<hr>
+</section>
+</section>
+<section id="badges-social-proof" class="level3">
+<h3 class="anchored" data-anchor-id="badges-social-proof">📈 Badges &amp; Social Proof</h3>
+<section id="dynamic-badges-in-software.qmd" class="level4">
+<h4 class="anchored" data-anchor-id="dynamic-badges-in-software.qmd">10. <strong>Dynamic Badges in software.qmd</strong></h4>
+<ul>
+<li>✅ PyPI version badges</li>
+<li>✅ Download count badges</li>
+<li>✅ License badges</li>
+<li>✅ GitHub stars badges</li>
+<li>✅ Hover animations</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI version](https://img.shields.io/pypi/v/enahodata.svg)</span><span class="co">](...)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Downloads](https://img.shields.io/pypi/dm/enahodata.svg)</span><span class="co">](...)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="academic-citations" class="level3">
+<h3 class="anchored" data-anchor-id="academic-citations">📚 Academic Citations</h3>
+<section id="bibtex-citations" class="level4">
+<h4 class="anchored" data-anchor-id="bibtex-citations">11. <strong>BibTeX Citations</strong></h4>
+<p>Added to 3 projects: - ✅ <code>mining-analysis.qmd</code> - <span class="citation" data-cites="unpublished">@unpublished</span> format - ✅ <code>social-conflict-education.qmd</code> - <span class="citation" data-cites="mastersthesis">@mastersthesis</span> format - ✅ <code>university-funding.qmd</code> - <span class="citation" data-cites="techreport">@techreport</span> format</p>
+<p><strong>Both formats provided:</strong> - BibTeX code block - APA formatted text</p>
+<hr>
+</section>
+</section>
+<section id="security-performance" class="level3">
+<h3 class="anchored" data-anchor-id="security-performance">🔒 Security &amp; Performance</h3>
+<section id="security-headers" class="level4">
+<h4 class="anchored" data-anchor-id="security-headers">12. <strong>Security Headers</strong></h4>
+<p>Created <code>_headers</code> file with: - ✅ X-Frame-Options: DENY - ✅ X-Content-Type-Options: nosniff - ✅ X-XSS-Protection - ✅ Referrer-Policy - ✅ Permissions-Policy - ✅ Content-Security-Policy - ✅ Cache-Control directives</p>
+<hr>
+</section>
+</section>
+<section id="continuous-integration" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-integration">🧪 Continuous Integration</h3>
+<section id="lighthouse-ci" class="level4">
+<h4 class="anchored" data-anchor-id="lighthouse-ci">13. <strong>Lighthouse CI</strong></h4>
+<p>Created <code>.github/workflows/lighthouse.yml</code>: - ✅ Runs on every push/PR - ✅ Tests 4 main pages - ✅ Desktop preset - ✅ Performance budgets: - Performance: &gt;80% - Accessibility: &gt;90% - Best Practices: &gt;90% - SEO: &gt;90% - ✅ Uploads artifacts - ✅ Config in <code>lighthouserc.json</code></p>
+<hr>
+</section>
+</section>
+</section>
+<section id="what-you-need-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-need-to-do">📋 What You Need to Do</h2>
+<section id="critical-do-now" class="level3">
+<h3 class="anchored" data-anchor-id="critical-do-now">🔥 Critical (Do Now)</h3>
+<ol type="1">
+<li><p><strong>Optimize Images</strong> (Biggest Performance Impact)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># See IMAGE_OPTIMIZATION.md for full instructions</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert img_2.gif → MP4 (5MB → 500KB)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert profile.png → WebP (377KB → 30KB)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert img_3.png → WebP (568KB → 60KB)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Replace Google Analytics Placeholder</strong></p>
+<ul>
+<li>In <code>_quarto.yml</code> line 16</li>
+<li>Change <code>G-XXXXXXXXXX</code> to your real GA4 ID</li>
+<li>Get ID from: https://analytics.google.com</li>
+</ul></li>
+<li><p><strong>Test the Site Locally</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Check dark mode toggle</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify all animations work</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test mobile responsive</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="important-do-soon" class="level3">
+<h3 class="anchored" data-anchor-id="important-do-soon">⚡ Important (Do Soon)</h3>
+<ol start="4" type="1">
+<li><strong>Create Custom OG Images</strong> (Optional but recommended)
+<ul>
+<li>Create 1200x630px images for:
+<ul>
+<li>Home page</li>
+<li>Software page</li>
+<li>Projects page</li>
+</ul></li>
+<li>Update <code>open-graph.image</code> in each .qmd file</li>
+</ul></li>
+<li><strong>Enable Lighthouse CI</strong>
+<ul>
+<li>The workflow is ready</li>
+<li>Will run automatically on next push</li>
+<li>Check results in GitHub Actions tab</li>
+</ul></li>
+</ol>
+</section>
+<section id="monitor-after-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="monitor-after-deployment">📊 Monitor (After Deployment)</h3>
+<ol start="6" type="1">
+<li><strong>Check Google Analytics</strong>
+<ul>
+<li>Custom events should appear in GA4</li>
+<li>Monitor scroll depth, downloads, clicks</li>
+<li>Create custom reports</li>
+</ul></li>
+<li><strong>Review Lighthouse Scores</strong>
+<ul>
+<li>Should see 90+ across all categories</li>
+<li>After image optimization: 95+ performance</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="expected-results" class="level2">
+<h2 class="anchored" data-anchor-id="expected-results">🎯 Expected Results</h2>
+<section id="before-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="before-improvements">Before Improvements:</h3>
+<ul>
+<li>Performance: ~70-75</li>
+<li>Large images slowing load</li>
+<li>No dark mode</li>
+<li>Basic analytics</li>
+<li>No structured data</li>
+</ul>
+</section>
+<section id="after-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="after-improvements">After Improvements:</h3>
+<ul>
+<li>Performance: <strong>90-95+</strong> (after image optimization)</li>
+<li>Dark mode: <strong>Full support</strong></li>
+<li>Analytics: <strong>10+ custom events</strong></li>
+<li>SEO: <strong>Rich snippets enabled</strong></li>
+<li>Accessibility: <strong>WCAG 2.1 AA</strong></li>
+<li>PWA: <strong>Installable</strong></li>
+<li>Lighthouse CI: <strong>Automated</strong></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="new-files-created" class="level2">
+<h2 class="anchored" data-anchor-id="new-files-created">📂 New Files Created</h2>
+<pre><code>📁 Project Root
+├── IMAGE_OPTIMIZATION.md      # Image optimization guide
+├── manifest.json               # PWA manifest
+├── lighthouserc.json          # Lighthouse CI config
+├── _headers                    # Security headers
+├── .github/workflows/
+│   └── lighthouse.yml         # Lighthouse CI workflow
+└── IMPROVEMENTS_SUMMARY.md    # This file</code></pre>
+<hr>
+</section>
+<section id="modified-files" class="level2">
+<h2 class="anchored" data-anchor-id="modified-files">🔧 Modified Files</h2>
+<pre><code>📝 Modified Files
+├── _quarto.yml                 # Meta tags, PWA, GA4, Dark mode
+├── _variables.scss             # Dark mode variables
+├── styles.css                  # Animations, accessibility
+├── software.qmd                # Badges, Schema.org
+├── projects/
+│   ├── mining-analysis.qmd     # BibTeX citation
+│   ├── social-conflict-education.qmd  # BibTeX citation
+│   └── university-funding.qmd  # BibTeX citation</code></pre>
+<hr>
+</section>
+<section id="deployment-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="deployment-instructions">🚀 Deployment Instructions</h2>
+<ol type="1">
+<li><p><strong>Review all changes</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Test locally</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Build the site</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Commit and push</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"feat: expert-level improvements</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">- Dark mode with system preference</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="st">- Advanced GA4 event tracking</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="st">- PWA manifest and mobile optimization</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="st">- Accessibility improvements (WCAG 2.1)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="st">- Lighthouse CI integration</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="st">- Dynamic badges for packages</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="st">- BibTeX citations for research</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="st">- Animations and micro-interactions</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="st">- Security headers and CSP</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="st">- Enhanced Schema.org structured data"</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Monitor deployment</strong></p>
+<ul>
+<li>GitHub Actions will run</li>
+<li>Lighthouse CI will test</li>
+<li>Site will deploy automatically</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="performance-metrics-to-track" class="level2">
+<h2 class="anchored" data-anchor-id="performance-metrics-to-track">📊 Performance Metrics to Track</h2>
+<section id="core-web-vitals" class="level3">
+<h3 class="anchored" data-anchor-id="core-web-vitals">Core Web Vitals</h3>
+<ul>
+<li><strong>LCP</strong> (Largest Contentful Paint): Target &lt; 2.5s</li>
+<li><strong>FID</strong> (First Input Delay): Target &lt; 100ms</li>
+<li><strong>CLS</strong> (Cumulative Layout Shift): Target &lt; 0.1</li>
+</ul>
+</section>
+<section id="custom-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="custom-metrics">Custom Metrics</h3>
+<ul>
+<li>Dark mode adoption rate</li>
+<li>CV download rate</li>
+<li>Package click-through rate</li>
+<li>Project engagement</li>
+<li>Scroll depth distribution</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">🎉 Summary</h2>
+<p><strong>13/13 Improvements Completed:</strong> - ✅ Image optimization guide - ✅ Dark mode - ✅ PWA manifest - ✅ Advanced meta tags - ✅ Schema.org expansion - ✅ PyPI/GitHub badges - ✅ Preload/prefetch - ✅ Animations - ✅ Lighthouse CI - ✅ GA4 advanced tracking - ✅ Security headers - ✅ Accessibility - ✅ BibTeX citations</p>
+<p><strong>Your site is now at expert level!</strong> 🚀</p>
+<p>Ready to deploy when you are. Just optimize those images first for maximum impact.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/maykolmedrano\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "MaykolMedrano/maykolmedrano.github.io";
+    script.dataset.repoId = "R_kgDOQ296zQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOQ296zc4C0x47";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🚀 Expert-Level Improvements Summary</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## ✅ All Improvements Successfully Implemented</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📊 Performance Optimizations</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. **Image Optimization Guide Created**</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Created <span class="in">`IMAGE_OPTIMIZATION.md`</span> with detailed instructions</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ACTION REQUIRED:** Convert images using the guide:</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`img_2.gif`</span> (4.9MB) → MP4/WebM video (~500KB = 90% reduction)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`profile.png`</span> (377KB) → WebP/AVIF (~30KB = 92% reduction)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`img_3.png`</span> (568KB) → WebP/AVIF (~60KB = 89% reduction)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Expected Performance Gain:** 40-60% improvement in LCP (Largest Contentful Paint)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. **Preload/Prefetch for Critical Resources**</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ DNS prefetch for Google Analytics and Fonts</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Preconnect to external resources</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Preload for profile image</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Font display=swap for better rendering</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🎨 Dark Mode Implementation</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. **Complete Dark Mode System**</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Full dark/light theme with CSS variables</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Floating toggle button (bottom-right)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ LocalStorage persistence</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ System preference detection (<span class="in">`prefers-color-scheme`</span>)</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Smooth transitions (0.3s)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ GA4 tracking for theme changes</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>**Features:**</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🌙/☀️ Animated toggle button</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Remembers user preference</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Respects system settings</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Auto-switches with OS theme</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📱 PWA &amp; Mobile Optimization</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 4. **Progressive Web App Support**</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Created <span class="in">`manifest.json`</span> with:</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>App icons and shortcuts</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Standalone display mode</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Themed splash screen</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Apple touch icons</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Mobile web app capable meta tags</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Theme color for status bar (adaptive)</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 5. **Advanced Meta Tags**</span></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Academic metadata (Dublin Core, Citation tags)</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Enhanced Open Graph tags</span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Twitter Card metadata</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Googlebot directives</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Security headers (X-Content-Type-Options, Referrer-Policy)</span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🔍 SEO &amp; Structured Data</span></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 6. **Expanded Schema.org**</span></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Person schema with knowsAbout fields</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ WebSite schema with search action</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ SoftwareApplication schema for each package</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Structured data in <span class="in">`software.qmd`</span></span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Enhanced with offers, licenses, repositories</span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>**Benefits:**</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rich snippets in search results</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Better discovery for packages</span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enhanced knowledge panel</span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📊 Analytics &amp; Tracking</span></span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 7. **Advanced Google Analytics Events**</span></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **CV downloads** - Track PDF clicks</span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Software package clicks** - PyPI/GitHub tracking</span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Project views** - Individual project analytics</span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Social media clicks** - LinkedIn, GitHub, Twitter</span>
+<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Email clicks** - Contact engagement</span>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Scroll depth** - 25%, 50%, 75%, 100% milestones</span>
+<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Time on page** - Engagement metrics</span>
+<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Search usage** - Internal search tracking</span>
+<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Badge clicks** - Shield.io badge interactions</span>
+<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a>**Events in GA4:**</span>
+<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
+<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> theme_change</span>
+<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> file_download</span>
+<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> software_click</span>
+<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> project_view</span>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> social_click</span>
+<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> email_click</span>
+<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> scroll_depth</span>
+<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> time_on_page</span>
+<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> search</span>
+<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> badge_click</span>
+<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🎭 Animations &amp; UX</span></span>
+<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 8. **Micro-Interactions**</span></span>
+<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Page fade-in animation (0.6s)</span>
+<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Card hover effects (translateY + shadow)</span>
+<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Link underline animation (0.3s)</span>
+<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Button ripple effect</span>
+<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Navbar scroll shadow</span>
+<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Badge hover lift</span>
+<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Image zoom on hover</span>
+<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Search input focus scale</span>
+<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Loading skeleton for lazy images</span>
+<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Smooth scroll behavior</span>
+<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ **Respects `prefers-reduced-motion`**</span>
+<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a><span class="fu">### ♿ Accessibility (WCAG 2.1 AA+)</span></span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 9. **Touch Targets &amp; ARIA**</span></span>
+<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Minimum 48x48px touch targets on mobile</span>
+<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Enhanced focus indicators (3px outline)</span>
+<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Screen reader only class (.sr-only)</span>
+<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Proper line length (70ch max)</span>
+<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Better list spacing (1.8 line-height)</span>
+<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ High contrast mode support</span>
+<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Keyboard navigation improvements</span>
+<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Focus-visible styles</span>
+<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>**Mobile Optimizations:**</span>
+<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All buttons: 48x48px minimum</span>
+<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Navbar links: 16px padding</span>
+<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Social icons: proper spacing</span>
+<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📈 Badges &amp; Social Proof</span></span>
+<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 10. **Dynamic Badges in software.qmd**</span></span>
+<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ PyPI version badges</span>
+<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Download count badges</span>
+<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ License badges</span>
+<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ GitHub stars badges</span>
+<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Hover animations</span>
+<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>**Example:**</span>
+<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI version](https://img.shields.io/pypi/v/enahodata.svg)</span><span class="co">](...)</span></span>
+<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Downloads](https://img.shields.io/pypi/dm/enahodata.svg)</span><span class="co">](...)</span></span>
+<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📚 Academic Citations</span></span>
+<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 11. **BibTeX Citations**</span></span>
+<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>Added to 3 projects:</span>
+<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ <span class="in">`mining-analysis.qmd`</span> - @unpublished format</span>
+<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ <span class="in">`social-conflict-education.qmd`</span> - @mastersthesis format</span>
+<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ <span class="in">`university-funding.qmd`</span> - @techreport format</span>
+<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a>**Both formats provided:**</span>
+<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>BibTeX code block</span>
+<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>APA formatted text</span>
+<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🔒 Security &amp; Performance</span></span>
+<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 12. **Security Headers**</span></span>
+<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a>Created <span class="in">`_headers`</span> file with:</span>
+<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ X-Frame-Options: DENY</span>
+<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ X-Content-Type-Options: nosniff</span>
+<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ X-XSS-Protection</span>
+<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Referrer-Policy</span>
+<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Permissions-Policy</span>
+<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Content-Security-Policy</span>
+<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Cache-Control directives</span>
+<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🧪 Continuous Integration</span></span>
+<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 13. **Lighthouse CI**</span></span>
+<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a>Created <span class="in">`.github/workflows/lighthouse.yml`</span>:</span>
+<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Runs on every push/PR</span>
+<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Tests 4 main pages</span>
+<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Desktop preset</span>
+<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Performance budgets:</span>
+<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Performance: &gt;80%</span>
+<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Accessibility: &gt;90%</span>
+<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Best Practices: &gt;90%</span>
+<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>SEO: &gt;90%</span>
+<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Uploads artifacts</span>
+<span id="cb11-200"><a href="#cb11-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Config in <span class="in">`lighthouserc.json`</span></span>
+<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📋 What You Need to Do</span></span>
+<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### 🔥 Critical (Do Now)</span></span>
+<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Optimize Images** (Biggest Performance Impact)</span>
+<span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a>   <span class="in">```bash</span></span>
+<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a>   <span class="co"># See IMAGE_OPTIMIZATION.md for full instructions</span></span>
+<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Convert img_2.gif → MP4 (5MB → 500KB)</span></span>
+<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Convert profile.png → WebP (377KB → 30KB)</span></span>
+<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Convert img_3.png → WebP (568KB → 60KB)</span></span>
+<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Replace Google Analytics Placeholder**</span>
+<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>In <span class="in">`_quarto.yml`</span> line 16</span>
+<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Change <span class="in">`G-XXXXXXXXXX`</span> to your real GA4 ID</span>
+<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Get ID from: https://analytics.google.com</span>
+<span id="cb11-220"><a href="#cb11-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-221"><a href="#cb11-221" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Test the Site Locally**</span>
+<span id="cb11-222"><a href="#cb11-222" aria-hidden="true" tabindex="-1"></a>   <span class="in">```bash</span></span>
+<span id="cb11-223"><a href="#cb11-223" aria-hidden="true" tabindex="-1"></a>   <span class="ex">quarto</span> preview</span>
+<span id="cb11-224"><a href="#cb11-224" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Check dark mode toggle</span></span>
+<span id="cb11-225"><a href="#cb11-225" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Verify all animations work</span></span>
+<span id="cb11-226"><a href="#cb11-226" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Test mobile responsive</span></span>
+<span id="cb11-227"><a href="#cb11-227" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb11-228"><a href="#cb11-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-229"><a href="#cb11-229" aria-hidden="true" tabindex="-1"></a><span class="fu">### ⚡ Important (Do Soon)</span></span>
+<span id="cb11-230"><a href="#cb11-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-231"><a href="#cb11-231" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Create Custom OG Images** (Optional but recommended)</span>
+<span id="cb11-232"><a href="#cb11-232" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Create 1200x630px images for:</span>
+<span id="cb11-233"><a href="#cb11-233" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Home page</span>
+<span id="cb11-234"><a href="#cb11-234" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Software page</span>
+<span id="cb11-235"><a href="#cb11-235" aria-hidden="true" tabindex="-1"></a><span class="ss">     - </span>Projects page</span>
+<span id="cb11-236"><a href="#cb11-236" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Update <span class="in">`open-graph.image`</span> in each .qmd file</span>
+<span id="cb11-237"><a href="#cb11-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-238"><a href="#cb11-238" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Enable Lighthouse CI**</span>
+<span id="cb11-239"><a href="#cb11-239" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>The workflow is ready</span>
+<span id="cb11-240"><a href="#cb11-240" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Will run automatically on next push</span>
+<span id="cb11-241"><a href="#cb11-241" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Check results in GitHub Actions tab</span>
+<span id="cb11-242"><a href="#cb11-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-243"><a href="#cb11-243" aria-hidden="true" tabindex="-1"></a><span class="fu">### 📊 Monitor (After Deployment)</span></span>
+<span id="cb11-244"><a href="#cb11-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-245"><a href="#cb11-245" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Check Google Analytics**</span>
+<span id="cb11-246"><a href="#cb11-246" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Custom events should appear in GA4</span>
+<span id="cb11-247"><a href="#cb11-247" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Monitor scroll depth, downloads, clicks</span>
+<span id="cb11-248"><a href="#cb11-248" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Create custom reports</span>
+<span id="cb11-249"><a href="#cb11-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-250"><a href="#cb11-250" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Review Lighthouse Scores**</span>
+<span id="cb11-251"><a href="#cb11-251" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Should see 90+ across all categories</span>
+<span id="cb11-252"><a href="#cb11-252" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>After image optimization: 95+ performance</span>
+<span id="cb11-253"><a href="#cb11-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-254"><a href="#cb11-254" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-255"><a href="#cb11-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-256"><a href="#cb11-256" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎯 Expected Results</span></span>
+<span id="cb11-257"><a href="#cb11-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-258"><a href="#cb11-258" aria-hidden="true" tabindex="-1"></a><span class="fu">### Before Improvements:</span></span>
+<span id="cb11-259"><a href="#cb11-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Performance: ~70-75</span>
+<span id="cb11-260"><a href="#cb11-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Large images slowing load</span>
+<span id="cb11-261"><a href="#cb11-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No dark mode</span>
+<span id="cb11-262"><a href="#cb11-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Basic analytics</span>
+<span id="cb11-263"><a href="#cb11-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No structured data</span>
+<span id="cb11-264"><a href="#cb11-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-265"><a href="#cb11-265" aria-hidden="true" tabindex="-1"></a><span class="fu">### After Improvements:</span></span>
+<span id="cb11-266"><a href="#cb11-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Performance: **90-95+** (after image optimization)</span>
+<span id="cb11-267"><a href="#cb11-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dark mode: **Full support**</span>
+<span id="cb11-268"><a href="#cb11-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analytics: **10+ custom events**</span>
+<span id="cb11-269"><a href="#cb11-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>SEO: **Rich snippets enabled**</span>
+<span id="cb11-270"><a href="#cb11-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Accessibility: **WCAG 2.1 AA**</span>
+<span id="cb11-271"><a href="#cb11-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>PWA: **Installable**</span>
+<span id="cb11-272"><a href="#cb11-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lighthouse CI: **Automated**</span>
+<span id="cb11-273"><a href="#cb11-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-274"><a href="#cb11-274" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-275"><a href="#cb11-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-276"><a href="#cb11-276" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📂 New Files Created</span></span>
+<span id="cb11-277"><a href="#cb11-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-278"><a href="#cb11-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-279"><a href="#cb11-279" aria-hidden="true" tabindex="-1"></a><span class="in">📁 Project Root</span></span>
+<span id="cb11-280"><a href="#cb11-280" aria-hidden="true" tabindex="-1"></a><span class="in">├── IMAGE_OPTIMIZATION.md      # Image optimization guide</span></span>
+<span id="cb11-281"><a href="#cb11-281" aria-hidden="true" tabindex="-1"></a><span class="in">├── manifest.json               # PWA manifest</span></span>
+<span id="cb11-282"><a href="#cb11-282" aria-hidden="true" tabindex="-1"></a><span class="in">├── lighthouserc.json          # Lighthouse CI config</span></span>
+<span id="cb11-283"><a href="#cb11-283" aria-hidden="true" tabindex="-1"></a><span class="in">├── _headers                    # Security headers</span></span>
+<span id="cb11-284"><a href="#cb11-284" aria-hidden="true" tabindex="-1"></a><span class="in">├── .github/workflows/</span></span>
+<span id="cb11-285"><a href="#cb11-285" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── lighthouse.yml         # Lighthouse CI workflow</span></span>
+<span id="cb11-286"><a href="#cb11-286" aria-hidden="true" tabindex="-1"></a><span class="in">└── IMPROVEMENTS_SUMMARY.md    # This file</span></span>
+<span id="cb11-287"><a href="#cb11-287" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-288"><a href="#cb11-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-289"><a href="#cb11-289" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-290"><a href="#cb11-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-291"><a href="#cb11-291" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔧 Modified Files</span></span>
+<span id="cb11-292"><a href="#cb11-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-293"><a href="#cb11-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-294"><a href="#cb11-294" aria-hidden="true" tabindex="-1"></a><span class="in">📝 Modified Files</span></span>
+<span id="cb11-295"><a href="#cb11-295" aria-hidden="true" tabindex="-1"></a><span class="in">├── _quarto.yml                 # Meta tags, PWA, GA4, Dark mode</span></span>
+<span id="cb11-296"><a href="#cb11-296" aria-hidden="true" tabindex="-1"></a><span class="in">├── _variables.scss             # Dark mode variables</span></span>
+<span id="cb11-297"><a href="#cb11-297" aria-hidden="true" tabindex="-1"></a><span class="in">├── styles.css                  # Animations, accessibility</span></span>
+<span id="cb11-298"><a href="#cb11-298" aria-hidden="true" tabindex="-1"></a><span class="in">├── software.qmd                # Badges, Schema.org</span></span>
+<span id="cb11-299"><a href="#cb11-299" aria-hidden="true" tabindex="-1"></a><span class="in">├── projects/</span></span>
+<span id="cb11-300"><a href="#cb11-300" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── mining-analysis.qmd     # BibTeX citation</span></span>
+<span id="cb11-301"><a href="#cb11-301" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── social-conflict-education.qmd  # BibTeX citation</span></span>
+<span id="cb11-302"><a href="#cb11-302" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── university-funding.qmd  # BibTeX citation</span></span>
+<span id="cb11-303"><a href="#cb11-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-304"><a href="#cb11-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-305"><a href="#cb11-305" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-306"><a href="#cb11-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-307"><a href="#cb11-307" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🚀 Deployment Instructions</span></span>
+<span id="cb11-308"><a href="#cb11-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-309"><a href="#cb11-309" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Review all changes**</span>
+<span id="cb11-310"><a href="#cb11-310" aria-hidden="true" tabindex="-1"></a>   <span class="in">```bash</span></span>
+<span id="cb11-311"><a href="#cb11-311" aria-hidden="true" tabindex="-1"></a>   <span class="fu">git</span> status</span>
+<span id="cb11-312"><a href="#cb11-312" aria-hidden="true" tabindex="-1"></a>   <span class="fu">git</span> diff</span>
+<span id="cb11-313"><a href="#cb11-313" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb11-314"><a href="#cb11-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-315"><a href="#cb11-315" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Test locally**</span>
+<span id="cb11-316"><a href="#cb11-316" aria-hidden="true" tabindex="-1"></a>   <span class="in">```bash</span></span>
+<span id="cb11-317"><a href="#cb11-317" aria-hidden="true" tabindex="-1"></a>   <span class="ex">quarto</span> preview</span>
+<span id="cb11-318"><a href="#cb11-318" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb11-319"><a href="#cb11-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-320"><a href="#cb11-320" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Build the site**</span>
+<span id="cb11-321"><a href="#cb11-321" aria-hidden="true" tabindex="-1"></a>   <span class="in">```bash</span></span>
+<span id="cb11-322"><a href="#cb11-322" aria-hidden="true" tabindex="-1"></a>   <span class="ex">quarto</span> render</span>
+<span id="cb11-323"><a href="#cb11-323" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb11-324"><a href="#cb11-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-325"><a href="#cb11-325" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Commit and push**</span>
+<span id="cb11-326"><a href="#cb11-326" aria-hidden="true" tabindex="-1"></a>   <span class="in">```bash</span></span>
+<span id="cb11-327"><a href="#cb11-327" aria-hidden="true" tabindex="-1"></a>   <span class="fu">git</span> add .</span>
+<span id="cb11-328"><a href="#cb11-328" aria-hidden="true" tabindex="-1"></a>   <span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"feat: expert-level improvements</span></span>
+<span id="cb11-329"><a href="#cb11-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-330"><a href="#cb11-330" aria-hidden="true" tabindex="-1"></a><span class="st">   - Dark mode with system preference</span></span>
+<span id="cb11-331"><a href="#cb11-331" aria-hidden="true" tabindex="-1"></a><span class="st">   - Advanced GA4 event tracking</span></span>
+<span id="cb11-332"><a href="#cb11-332" aria-hidden="true" tabindex="-1"></a><span class="st">   - PWA manifest and mobile optimization</span></span>
+<span id="cb11-333"><a href="#cb11-333" aria-hidden="true" tabindex="-1"></a><span class="st">   - Accessibility improvements (WCAG 2.1)</span></span>
+<span id="cb11-334"><a href="#cb11-334" aria-hidden="true" tabindex="-1"></a><span class="st">   - Lighthouse CI integration</span></span>
+<span id="cb11-335"><a href="#cb11-335" aria-hidden="true" tabindex="-1"></a><span class="st">   - Dynamic badges for packages</span></span>
+<span id="cb11-336"><a href="#cb11-336" aria-hidden="true" tabindex="-1"></a><span class="st">   - BibTeX citations for research</span></span>
+<span id="cb11-337"><a href="#cb11-337" aria-hidden="true" tabindex="-1"></a><span class="st">   - Animations and micro-interactions</span></span>
+<span id="cb11-338"><a href="#cb11-338" aria-hidden="true" tabindex="-1"></a><span class="st">   - Security headers and CSP</span></span>
+<span id="cb11-339"><a href="#cb11-339" aria-hidden="true" tabindex="-1"></a><span class="st">   - Enhanced Schema.org structured data"</span></span>
+<span id="cb11-340"><a href="#cb11-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-341"><a href="#cb11-341" aria-hidden="true" tabindex="-1"></a>   <span class="fu">git</span> push</span>
+<span id="cb11-342"><a href="#cb11-342" aria-hidden="true" tabindex="-1"></a>   <span class="in">```</span></span>
+<span id="cb11-343"><a href="#cb11-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-344"><a href="#cb11-344" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Monitor deployment**</span>
+<span id="cb11-345"><a href="#cb11-345" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>GitHub Actions will run</span>
+<span id="cb11-346"><a href="#cb11-346" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Lighthouse CI will test</span>
+<span id="cb11-347"><a href="#cb11-347" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Site will deploy automatically</span>
+<span id="cb11-348"><a href="#cb11-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-349"><a href="#cb11-349" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-350"><a href="#cb11-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-351"><a href="#cb11-351" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📊 Performance Metrics to Track</span></span>
+<span id="cb11-352"><a href="#cb11-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-353"><a href="#cb11-353" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core Web Vitals</span></span>
+<span id="cb11-354"><a href="#cb11-354" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LCP** (Largest Contentful Paint): Target &lt; 2.5s</span>
+<span id="cb11-355"><a href="#cb11-355" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**FID** (First Input Delay): Target &lt; 100ms</span>
+<span id="cb11-356"><a href="#cb11-356" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**CLS** (Cumulative Layout Shift): Target &lt; 0.1</span>
+<span id="cb11-357"><a href="#cb11-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-358"><a href="#cb11-358" aria-hidden="true" tabindex="-1"></a><span class="fu">### Custom Metrics</span></span>
+<span id="cb11-359"><a href="#cb11-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dark mode adoption rate</span>
+<span id="cb11-360"><a href="#cb11-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CV download rate</span>
+<span id="cb11-361"><a href="#cb11-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Package click-through rate</span>
+<span id="cb11-362"><a href="#cb11-362" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Project engagement</span>
+<span id="cb11-363"><a href="#cb11-363" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Scroll depth distribution</span>
+<span id="cb11-364"><a href="#cb11-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-365"><a href="#cb11-365" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb11-366"><a href="#cb11-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-367"><a href="#cb11-367" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🎉 Summary</span></span>
+<span id="cb11-368"><a href="#cb11-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-369"><a href="#cb11-369" aria-hidden="true" tabindex="-1"></a>**13/13 Improvements Completed:**</span>
+<span id="cb11-370"><a href="#cb11-370" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Image optimization guide</span>
+<span id="cb11-371"><a href="#cb11-371" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Dark mode</span>
+<span id="cb11-372"><a href="#cb11-372" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ PWA manifest</span>
+<span id="cb11-373"><a href="#cb11-373" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Advanced meta tags</span>
+<span id="cb11-374"><a href="#cb11-374" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Schema.org expansion</span>
+<span id="cb11-375"><a href="#cb11-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ PyPI/GitHub badges</span>
+<span id="cb11-376"><a href="#cb11-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Preload/prefetch</span>
+<span id="cb11-377"><a href="#cb11-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Animations</span>
+<span id="cb11-378"><a href="#cb11-378" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Lighthouse CI</span>
+<span id="cb11-379"><a href="#cb11-379" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ GA4 advanced tracking</span>
+<span id="cb11-380"><a href="#cb11-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Security headers</span>
+<span id="cb11-381"><a href="#cb11-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Accessibility</span>
+<span id="cb11-382"><a href="#cb11-382" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ BibTeX citations</span>
+<span id="cb11-383"><a href="#cb11-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-384"><a href="#cb11-384" aria-hidden="true" tabindex="-1"></a>**Your site is now at expert level!** 🚀</span>
+<span id="cb11-385"><a href="#cb11-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-386"><a href="#cb11-386" aria-hidden="true" tabindex="-1"></a>Ready to deploy when you are. Just optimize those images first for maximum impact.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Maykol Medrano. Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC 4.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/IMPROVEMENTS_SUMMARY.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://maykolmedrano.github.io/#person",
+      "name": "Maykol Medrano",
+      "url": "https://maykolmedrano.github.io",
+      "image": "https://maykolmedrano.github.io/profile.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/maykolmedrano",
+        "https://github.com/MaykolMedrano",
+        "https://twitter.com/maykolmedrano"
+      ],
+      "jobTitle": "Policy Data Scientist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Pontificia Universidad Católica de Chile"
+      }
+    }
+  ]
+}
+</script>
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+  <span class="theme-icon">🌙</span>
+</button>
+
+<script>
+  (function() {
+    // 1. Reading Progress Bar Logic
+    window.addEventListener('scroll', () => {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      const header = document.querySelector('header');
+      if (header) {
+        header.style.setProperty('--scroll-width', scrollPercent + '%');
+      }
+    });
+
+    // 2. Theme Logic
+    const setTheme = (theme) => {
+      const body = document.body;
+      if (theme === 'dark') {
+        body.classList.add('quarto-dark');
+        body.classList.remove('quarto-light');
+      } else {
+        body.classList.add('quarto-light');
+        body.classList.remove('quarto-dark');
+      }
+      
+      localStorage.setItem('quarto-color-scheme', theme);
+      updateToggleIcon(theme);
+      updateGiscusTheme(theme);
+
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'theme_change', { 'theme_mode': theme });
+      }
+    };
+
+    const updateGiscusTheme = (theme) => {
+      const giscusFrame = document.querySelector('iframe.giscus-frame');
+      if (giscusFrame) {
+        const giscusTheme = theme === 'dark' ? 'dark' : 'light';
+        giscusFrame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: giscusTheme } } },
+          'https://giscus.app'
+        );
+      }
+    };
+
+    const updateToggleIcon = (theme) => {
+      const icon = document.querySelector('.theme-icon');
+      if (icon) {
+        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+    };
+
+    const theme = localStorage.getItem('quarto-color-scheme') || 
+                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(theme);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          const isDark = document.body.classList.contains('quarto-dark');
+          setTheme(isDark ? 'light' : 'dark');
+        });
+      }
+    });
+  })();
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sendGAEvent = (name, params) => {
+      if (typeof gtag !== 'undefined') gtag('event', name, params);
+    };
+
+    // CV Downloads
+    document.querySelectorAll('a[href*="CV_Maykol_Medrano.pdf"]').forEach(link => {
+      link.addEventListener('click', () => {
+        sendGAEvent('file_download', { 'file_name': 'CV_Maykol_Medrano.pdf', 'file_type': 'PDF' });
+      });
+    });
+
+    // Software & Social Links
+    document.querySelectorAll('a[href*="github.com"], a[href*="pypi.org"], a[href*="linkedin.com"]').forEach(link => {
+      link.addEventListener('click', () => {
+        sendGAEvent('click_external', { 'destination_url': link.href });
+      });
+    });
+
+    // Scroll Depth
+    let scrollDepthTracked = {25: false, 50: false, 75: false, 100: false};
+    window.addEventListener('scroll', () => {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      Object.keys(scrollDepthTracked).forEach(depth => {
+        if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
+          scrollDepthTracked[depth] = true;
+          sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

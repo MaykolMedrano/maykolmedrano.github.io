@@ -1,0 +1,67 @@
+{
+  "name": "Maykol Medrano - Policy Data Scientist",
+  "short_name": "Maykol Medrano",
+  "description": "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f5f0",
+  "theme_color": "#325d88",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "profile.png",
+      "sizes": "800x800",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "research", "science"],
+  "lang": "en",
+  "dir": "ltr",
+  "screenshots": [
+    {
+      "src": "profile.png",
+      "sizes": "800x800",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Software Packages",
+      "short_name": "Software",
+      "description": "View open-source Python and Stata packages",
+      "url": "/software.html",
+      "icons": [
+        {
+          "src": "profile.png",
+          "sizes": "800x800"
+        }
+      ]
+    },
+    {
+      "name": "Research Projects",
+      "short_name": "Research",
+      "description": "Policy and research projects",
+      "url": "/projects.html",
+      "icons": [
+        {
+          "src": "profile.png",
+          "sizes": "800x800"
+        }
+      ]
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Read latest blog posts",
+      "url": "/blog.html",
+      "icons": [
+        {
+          "src": "profile.png",
+          "sizes": "800x800"
+        }
+      ]
+    }
+  ]
+}

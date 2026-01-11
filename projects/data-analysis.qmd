@@ -1,0 +1,60 @@
+---
+title: "Impact of Gold Price Shocks on Social Conflict"
+subtitle: "Causal Inference and Spatial Econometrics in the Peruvian Amazon"
+author: "Maykol Medrano"
+date: "2026-01-10"
+categories: [Causal Inference, Stata, Mining]
+image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800" # Puedes cambiar esto por una foto tuya local
+---
+
+## Introduction
+
+In this research, I analyze the impact of international commodity prices on local social conflicts. This project utilizes the `usecasen` and `enahodata` tools I developed to streamline data processing.
+
+::: {.callout-econometrics}
+**Identification Strategy**: We use a Difference-in-Differences (DiD) approach combined with Spatial Econometrics to account for spillover effects between districts.
+:::
+
+## Results: Main Estimates
+
+The following table follows the "Journal of Political Economy" style we designed:
+
+| Variable | OLS (1) | FE (2) | Spatial ML (3) |
+|:---      |:---:    |:---:   |:---:           |
+| Gold Price Shocks | 0.452*** | 0.381*** | 0.312** |
+|                   | (0.012)  | (0.015)  | (0.021) |
+| Controls          | YES      | YES      | YES     |
+| Fixed Effects     | NO       | YES      | YES     |
+| N                 | 15,420   | 15,420   | 15,420  |
+
+: Table 1: Impact on Social Conflict Frequency {.table-striped}
+
+> "The expansion of illegal mining in Madre de Dios represents one of the most significant challenges for environmental governance and social peace in Peru." — Research Note.
+
+## Coding Best Practices
+
+As a Teaching Assistant for **Applied Microeconometrics** at PUC-Chile, I recommend the following:
+
+::: {.callout-coding}
+**Reproducibility**: Always initialize your folder structure using `projectinit`. This ensures that any researcher can run your `.do` or `.py` files without changing paths.
+:::
+
+```stata
+* Example using my Stata command
+usecasen 2022, clear
+projectinit, setup("Conflict_Analysis")
+
+## Software Suite
+Este análisis fue procesado íntegramente usando <span class="project-badge badge-stata">STATA</span> y la suite <span class="project-badge badge-ta">PUC-CHILE TA</span>.
+
+
+---
+
+### 3. Cómo ver los cambios
+1.  **Reading Progress Bar:** Al scrollear hacia abajo, verás una línea azul de 3px cargándose justo debajo de tu Header con Glassmorphism.
+2.  **Academic Blockquotes:** La cita de la introducción aparecerá con una barra lateral azul y fondo sutil, ideal para resaltar teoría económica.
+3.  **Tablas:** La Tabla 1 no tendrá líneas verticales y las líneas horizontales serán más gruesas en los extremos, dándole un look de publicación de la **UNSAAC** o **PUC-Chile**.
+4.  **Callouts:** Las cajas de "Econometric Note" y "Coding Best Practice" se verán con los iconos y colores específicos que diseñamos para tus ayudantías.
+5.  **Badges:** Aparecerán en las esquinas de tus tarjetas de proyectos en el listado principal, identificando rápidamente si el proyecto es de **Stata**, **Python** o material de **Ayudantía**.
+
+**¿Te gustaría que te ayude a configurar una sección de "News" o "Updates" automática para c

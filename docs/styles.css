@@ -1,263 +1,929 @@
-/* css styles */
+/* =======================================================
+   PROFESSIONAL UX STYLES - PRODUCTION READY
+   Features: Glassmorphism Header + Dark Mode + UX Animations
+   (Updated: Profile Photo Zoom & Spring Animation)
+   ======================================================= */
 
-/* Expandir TODO el contenido al ancho completo */
-#quarto-content {
-  max-width: 100% !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
+/* 0. FONT IMPORTS (REQUIRED) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- THEME VARIABLES --- */
+:root {
+  /* Main Palette - Tech Economist */
+  --navbar-bg: #0f172a; /* Slate 900 (Deep Dark Blue) */
+  --navbar-fg: #f1f5f9; /* Slate 100 (Off White) */
+   
+  /* Accent: Royal Blue */
+  --accent-color: #2563eb;
+  --accent-secondary: #334155;
+   
+  /* Backgrounds */
+  --bg-body: #ffffff;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --card-border: 1px solid #e2e8f0;
+   
+  /* Typography */
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
 }
 
-.quarto-about-trestles .about-entity {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* Dark Mode Variables - Neutral & Elegant */
+body.quarto-dark {
+  --bg-body: #020617; /* Slate 950 (Almost Black) */
+   
+  /* Cards: Dark Charcoal for soft contrast */
+  --card-bg: #242424; 
+   
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --card-border: 1px solid rgba(255,255,255,0.05);
+  --accent-color: #60a5fa; 
+  --accent-secondary: #94a3b8;
 }
 
-.quarto-about-trestles {
-  max-width: 100% !important;
-  width: 100% !important;
+/* ============================================
+   1. UX HEADER (REAL GLASSMORPHISM)
+   ============================================ */
+
+/* Force semi-transparent background with blur */
+#quarto-header .navbar,
+.navbar,
+.navbar.navbar-expand-lg,
+.navbar.navbar-light, 
+.bg-light {            
+  /* Background with alpha transparency (0.85) */
+  background-color: rgba(15, 23, 42, 0.85) !important; 
+  background: rgba(15, 23, 42, 0.85) !important;       
+  
+  /* Blur Effect (The "Frosted Glass" look) */
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 0.8rem 1rem !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1) !important;
 }
 
-/* Contenedor principal sin restricciones */
-main.content {
-  max-width: 100% !important;
-}
-
-.page-columns {
-  max-width: 100% !important;
-}
-
-/* Fuente limpia y estética: Manrope */
-body {
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  font-size: 0.95rem !important;
-  font-weight: 400;
-  letter-spacing: -0.005em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Fuente del navbar */
-.navbar {
-  font-size: 0.9rem !important;
-}
-
-.navbar-brand {
-  font-size: 1.1rem !important;
-}
-
-.navbar .navbar-nav .nav-link {
-  font-size: 0.9rem !important;
-}
-
-/* Fuentes de contenido */
-.quarto-about-trestles .about-entity .about-contents p,
-#quarto-content p {
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
-}
-
-.quarto-about-trestles .about-entity .about-contents h2,
-#quarto-content h2 {
-  font-size: 1.5rem !important;
-  font-weight: 600 !important;
-}
-
-.quarto-about-trestles .about-entity .about-contents h4,
-#quarto-content h4 {
-  font-size: 1rem !important;
-}
-
-/* Títulos de página */
-#quarto-content .quarto-title h1.title {
-  font-size: 2rem !important;
-}
-
-#quarto-content .quarto-title .quarto-title-meta {
-  font-size: 0.85rem !important;
-}
-
-/* El nombre en el sidebar */
-.quarto-about-trestles .about-entity .about-image h2.about-entity-heading {
-  font-size: 1.6rem !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.03em;
-}
-
-/* Mejorar navbar con Inter */
-.navbar-brand {
-  font-weight: 600 !important;
-  letter-spacing: -0.02em;
-}
-
-.navbar .navbar-nav .nav-link {
-  font-weight: 500 !important;
+/* Brand Name - ALWAYS White */
+.navbar-brand,
+.navbar.navbar-light .navbar-brand {
+  font-family: var(--font-heading) !important;
+  font-weight: 800 !important;
+  font-size: 1.4rem !important;
+  color: #ffffff !important;
   letter-spacing: -0.01em;
 }
 
-/* Código con JetBrains Mono */
-code, pre {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+/* Navbar Links - ALWAYS Light (Ice Grey) */
+.navbar-nav .nav-link,
+.navbar.navbar-light .navbar-nav .nav-link {
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #cbd5e1 !important; /* Visible on dark blue */
+  transition: color 0.3s ease !important;
+  position: relative;
+  padding-bottom: 5px !important;
 }
 
-/* Sistema de columnas como el original de Mike Mahoney */
+/* Animated Underline for Navbar */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+
+/* Navbar Hover State */
+.navbar-nav .nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* --- MOBILE TOGGLER FIX (ALWAYS WHITE) --- */
+.navbar-toggler-icon {
+  /* Force the SVG icon to be Pure White */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  
+  /* Remove any inversion filters causing issues in Dark Mode */
+  filter: none !important; 
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3) !important; /* Subtle white border */
+}
+
+/* Focus state (removes default blue outline) */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ============================================
+   2. BODY & LINK ANIMATIONS
+   ============================================ */
+
+/* Main Text Links - Expanding Underline */
+main a:not(.btn):not(.navbar-brand):not(.nav-link):not(.listing-category):not(.about-link) {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent-color) !important;
+  padding-bottom: 2px;
+}
+
+main a:not(.btn):not(.navbar-brand):not(.nav-link):not(.listing-category):not(.about-link)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.6;
+}
+
+main a:not(.btn):not(.navbar-brand):not(.nav-link):not(.listing-category):not(.about-link):hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* General Smooth Transitions */
+body, .card, code, h1, h2, p {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Page Load Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#quarto-content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* >>> CARD UX ANIMATIONS (ENHANCED) <<<
+   Added "Scale" and "Cubic-Bezier" for a premium feel
+*/
+.quarto-listing-grid .listing-item {
+  background: var(--card-bg) !important;
+  border: var(--card-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--card-shadow) !important;
+  overflow: hidden;
+  
+  /* Smooth Physics Transition */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.3s ease !important;
+}
+
+.quarto-listing-grid .listing-item:hover {
+  /* Lift + Subtle Scale Pop */
+  transform: translateY(-8px) scale(1.02) !important; 
+  
+  /* Deep Elevated Shadow */
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2) !important; 
+  border-color: var(--accent-color) !important;
+  z-index: 10;
+}
+
+.listing-item .listing-image {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ============================================
+   3. LAYOUT & STRUCTURE
+   ============================================ */
+
+#quarto-content {
+  max-width: 100% !important;
+  padding: 0 1rem 1rem 1rem !important;
+  margin: 0 !important;
+}
+
+main.content {
+  max-width: 1600px !important;
+  margin: 0 auto !important;
+  padding-top: 2rem !important;
+  min-height: 85vh !important;
+}
+
+/* ============================================
+   4. PROFILE SECTION (CLEAN & MODERN)
+   ============================================ */
+
 .quarto-about-trestles .about-entity {
   display: flex !important;
-  gap: min(4vw, 1.5em) !important;
+  gap: 2.5rem !important;
+  align-items: center !important;
 }
 
+/* --- 1. CONFIGURACIÓN DE LA IMAGEN --- */
 .quarto-about-trestles .about-entity .about-image {
-  flex: 0 0 40% !important;
-  max-width: 40% !important;
-  min-width: 360px !important;
-  overflow: visible !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 1rem !important;
-  padding-right: 2rem !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 0 0 auto !important;
+  width: 320px !important; /* Tamaño controlado */
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .quarto-about-trestles .about-entity .about-image img {
-  width: 320px !important;
-  height: 160px !important;
-  min-width: 320px !important;
-  min-height: 160px !important;
-  max-width: 320px !important;
-  max-height: 160px !important;
-  margin-bottom: 1.5rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px !important;
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important; /* Cuadrado perfecto */
+  
+  /* AJUSTE DE ENCUADRE: 
+     'center 20%' enfoca ligeramente hacia arriba para no cortar la cabeza,
+     pero mostrando hombros y manos si la foto lo permite. */
   object-fit: cover !important;
-  aspect-ratio: 2/1 !important;
+  object-position: center 20% !important; 
+
+  border-radius: 20px !important; /* Bordes suaves modernos */
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+  
+  /* Animación Spring al pasar el mouse */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  margin-bottom: 0 !important;
 }
 
-.quarto-about-trestles .about-entity .about-image .about-link {
-  text-align: center !important;
+/* Efecto Zoom en la foto */
+.quarto-about-trestles .about-entity .about-image img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 25px 50px -10px rgba(0,0,0,0.25);
 }
 
-.quarto-about-trestles .about-entity .about-image h2.about-entity-heading {
-  text-align: center !important;
-  width: 100%;
-  margin-bottom: 1.5rem !important;
-}
-
-.quarto-about-trestles .about-entity .about-links {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 0.5rem !important;
-}
-
+/* --- 2. CONTENIDO Y BOTONES --- */
 .quarto-about-trestles .about-entity .about-contents {
-  flex: 0 0 60% !important;
-  overflow: visible !important;
-  max-width: 60% !important;
-  min-width: 0;
+  flex: 1 !important;
+  text-align: left !important;
 }
 
-/* Mejorar espaciado y diseño profesional del home */
-.quarto-about-trestles .about-entity .about-contents > p:first-child {
-  font-size: 1.05rem !important;
-  line-height: 1.7 !important;
-  margin-bottom: 1.2rem !important;
+/* Contenedor de Botones (FLEX) */
+.quarto-about-trestles .about-links {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  gap: 0.8rem !important;
+  margin-top: 1.5rem !important;
 }
 
-.quarto-about-trestles .about-entity .about-contents hr {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
-  margin: 2rem 0 !important;
-}
-
-.quarto-about-trestles .about-entity .about-contents h2 {
-  margin-top: 0.5rem !important;
-  margin-bottom: 1rem !important;
-  color: #93c54b !important;
-  letter-spacing: -0.02em;
+/* ESTILO BASE (MODO CLARO) - Petite & Tech */
+.about-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  
+  /* Tamaño reducido y elegante */
+  font-family: var(--font-code) !important;
+  font-size: 0.75rem !important; 
+  padding: 0.35rem 0.8rem !important;
+  
+  /* Colores Light Mode (Azul Tech) */
+  border: 1px solid var(--accent-color) !important;
+  color: var(--accent-color) !important;
+  background: transparent;
+  
+  border-radius: 6px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-weight: 600 !important;
-}
-
-.quarto-about-trestles .about-entity .about-contents p strong:first-child {
-  color: #93c54b !important;
-  font-weight: 600 !important;
-}
-
-.quarto-about-trestles .about-entity .about-contents p {
-  margin-bottom: 0.9rem !important;
-}
-
-/* Mejorar los enlaces de los paquetes */
-.quarto-about-trestles .about-entity .about-contents a {
-  color: #29abe0 !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(41, 171, 224, 0.3);
-  transition: all 0.2s ease;
-}
-
-.quarto-about-trestles .about-entity .about-contents a:hover {
-  color: #ffffff !important;
-  border-bottom-color: #29abe0;
-}
-
-/* Mejorar botones del sidebar */
-.quarto-about-trestles .about-entity .about-link {
-  font-size: 0.85rem !important;
-  padding: 0.4rem 1rem !important;
-  border-radius: 4px !important;
   transition: all 0.2s ease !important;
 }
 
-.quarto-about-trestles .about-entity .about-link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para la página de Software */
-#quarto-content h3 {
-  font-size: 1.3rem !important;
-  font-weight: 600 !important;
-  color: #29abe0 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 0.8rem !important;
-  letter-spacing: -0.02em;
-}
-
-/* Mejorar los subtítulos de página */
-#quarto-content .quarto-title .description {
-  font-size: 1rem !important;
-  color: rgba(255, 255, 255, 0.7) !important;
-  margin-top: 0.5rem !important;
-}
-
-/* Estilos específicos solo para la página de Software */
-body:has([data-quarto-source-file="software.qmd"]) #quarto-content p strong:first-child {
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
+.about-link:hover {
+  background: var(--accent-color) !important;
   color: #ffffff !important;
-  display: block;
-  margin-bottom: 0.3rem !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  text-decoration: none !important;
 }
 
-body:has([data-quarto-source-file="software.qmd"]) #quarto-content p strong + a {
-  color: rgba(255, 255, 255, 0.5) !important;
+/* --- AJUSTE DARK MODE: BOTONES "GHOST" (CORREGIDO) --- */
+/* En modo oscuro, eliminamos el azul para no romper la estética */
+body.quarto-dark .about-link {
+  background: transparent !important;
+  /* Borde blanco muy sutil (40% opacidad) */
+  border: 1px solid rgba(255, 255, 255, 0.4) !important; 
+  color: #e2e8f0 !important; /* Texto blanco hueso */
+}
+
+/* Hover Dark Mode: Se ilumina en BLANCO (Efecto Premium) */
+body.quarto-dark .about-link:hover {
+  background: #ffffff !important; /* Relleno Blanco */
+  color: #0f172a !important;      /* Texto Oscuro (Alto contraste) */
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  /* Pequeño resplandor (Glow) */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
+}
+
+/* ============================================
+   5. TYPOGRAPHY & DARK MODE (OPTIMIZED)
+   ============================================ */
+
+body {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  
+  /* MASTER TEXT SPACING: 1.5 (Clean Standard) */
+  line-height: 1.5 !important; 
+  
+  color: #334155; /* Dark Slate for Light Mode */
+}
+
+/* Heading Fix: Tighter line height for large text */
+h1, h2, h3, h4 {
+  line-height: 1.3 !important; 
+}
+
+/* Light Mode Headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading) !important;
+  color: #0f172a !important; /* Almost Black */
+}
+
+h1.title {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  margin-top: 3rem !important;
+  color: var(--accent-secondary) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 0.5rem;
+}
+
+/* --- DARK MODE TYPOGRAPHY --- */
+body.quarto-dark {
+  color: #e2e8f0 !important;
+}
+
+body.quarto-dark h1, 
+body.quarto-dark h2, 
+body.quarto-dark h3,
+body.quarto-dark .title,
+body.quarto-dark .about-entity h1 {
+  color: #f8fafc !important; /* White Headings */
+}
+
+body.quarto-dark p, 
+body.quarto-dark li, 
+body.quarto-dark .description {
+  color: #cbd5e1 !important; /* Light Text */
+}
+
+body.quarto-dark h2 {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ============================================
+   6. MINIMALIST TAGS (NUCLEAR FIX)
+   ============================================ */
+
+/* Multi-Selector to cover ALL cases:
+   1. .listing-category -> Lists (Home, Archive)
+   2. .quarto-category  -> Blog Posts
+   3. .quarto-title-meta-contents -> Project Metadata
+*/
+.listing-category,
+.quarto-category,
+.quarto-title-meta-contents a.quarto-category {
+  /* Typography */
+  font-family: var(--font-body) !important;
+  font-size: 0.55em !important; /* Fixed for legibility */
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em;
+
+  /* LIGHT MODE: Outline Style */
+  background-color: transparent !important; 
+  color: #334155 !important; /* Slate 700 */
+  border: 1px solid #cbd5e1 !important; 
+  
+  /* Shape */
+  border-radius: 4px !important;
+  
+  /* Spacing */
+  padding: 0.25em 0.7em !important;
+  margin: 0 0.3em 0.3em 0 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.2s ease;
+  
+  /* Reset Opacity */
+  opacity: 1 !important; 
+}
+
+/* Hover LIGHT MODE: Fill with Dark Grey */
+.listing-category:hover,
+.quarto-category:hover,
+.quarto-title-meta-contents a.quarto-category:hover {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+  border-color: #334155 !important;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+/* --- DARK MODE TAGS --- */
+body.quarto-dark .listing-category,
+body.quarto-dark .quarto-category,
+body.quarto-dark .quarto-title-meta-contents a.quarto-category {
+  background-color: transparent !important;
+  color: #e2e8f0 !important; /* Bone White */
+  border: 1px solid #475569 !important; 
+}
+
+/* Hover DARK MODE: FILL WHITE (High Contrast) */
+body.quarto-dark .listing-category:hover,
+body.quarto-dark .quarto-category:hover,
+body.quarto-dark .quarto-title-meta-contents a.quarto-category:hover {
+  background-color: #ffffff !important; /* Pure White */
+  color: #000000 !important; /* Pure Black */
+  border-color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   7. UTILITIES (CODE, TOGGLE, SCROLL)
+   ============================================ */
+
+/* Code Blocks */
+code {
+  color: var(--accent-color) !important;
+  background: rgba(10, 25, 47, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  border: 1px solid rgba(0,0,0,0.05);
+  font-family: var(--font-code) !important;
+}
+
+body.quarto-dark code {
+  color: #93c5fd !important;
+  background: #1e293b;
+  border-color: #334155;
+}
+
+/* Floating Dark Mode Toggle */
+.theme-toggle {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: var(--navbar-bg) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  z-index: 1000;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.theme-toggle i { font-size: 1.4rem !important; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-body); }
+::-webkit-scrollbar-thumb { background: #64748b; border-radius: 5px; border: 3px solid var(--bg-body); }
+
+/* ============================================
+   8. FINAL DETAILS (TEXT SELECTION)
+   ============================================ */
+
+/* Custom Text Selection Color */
+::selection {
+  background-color: rgba(37, 99, 235, 0.25) !important; /* Soft Blue */
+  color: inherit;
+}
+
+/* Dark Mode Selection */
+body.quarto-dark ::selection {
+  background-color: rgba(96, 165, 250, 0.35) !important;
+  color: #ffffff;
+}
+
+/* ============================================
+   9. OPTIMIZACIÓN MÓVIL (CORRECCIÓN LAYOUT)
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* 1. Cambiar dirección: Foto Arriba, Texto Abajo */
+  .quarto-about-trestles .about-entity {
+    flex-direction: column !important; /* Columna vertical */
+    gap: 1.5rem !important;
+    text-align: center !important; /* Centrar todo */
+  }
+
+  /* 2. Ajustar ancho de la foto en móvil */
+  .quarto-about-trestles .about-entity .about-image {
+    width: 250px !important; /* Un poco más pequeña en móvil */
+    margin: 0 auto !important; /* Centrada horizontalmente */
+  }
+
+  /* 3. Centrar el texto y darle ancho completo */
+  .quarto-about-trestles .about-entity .about-contents {
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 1rem !important; /* Un poco de margen a los lados */
+  }
+
+  /* 4. Botones: Centrados y asegurando que se apilen (wrap) */
+  .quarto-about-trestles .about-links {
+    justify-content: center !important; /* Centrados */
+    width: 100% !important;
+  }
+}
+
+/* =======================================================
+   10. ADVANCED PREMIUM POLISH (FINAL TOUCHES)
+   ======================================================= */
+
+/* Smooth Scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Focus State for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 4px;
+}
+
+/* SUBTLE BACKGROUND GRADIENT (Dark Mode Only)
+   Adds depth so the screen doesn't look like a "flat black hole"
+*/
+body.quarto-dark {
+  background: radial-gradient(circle at top center, #0f172a 0%, #020617 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* ENHANCED CARD TYPOGRAPHY
+   Makes titles pop more by dimming the secondary info
+*/
+.listing-item .listing-categories {
+  margin-bottom: 12px !important;
+}
+
+.listing-item .metadata {
+  font-size: 0.8rem !important;
+  opacity: 0.6;
+  font-family: var(--font-code);
+}
+
+/* CARD IMAGE BRIGHTNESS (UX Fix)
+   In Dark Mode, very bright images can be jarring. 
+   This subtly dims them until you hover.
+*/
+body.quarto-dark .listing-item .listing-image {
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+body.quarto-dark .listing-item:hover .listing-image {
+  filter: brightness(1);
+}
+
+/* CUSTOM TOOLTIP STYLE (Optional)
+   If you use Quarto tooltips, this makes them match your theme
+*/
+.tooltip-inner {
+  background-color: var(--navbar-bg) !important;
+  font-family: var(--font-body);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* REFINING THE SCROLLBAR (Thinner & Sleeker) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* =======================================================
+   11. EXTRA PREMIUM UX FEATURES
+   ======================================================= */
+
+/* --- A. READING PROGRESS BAR ---
+   This creates a thin blue line at the bottom of your fixed header 
+   that fills up as the user scrolls. 
+*/
+header::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--accent-color);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+/* --- B. ACADEMIC BLOCKQUOTES ---
+   Refined style for citations and important notes.
+*/
+blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background: rgba(37, 99, 235, 0.03);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--accent-secondary);
+}
+
+body.quarto-dark blockquote {
+  background: rgba(255, 255, 255, 0.03);
+  color: #cbd5e1;
+}
+
+/* --- C. SECTION SPACING & REVEAL ---
+   Ensures deep focus on content with generous vertical breathing room.
+*/
+section {
+  margin-bottom: 4rem !important;
+}
+
+/* Simple Reveal Animation for Main Content */
+.column-body, .listing-grid {
+  animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- D. ENHANCED FOOTER ---
+   Clean and minimal footer to close the professional loop.
+*/
+#quarto-margin-sidebar {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+footer {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding: 2rem 0 !important;
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  color: var(--accent-secondary);
+}
+
+body.quarto-dark footer {
+  border-color: rgba(255,255,255,0.05);
+  color: #64748b;
+}
+
+/* =======================================================
+   12. ECONOMETRIC TABLES & DATA PRESENTATION
+   ======================================================= */
+
+/* Professional Journal Style for Tables */
+.table, table {
+  border-collapse: collapse !important;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  margin-bottom: 2rem !important;
+}
+
+/* Remove all vertical borders for a cleaner look */
+.table td, .table th, table td, table th {
+  border-right: none !important;
+  border-left: none !important;
+  padding: 0.75rem !important;
+}
+
+/* Header styling with thick horizontal lines */
+.table thead th, table thead th {
+  border-top: 2px solid #0f172a !important;
+  border-bottom: 1.5px solid #0f172a !important;
+  background-color: transparent !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+
+/* Bottom line of the table */
+.table tbody:last-child, table tbody:last-child {
+  border-bottom: 2px solid #0f172a !important;
+}
+
+/* Dark Mode adjustment for tables */
+body.quarto-dark .table thead th, 
+body.quarto-dark table thead th,
+body.quarto-dark .table tbody:last-child,
+body.quarto-dark table tbody:last-child {
+  border-color: #cbd5e1 !important;
+  color: #f8fafc !important;
+}
+
+/* Zebra striping only in Light Mode for legibility */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* --- DATA SCIENCE UTILITIES --- */
+
+/* Highlighted "Results" or "Estimates" text */
+.estimate-highlight {
+  font-weight: 700;
+  color: var(--accent-color);
+  background: rgba(37, 99, 235, 0.05);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+/* Captions for Figures and Tables */
+caption, .figure-caption {
   font-size: 0.85rem !important;
-  border-bottom: none !important;
-  transition: color 0.2s ease;
+  font-style: italic;
+  color: var(--accent-secondary);
+  margin-top: 0.75rem;
+  text-align: left !important;
 }
 
-body:has([data-quarto-source-file="software.qmd"]) #quarto-content p strong + a:hover {
-  color: #29abe0 !important;
+/* =======================================================
+   14. EDUCATIONAL CALLOUTS (ECONOMETRICS & CODING)
+   ======================================================= */
+
+/* Base Callout Style */
+.callout-econometrics, .callout-coding {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid;
+  position: relative;
 }
 
-body:has([data-quarto-source-file="software.qmd"]) #quarto-content p {
-  line-height: 1.5 !important;
-  margin-bottom: 0.8rem !important;
+/* A. ECONOMETRIC WARNING (Rigorous & Academic) 
+   Use this for: Endogeneity, Identification strategies, 
+   or Cluster Standard Errors tips.
+*/
+.callout-econometrics {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: #0f172a; /* Navy Blue */
+  color: #1e293b;
 }
 
-body:has([data-quarto-source-file="software.qmd"]) #quarto-content h2 + p {
-  margin-bottom: 1.2rem !important;
+.callout-econometrics::before {
+  content: "📊 ECONOMETRIC NOTE";
+  display: block;
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* B. CODING BEST PRACTICE (Technical & Efficient)
+   Use this for: Stata/Python optimization, 
+   reproducibility (projectinit), or data cleaning.
+*/
+.callout-coding {
+  background: rgba(37, 99, 235, 0.04);
+  border-color: var(--accent-color); /* Blue Accent */
+  color: #1e293b;
+}
+
+.callout-coding::before {
+  content: "💻 CODING BEST PRACTICE";
+  display: block;
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* Dark Mode Adjustments */
+body.quarto-dark .callout-econometrics {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #94a3b8;
+  color: #e2e8f0;
+}
+
+body.quarto-dark .callout-coding {
+  background: rgba(96, 165, 250, 0.1);
+  border-color: #60a5fa;
+  color: #e2e8f0;
+}
+/* =======================================================
+   15. PROJECT BADGES (RSE SUITE STYLE)
+   ======================================================= */
+
+/* Badge Container - Positioned over the card image */
+.listing-item .listing-image {
+  position: relative;
+}
+
+.project-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: var(--font-code);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(4px);
+}
+
+/* Badge Variations */
+.badge-stata {
+  background: rgba(15, 23, 42, 0.9) !important; /* Navy Dark */
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.badge-python {
+  background: rgba(37, 99, 235, 0.9) !important; /* Royal Blue */
+  color: #ffffff !important;
+}
+
+.badge-ta {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+  border: 1px solid #0f172a;
+}
+
+/* =======================================================
+   15. ELITE REFINEMENT (FINAL POLISH)
+   ======================================================= */
+
+/* Subtle background for Abstract/Summary in Posts */
+.abstract {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--accent-secondary);
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 1px dashed rgba(0,0,0,0.1);
+}
+
+body.quarto-dark .abstract {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255,255,255,0.1);
+  color: #94a3b8;
+}
+
+/* Tooltip for Citations */
+.citation {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* Smooth Image Gallery (for multiple results) */
+.quarto-figure:hover img {
+  filter: contrast(1.05);
+  transition: all 0.3s ease;
 }

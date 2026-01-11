@@ -56,20 +56,23 @@ format:
     theme: [sandstone, _variables.scss]
     css: styles.css
     mainfont: "Manrope"
+    monofont: "JetBrains Mono"
     
     # UX & Comportamiento
     toc: true
     toc-title: On this page
+    fixed-header: true
     smooth-scroll: true
     anchor-sections: true
     link-external-icon: true
     link-external-newwindow: true
+    google-scholar: true
     
-    code-copy: true         
-    code-overflow: wrap     
-    highlight-style: github 
-    code-fold: show         
-    code-tools: true        
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    code-fold: show
+    code-tools: true
     lightbox: true
     html-math-method: mathjax
     citation-hover: true
@@ -89,23 +92,19 @@ format:
     # Header
     include-in-header:
       - text: |
-          <!-- Preconnect for Performance -->
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link rel="dns-prefetch" href="https://www.googletagmanager.com">
           <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-          <!-- Fonts with display=swap for better performance -->
           <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-          <!-- SEO Meta Tags -->
           <meta name="author" content="Maykol Medrano">
           <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata, Econometrics, Data Science">
           <meta name="robots" content="index, follow">
           <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
           <link rel="canonical" href="https://maykolmedrano.github.io">
 
-          <!-- PWA & Mobile Meta Tags -->
           <meta name="theme-color" content="#325d88" media="(prefers-color-scheme: light)">
           <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
           <meta name="apple-mobile-web-app-capable" content="yes">
@@ -113,37 +112,20 @@ format:
           <meta name="apple-mobile-web-app-title" content="Maykol Medrano">
           <meta name="mobile-web-app-capable" content="yes">
 
-          <!-- Favicons & Icons -->
           <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
           <link rel="apple-touch-icon" sizes="180x180" href="profile.png">
 
-          <!-- PWA Manifest -->
           <link rel="manifest" href="manifest.json">
 
-          <!-- Security Headers (Content Security Policy) -->
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta http-equiv="X-Content-Type-Options" content="nosniff">
           <meta name="referrer" content="strict-origin-when-cross-origin">
 
-          <!-- Performance Hints -->
           <link rel="preload" as="image" href="profile.png" type="image/png">
 
-          <!-- Additional Open Graph -->
-          <meta property="og:type" content="website">
-          <meta property="og:locale" content="en_US">
-          <meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
-
-          <!-- Twitter Card Additional -->
-          <meta name="twitter:card" content="summary_large_image">
-          <meta name="twitter:site" content="@maykolmedrano">
-          <meta name="twitter:creator" content="@maykolmedrano">
-
-          <!-- Academic/Research Meta -->
           <meta name="citation_author" content="Medrano, Maykol">
           <meta name="citation_title" content="Maykol Medrano - Policy Data Scientist">
           <meta name="DC.creator" content="Maykol Medrano">
-          <meta name="DC.type" content="Text">
-          <meta name="DC.format" content="text/html">
           <meta name="DC.language" content="en">
 
     include-after-body:
@@ -166,67 +148,56 @@ format:
                 "jobTitle": "Policy Data Scientist",
                 "worksFor": {
                   "@type": "Organization",
-                  "name": "Pontificia Universidad Católica de Chile",
-                  "url": "https://www.uc.cl"
-                },
-                "alumniOf": {
-                  "@type": "Organization",
                   "name": "Pontificia Universidad Católica de Chile"
-                },
-                "description": "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation",
-                "email": "mmedrano2@uc.cl",
-                "knowsAbout": [
-                  "Causal Inference",
-                  "Machine Learning",
-                  "Econometrics",
-                  "Python",
-                  "Stata",
-                  "Policy Evaluation",
-                  "Data Science"
-                ]
-              },
-              {
-                "@type": "WebSite",
-                "@id": "https://maykolmedrano.github.io/#website",
-                "url": "https://maykolmedrano.github.io",
-                "name": "Maykol Medrano - Policy Data Scientist",
-                "description": "Personal website showcasing research, open-source software, and policy data science work",
-                "publisher": {
-                  "@id": "https://maykolmedrano.github.io/#person"
-                },
-                "inLanguage": "en-US"
+                }
               }
             ]
           }
           </script>
 
-          <!-- Dark Mode Toggle Button -->
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
             <span class="theme-icon">🌙</span>
           </button>
 
-          <!-- Dark Mode Script -->
           <script>
-            // Initialize theme from localStorage or system preference
             (function() {
-              const getPreferredTheme = () => {
-                const savedTheme = localStorage.getItem('theme');
-                if (savedTheme) {
-                  return savedTheme;
+              // 1. Reading Progress Bar Logic
+              window.addEventListener('scroll', () => {
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                const header = document.querySelector('header');
+                if (header) {
+                  header.style.setProperty('--scroll-width', scrollPercent + '%');
                 }
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+              });
+
+              // 2. Theme Logic
+              const setTheme = (theme) => {
+                const body = document.body;
+                if (theme === 'dark') {
+                  body.classList.add('quarto-dark');
+                  body.classList.remove('quarto-light');
+                } else {
+                  body.classList.add('quarto-light');
+                  body.classList.remove('quarto-dark');
+                }
+                
+                localStorage.setItem('quarto-color-scheme', theme);
+                updateToggleIcon(theme);
+                updateGiscusTheme(theme);
+
+                if (typeof gtag !== 'undefined') {
+                  gtag('event', 'theme_change', { 'theme_mode': theme });
+                }
               };
 
-              const setTheme = (theme) => {
-                document.documentElement.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                updateToggleIcon(theme);
-
-                // Track theme change in GA4
-                if (typeof gtag !== 'undefined') {
-                  gtag('event', 'theme_change', {
-                    'theme_mode': theme
-                  });
+              const updateGiscusTheme = (theme) => {
+                const giscusFrame = document.querySelector('iframe.giscus-frame');
+                if (giscusFrame) {
+                  const giscusTheme = theme === 'dark' ? 'dark' : 'light';
+                  giscusFrame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme: giscusTheme } } },
+                    'https://giscus.app'
+                  );
                 }
               };
 
@@ -237,154 +208,51 @@ format:
                 }
               };
 
-              // Set initial theme
-              const theme = getPreferredTheme();
+              const theme = localStorage.getItem('quarto-color-scheme') || 
+                            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
               setTheme(theme);
 
-              // Toggle theme on button click
               document.addEventListener('DOMContentLoaded', () => {
                 const toggle = document.getElementById('theme-toggle');
                 if (toggle) {
                   toggle.addEventListener('click', () => {
-                    const currentTheme = document.documentElement.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    setTheme(newTheme);
+                    const isDark = document.body.classList.contains('quarto-dark');
+                    setTheme(isDark ? 'light' : 'dark');
                   });
-                }
-              });
-
-              // Listen for system theme changes
-              window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                  setTheme(e.matches ? 'dark' : 'light');
                 }
               });
             })();
           </script>
 
-          <!-- Advanced Google Analytics Event Tracking -->
           <script>
             document.addEventListener('DOMContentLoaded', function() {
-              // Helper function to send GA4 events
-              function sendGAEvent(eventName, eventParams) {
-                if (typeof gtag !== 'undefined') {
-                  gtag('event', eventName, eventParams);
-                }
-              }
+              const sendGAEvent = (name, params) => {
+                if (typeof gtag !== 'undefined') gtag('event', name, params);
+              };
 
-              // Track CV downloads
-              const cvLinks = document.querySelectorAll('a[href*="CV_Maykol_Medrano.pdf"]');
-              cvLinks.forEach(link => {
+              // CV Downloads
+              document.querySelectorAll('a[href*="CV_Maykol_Medrano.pdf"]').forEach(link => {
                 link.addEventListener('click', () => {
-                  sendGAEvent('file_download', {
-                    'file_name': 'CV_Maykol_Medrano.pdf',
-                    'file_type': 'PDF',
-                    'link_text': link.textContent
-                  });
+                  sendGAEvent('file_download', { 'file_name': 'CV_Maykol_Medrano.pdf', 'file_type': 'PDF' });
                 });
               });
 
-              // Track external software package clicks
-              const packageLinks = document.querySelectorAll('a[href*="pypi.org"], a[href*="github.com"]');
-              packageLinks.forEach(link => {
+              // Software & Social Links
+              document.querySelectorAll('a[href*="github.com"], a[href*="pypi.org"], a[href*="linkedin.com"]').forEach(link => {
                 link.addEventListener('click', () => {
-                  const url = new URL(link.href);
-                  const isPyPI = url.hostname.includes('pypi.org');
-                  const isGitHub = url.hostname.includes('github.com');
-
-                  sendGAEvent('software_click', {
-                    'platform': isPyPI ? 'PyPI' : isGitHub ? 'GitHub' : 'Other',
-                    'package_url': link.href,
-                    'link_text': link.textContent
-                  });
+                  sendGAEvent('click_external', { 'destination_url': link.href });
                 });
               });
 
-              // Track project views
-              const projectLinks = document.querySelectorAll('a[href*="projects/"]');
-              projectLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                  const projectName = link.href.split('/').pop().replace('.html', '');
-                  sendGAEvent('project_view', {
-                    'project_name': projectName,
-                    'link_text': link.textContent
-                  });
-                });
-              });
-
-              // Track social media clicks
-              const socialLinks = document.querySelectorAll('a[href*="linkedin.com"], a[href*="github.com"], a[href*="twitter.com"]');
-              socialLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                  const url = new URL(link.href);
-                  const platform = url.hostname.includes('linkedin') ? 'LinkedIn' :
-                                  url.hostname.includes('github') ? 'GitHub' :
-                                  url.hostname.includes('twitter') ? 'Twitter' : 'Other';
-
-                  sendGAEvent('social_click', {
-                    'platform': platform,
-                    'destination_url': link.href
-                  });
-                });
-              });
-
-              // Track email clicks
-              const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-              emailLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                  sendGAEvent('email_click', {
-                    'email_address': link.href.replace('mailto:', ''),
-                    'link_text': link.textContent
-                  });
-                });
-              });
-
-              // Track scroll depth
+              // Scroll Depth
               let scrollDepthTracked = {25: false, 50: false, 75: false, 100: false};
               window.addEventListener('scroll', () => {
                 const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
                 Object.keys(scrollDepthTracked).forEach(depth => {
                   if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
                     scrollDepthTracked[depth] = true;
-                    sendGAEvent('scroll_depth', {
-                      'percent_scrolled': depth,
-                      'page_path': window.location.pathname
-                    });
+                    sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
                   }
-                });
-              });
-
-              // Track time on page
-              let startTime = Date.now();
-              window.addEventListener('beforeunload', () => {
-                const timeSpent = Math.round((Date.now() - startTime) / 1000);
-                sendGAEvent('time_on_page', {
-                  'page_path': window.location.pathname,
-                  'time_seconds': timeSpent
-                });
-              });
-
-              // Track search usage
-              const searchInput = document.querySelector('#quarto-search input');
-              if (searchInput) {
-                searchInput.addEventListener('keyup', (e) => {
-                  if (e.key === 'Enter' && searchInput.value) {
-                    sendGAEvent('search', {
-                      'search_term': searchInput.value
-                    });
-                  }
-                });
-              }
-
-              // Track badge clicks (PyPI/GitHub badges)
-              const badgeLinks = document.querySelectorAll('a img[src*="shields.io"]');
-              badgeLinks.forEach(badge => {
-                badge.parentElement.addEventListener('click', () => {
-                  sendGAEvent('badge_click', {
-                    'badge_type': badge.alt || 'unknown',
-                    'destination_url': badge.parentElement.href
-                  });
                 });
               });
             });

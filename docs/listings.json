@@ -8,6 +8,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/data-analysis.html",
       "/projects/gold-shocks.html",
       "/projects/mining-conflict.html",
       "/projects/mining-analysis.html",
