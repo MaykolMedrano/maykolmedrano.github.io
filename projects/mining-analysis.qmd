@@ -1,39 +1,54 @@
 ---
 title: "Illegal Mining Detection in Peruvian Amazon"
 subtitle: "Geospatial analysis combining satellite imagery and machine learning"
+description: "Machine learning and satellite imagery (Landsat 8, Sentinel-2) to detect illegal mining expansion in Madre de Dios. Random Forest classification with spatial econometrics."
 author: "Maykol Medrano"
 date: "2024-11-15"
-categories: [Geospatial, Causal Inference, ML]
+categories: [Geospatial, Causal Inference, Machine Learning, Mining]
 image: "img_3.png"
-comments:
-  utterances:
-    repo: MaykolMedrano/maykolmedrano.github.io
 ---
 
 ## Overview
 
 This project combines remote sensing, machine learning, and spatial econometrics to detect and evaluate the impact of illegal gold mining in the Peruvian Amazon (Madre de Dios region).
 
-## Methods
+## Research Question
 
+How can satellite imagery and machine learning techniques be leveraged to detect illegal mining activity and quantify its environmental and social impacts?
+
+## Methodology
+
+**Remote Sensing & ML:**
 - Satellite imagery processing (Landsat 8, Sentinel-2)
-- Random Forest for land cover classification
+- Random Forest classification for land cover detection
+- Time-series analysis for mining expansion patterns
+
+**Causal Inference:**
 - Difference-in-Differences with spatial fixed effects
 - Geospatial buffer analysis for policy evaluation
+- Spatial spillover effects modeling
 
 ## Key Findings
 
-Illegal mining expanded 15% annually between 2018-2023, with significant impacts on deforestation rates and mercury contamination in nearby water sources.
+- Illegal mining expanded **15% annually** between 2018-2023
+- Significant impacts on deforestation rates in affected zones
+- Mercury contamination detected in nearby water sources
+- Spatial spillover effects extend up to 10km from mining sites
 
 ## Policy Impact
 
-Findings informed targeted enforcement strategies and environmental protection policies at the regional government level.
+Analysis directly informed targeted enforcement strategies and environmental protection policies at the regional government level in Madre de Dios.
+
+## Implementation
+
+**Technologies:**
+- Python (GeoPandas, Scikit-learn, Rasterio)
+- Google Earth Engine for satellite data processing
+- Stata for econometric analysis
 
 ---
 
 ## Citation
-
-If you use this research, please cite:
 
 ```bibtex
 @unpublished{medrano2024illegal,
@@ -46,7 +61,7 @@ If you use this research, please cite:
 ```
 
 **APA Format:**
-Medrano, M. (2024). *Illegal Mining Detection in Peruvian Amazon: Geospatial Analysis Combining Satellite Imagery and Machine Learning* [Working Paper]. Retrieved from https://maykolmedrano.github.io/projects/mining-analysis.html
+Medrano, M. (2024). *Illegal Mining Detection in Peruvian Amazon: Geospatial Analysis Combining Satellite Imagery and Machine Learning* [Working Paper]. https://maykolmedrano.github.io/projects/mining-analysis.html
 
 ---
 

@@ -18,7 +18,14 @@
       "Bash(tasklist:*)",
       "Bash(findstr:*)",
       "Bash(gh run list:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(css-validator:*)",
+      "Bash(quarto clean:*)",
+      "Bash(echo:*)",
+      "Bash(copy manifest.json docsmanifest.json)",
+      "Bash(magick:*)",
+      "Bash(convert:*)",
+      "Bash(python:*)"
     ]
   }
 }

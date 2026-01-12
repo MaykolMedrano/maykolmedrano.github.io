@@ -4,8 +4,7 @@
    (Updated: Profile Photo Zoom & Spring Animation)
    ======================================================= */
 
-/* 0. FONT IMPORTS (REQUIRED) */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+/* 0. FONT IMPORTS - Loaded via _quarto.yml header for better performance */
 
 /* --- THEME VARIABLES --- */
 :root {
@@ -190,12 +189,12 @@ body, .card, code, h1, h2, p {
 
 .quarto-listing-grid .listing-item:hover {
   /* Lift + Subtle Scale Pop */
-  transform: translateY(-8px) scale(1.02) !important; 
-  
+  transform: translateY(-8px) scale(1.02) !important;
+
   /* Deep Elevated Shadow */
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2) !important; 
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2) !important;
   border-color: var(--accent-color) !important;
-  z-index: 10;
+  z-index: 100;
 }
 
 .listing-item .listing-image {
@@ -208,14 +207,14 @@ body, .card, code, h1, h2, p {
 
 #quarto-content {
   max-width: 100% !important;
-  padding: 0 1rem 1rem 1rem !important;
+  padding: 0 1rem 1rem !important; /* top 0, horizontal 1rem, bottom 1rem */
   margin: 0 !important;
 }
 
 main.content {
   max-width: 1600px !important;
   margin: 0 auto !important;
-  padding-top: 2rem !important;
+  padding-top: 0 !important; /* Removed all top padding for compact layout */
   min-height: 85vh !important;
 }
 
@@ -225,43 +224,71 @@ main.content {
 
 .quarto-about-trestles .about-entity {
   display: flex !important;
-  gap: 2.5rem !important;
-  align-items: center !important;
+  gap: 1.5rem !important; /* Reduced from 2.5rem to reduce vertical space */
+  align-items: center !important; /* Centered as before */
+  margin-top: 0.5rem !important; /* Minimal top margin */
 }
 
 /* --- 1. CONFIGURACIÓN DE LA IMAGEN --- */
 .quarto-about-trestles .about-entity .about-image {
   flex: 0 0 auto !important;
-  width: 320px !important; /* Tamaño controlado */
+  width: 180px !important; /* Reduced to 180px for compact above-fold layout */
+  height: 180px !important; /* Altura igual al ancho para círculo perfecto */
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
   display: flex !important;
   justify-content: center !important;
+  align-items: center !important;
+  border-radius: 50% !important; /* Contenedor circular */
+  overflow: visible !important; /* Changed from hidden to allow glow effect */
+  cursor: pointer !important; /* Make it clear it's interactive */
 }
 
 .quarto-about-trestles .about-entity .about-image img {
   width: 100% !important;
   aspect-ratio: 1 / 1 !important; /* Cuadrado perfecto */
-  
-  /* AJUSTE DE ENCUADRE: 
+
+  /* AJUSTE DE ENCUADRE:
      'center 20%' enfoca ligeramente hacia arriba para no cortar la cabeza,
      pero mostrando hombros y manos si la foto lo permite. */
   object-fit: cover !important;
-  object-position: center 20% !important; 
+  object-position: center 20% !important;
 
-  border-radius: 20px !important; /* Bordes suaves modernos */
+  border-radius: 50% !important; /* Foto circular */
   box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
-  
-  /* Animación Spring al pasar el mouse */
+
+  /* Animación Spring al pasar el mouse + Flotación continua */
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
   margin-bottom: 0 !important;
+
+  /* Micro-animación de flotación sutil */
+  animation: profileFloat 3s ease-in-out infinite;
 }
 
-/* Efecto Zoom en la foto */
-.quarto-about-trestles .about-entity .about-image img:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 25px 50px -10px rgba(0,0,0,0.25);
+/* Keyframes para la animación de flotación */
+@keyframes profileFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Efecto Zoom + Glow en la foto - MANTIENE FORMA CIRCULAR */
+.quarto-about-trestles .about-entity .about-image:hover img,
+.about-entity .about-image:hover img,
+.quarto-about-trestles .about-entity .about-image img:hover,
+.about-entity .about-image img:hover {
+  transform: scale(1.15) !important; /* Increased for more noticeable effect */
+  border-radius: 50% !important; /* CRÍTICO: Mantiene la imagen redonda durante hover */
+  box-shadow: 0 30px 60px -10px rgba(0,0,0,0.4),
+              0 0 40px rgba(37, 99, 235, 0.5) !important; /* Stronger blue glow */
+  animation: none !important; /* Stop float animation on hover */
+  cursor: pointer !important;
+  filter: brightness(1.1) contrast(1.05) !important; /* Brighter and more vivid */
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; /* Bouncy spring effect */
 }
 
 /* --- 2. CONTENIDO Y BOTONES --- */
@@ -270,14 +297,52 @@ main.content {
   text-align: left !important;
 }
 
+/* Reduce spacing in about page content */
+.quarto-about-trestles .about-entity .about-contents h2 {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 1.5rem !important;
+}
+
+.quarto-about-trestles .about-entity .about-contents p {
+  margin-bottom: 0.5rem !important; /* Reduced from 0.75rem to bring buttons closer */
+  line-height: 1.4 !important; /* Tighter for compact layout */
+}
+
+/* Reduce name size in about page */
+.quarto-about-trestles h1.title,
+.quarto-about-trestles .about-entity h1 {
+  font-size: 2rem !important; /* Reduced from 2.5rem */
+  margin-bottom: 0.5rem !important;
+}
+
+/* Reduce spacing before h2 sections in about page */
+.quarto-about-trestles h2 {
+  margin-top: 1.5rem !important; /* Reduced from 3rem default */
+}
+
+/* Reduce margin on bio section specifically */
+section#bio.level2,
+#bio.level2,
+section.level2 {
+  margin-top: 0.5rem !important; /* Reduced from default 68px */
+  margin-bottom: 0.5rem !important;
+}
+
+/* Additional override for all level2 sections in about page */
+.quarto-about-trestles section.level2,
+.quarto-about-trestles .level2 {
+  margin-top: 0.5rem !important;
+}
+
 /* Contenedor de Botones (FLEX) */
 .quarto-about-trestles .about-links {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: wrap !important;
   justify-content: flex-start !important;
-  gap: 0.8rem !important;
-  margin-top: 1.5rem !important;
+  gap: 0.6rem !important; /* Reduced for compact layout */
+  margin-top: 0.5rem !important; /* Reduced from 0.75rem to bring buttons closer */
 }
 
 /* ESTILO BASE (MODO CLARO) - Petite & Tech */
@@ -498,7 +563,7 @@ body.quarto-dark code {
   justify-content: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-  z-index: 1000;
+  z-index: 10000;
   cursor: pointer;
   backdrop-filter: blur(5px);
 }
@@ -540,14 +605,16 @@ body.quarto-dark ::selection {
   /* 1. Cambiar dirección: Foto Arriba, Texto Abajo */
   .quarto-about-trestles .about-entity {
     flex-direction: column !important; /* Columna vertical */
-    gap: 1.5rem !important;
+    gap: 1rem !important; /* Reducido de 1.5rem a 1rem */
     text-align: center !important; /* Centrar todo */
+    margin-bottom: 1rem !important; /* Reducir espacio inferior */
   }
 
   /* 2. Ajustar ancho de la foto en móvil */
   .quarto-about-trestles .about-entity .about-image {
-    width: 250px !important; /* Un poco más pequeña en móvil */
-    margin: 0 auto !important; /* Centrada horizontalmente */
+    width: 220px !important; /* Un poco más pequeña en móvil */
+    height: 220px !important; /* Mantener proporción circular */
+    margin: 2rem auto 0 auto !important; /* Espacio superior desde header, centrada horizontalmente */
   }
 
   /* 3. Centrar el texto y darle ancho completo */
@@ -561,6 +628,13 @@ body.quarto-dark ::selection {
   .quarto-about-trestles .about-links {
     justify-content: center !important; /* Centrados */
     width: 100% !important;
+    margin-top: 1rem !important; /* Reducido de 1.5rem a 1rem */
+    margin-bottom: 1rem !important; /* Reducir espacio después de botones */
+  }
+
+  /* 5. Reducir espacio inferior de la página en móvil */
+  #quarto-content {
+    padding-bottom: 1rem !important;
   }
 }
 
@@ -643,18 +717,18 @@ body.quarto-dark .listing-item:hover .listing-image {
    ======================================================= */
 
 /* --- A. READING PROGRESS BAR ---
-   This creates a thin blue line at the bottom of your fixed header 
-   that fills up as the user scrolls. 
+   This creates a thin blue line at the top of the viewport
+   that fills up as the user scrolls.
 */
 header::after {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 0%;
+  width: var(--scroll-width, 0%);
   height: 3px;
   background: var(--accent-color);
-  z-index: 9999;
+  z-index: 100000;
   transition: width 0.1s ease-out;
 }
 
@@ -703,7 +777,7 @@ section {
 
 footer {
   border-top: 1px solid rgba(0,0,0,0.05);
-  padding: 2rem 0 !important;
+  padding: 0 !important; /* Sin padding vertical */
   font-family: var(--font-code);
   font-size: 0.8rem;
   color: var(--accent-secondary);
@@ -868,7 +942,7 @@ body.quarto-dark .callout-coding {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  z-index: 5;
+  z-index: 10;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   backdrop-filter: blur(4px);
 }
@@ -926,4 +1000,268 @@ body.quarto-dark .abstract {
 .quarto-figure:hover img {
   filter: contrast(1.05);
   transition: all 0.3s ease;
+}
+
+/* Eliminar espacio extra en el footer y comentarios */
+#quarto-after-body-content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+footer.footer {
+  margin-top: 11px !important; /* Espacio exacto de 11px */
+  padding: 0 !important; /* Sin padding */
+}
+
+/* Eliminar padding y margin de los contenedores internos del footer */
+.nav-footer, .nav-footer-center, .nav-footer-left, .nav-footer-right {
+  padding: 0.5rem 1rem !important; /* Padding vertical y horizontal para respiro */
+  margin: 0 !important;
+}
+
+/* Ajustar altura del footer en móvil */
+@media (max-width: 768px) {
+  footer.footer, footer {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .nav-footer-center {
+    padding: 0.5rem 1rem !important; /* Padding para texto con respiro en los lados */
+  }
+}
+
+/* Ajuste para que los comentarios no empujen el footer infinitamente */
+.giscus, .utterances {
+  margin-top: 3rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* =======================================================
+   16. RESPONSIVE TYPOGRAPHY (MOBILE OPTIMIZATION)
+   ======================================================= */
+
+/* Mobile Small (< 576px) - Optimize readability */
+@media (max-width: 575.98px) {
+  /* Base font size slightly smaller for mobile */
+  body {
+    font-size: 14px !important;
+  }
+
+  /* Code tools button: Smaller and better positioned */
+  .code-tools-button,
+  .code-with-filename .code-tools-button {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.5rem !important;
+    min-width: auto !important;
+  }
+
+  /* Code fold buttons */
+  .code-fold-btn {
+    font-size: 0.75rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+
+  /* Source code blocks: Better mobile handling */
+  div.sourceCode {
+    font-size: 0.7rem !important;
+    margin: 0.5rem 0 !important;
+    overflow-x: auto !important;
+  }
+
+  pre.sourceCode {
+    padding: 0.5rem !important;
+    border-radius: 6px !important;
+    overflow-x: auto !important;
+  }
+
+  /* Citation blocks */
+  .citation {
+    font-size: 0.8rem !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Callouts: More compact */
+  .callout {
+    padding: 0.75rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .callout-title {
+    font-size: 0.9rem !important;
+  }
+
+  .callout-body {
+    font-size: 0.85rem !important;
+  }
+
+  /* Badges inline (project-badge spans) */
+  span.project-badge,
+  .badge-stata,
+  .badge-python,
+  .badge-ta {
+    font-size: 0.65rem !important;
+    padding: 0.15rem 0.4rem !important;
+    display: inline-block !important;
+    margin: 0.2rem !important;
+  }
+
+  /* Headings: More compact on mobile */
+  h1, h1.title {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.35rem !important;
+    margin-top: 2rem !important;
+  }
+
+  h3 {
+    font-size: 1.15rem !important;
+  }
+
+  h4 {
+    font-size: 1rem !important;
+  }
+
+  /* Paragraphs: Better line height for small screens */
+  p {
+    line-height: 1.6 !important;
+  }
+
+  /* Code blocks: Smaller and scrollable */
+  code {
+    font-size: 0.8em !important;
+    word-break: break-word;
+  }
+
+  pre {
+    font-size: 0.75rem !important;
+    overflow-x: auto;
+  }
+
+  /* Listing titles (project cards) */
+  .listing-item .listing-title {
+    font-size: 1.1rem !important;
+  }
+
+  .listing-item .listing-subtitle {
+    font-size: 0.85rem !important;
+  }
+
+  /* Metadata text */
+  .listing-item .metadata,
+  .listing-date {
+    font-size: 0.75rem !important;
+  }
+
+  /* Tags: Slightly smaller */
+  .listing-category,
+  .quarto-category {
+    font-size: 0.5em !important;
+    padding: 0.2em 0.6em !important;
+  }
+
+  /* About section (profile) */
+  .about-entity h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .about-entity p {
+    font-size: 0.95rem !important;
+  }
+
+  /* About links: Adjust for mobile */
+  .about-link {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.7rem !important;
+  }
+
+  /* Navbar: Ensure text is readable */
+  .navbar-nav .nav-link {
+    font-size: 0.9rem !important;
+  }
+
+  /* Content padding: More air on sides */
+  main.content {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  /* Blockquotes: Smaller padding */
+  blockquote {
+    padding: 1rem 1.25rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Tables: Smaller text and scrollable */
+  .table, table {
+    font-size: 0.8rem !important;
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+  .table td, .table th,
+  table td, table th {
+    padding: 0.4rem !important;
+  }
+
+  /* Table container: Ensure horizontal scroll */
+  .cell-output-display {
+    overflow-x: auto !important;
+  }
+
+  /* Fix wide content overflow */
+  .column-page,
+  .column-body {
+    overflow-x: hidden !important;
+  }
+
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Figure captions */
+  .figure-caption,
+  figcaption {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Tablet (576px - 767px) - Intermediate sizing */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 14.5px !important;
+  }
+
+  h1, h1.title {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Listing items: Comfortable reading */
+  .listing-item .listing-title {
+    font-size: 1.2rem !important;
+  }
+
+  /* About section */
+  .about-entity h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Tablet Landscape (768px - 991px) - Standard sizing */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Most defaults work well here, minimal adjustments */
+
+  .listing-item .listing-title {
+    font-size: 1.25rem !important;
+  }
 }

@@ -1,25 +1,121 @@
 ---
 title: "Gold Price Shocks and Social Conflict"
 subtitle: "Causal evidence from the Peruvian Amazon"
-description: "Analyzing the impact of international commodity price shocks on local social conflicts using spatial econometrics and difference-in-differences."
+description: "Spatial econometrics and DiD analysis examining how commodity price shocks affect conflict probability in resource-rich regions. SSIV and spillover modeling."
+author: "Maykol Medrano"
 date: "2025-10-20"
-categories: [Economics, Causal Inference, Mining, Peru]
-image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800" # Puedes cambiar esto por una foto tuya local
+categories: [Causal Inference, Stata, Python, Mining, Spatial Econometrics]
+image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800"
 ---
 
 ## Overview
 
 This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.
 
-### Methodology
+## Research Question
 
-Using a **Shift-Share IV** approach, we exploit exogenous variation in international prices combined with local mineral endowments to predict conflict probability.
+How do international commodity price shocks affect the probability and intensity of social conflicts in resource-rich regions?
 
-### Preliminary Results
+## Methodology
 
-* **Key Finding 1:** A 10% increase in gold prices leads to a...
-* **Key Finding 2:** The effect is concentrated in districts with weak institutional presence.
+**Identification Strategy:**
+- Shift-Share Instrumental Variable (SSIV) approach
+- Difference-in-Differences (DiD) with spatial econometrics
+- Two-way fixed effects accounting for spillover effects
 
-### Stack
-* **Stata:** Panel data estimation (`reghdfe`)
-* **Python:** Spatial visualization (`geopandas`)
+**Key equation:**
+
+$$
+Z_{dt} = \text{Endowment}_d \times \log(\text{Price}_{t})
+$$
+
+Where $Z_{dt}$ is the instrument for district $d$ at time $t$.
+
+**Data Sources:**
+- ENAHO household surveys (2015-2022)
+- International commodity price data (World Bank)
+- Social conflict registry (Defensoría del Pueblo)
+- Spatial weights matrix for spillover modeling
+
+## Key Findings
+
+- A **10% increase in gold prices** leads to higher conflict probability
+- Effects concentrated in districts with weak institutional presence
+- Spatial spillover effects extend to neighboring districts
+- Impact driven by competition for land rights and resource access
+
+## Implementation
+
+::: {.panel-tabset}
+
+## Stata
+
+```stata
+* Load data and setup project structure
+usecasen 2022, clear
+projectinit, setup("Conflict_Analysis")
+
+* Define Shift-Share Instrument
+gen shift_share_iv = gold_endowment * log(gold_price_int)
+
+* Main Specification (Fixed Effects)
+reghdfe conflict_dummy shift_share_iv canon_transfers ///
+    population_density, ///
+    absorb(district_id year_month) ///
+    vce(cluster district_id)
+
+* Export Results
+outreg2 using "results/main_table.tex", replace tex
+```
+
+## Python
+
+```python
+import geopandas as gpd
+import matplotlib.pyplot as plt
+
+# Load district data with conflict intensity
+peru_map = gpd.read_file("data/peru_districts.geojson")
+
+# Spatial visualization
+fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+peru_map.plot(column='conflict_intensity',
+              ax=ax,
+              legend=True,
+              cmap='OrRd',
+              scheme='quantiles')
+
+plt.title("Spatial Distribution of Social Conflicts")
+plt.show()
+```
+
+:::
+
+## Policy Implications
+
+Findings suggest need for:
+- Enhanced conflict prevention mechanisms in extractive zones
+- Strengthened local governance in resource-rich areas
+- Early warning systems for commodity price-driven tensions
+- Improved benefit-sharing mechanisms from mining activities
+
+---
+
+## Citation
+
+```bibtex
+@unpublished{medrano2025mining,
+  title={Gold Price Shocks and Social Conflict: Causal Evidence from the Peruvian Amazon},
+  author={Medrano, Maykol},
+  year={2025},
+  note={Working Paper},
+  url={https://maykolmedrano.github.io/projects/mining-conflict.html}
+}
+```
+
+**APA Format:**
+Medrano, M. (2025). *Gold Price Shocks and Social Conflict: Causal Evidence from the Peruvian Amazon* [Working Paper]. https://maykolmedrano.github.io/projects/mining-conflict.html
+
+---
+
+*Full working paper and replication code available upon request.*

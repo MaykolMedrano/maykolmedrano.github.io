@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-aefeaf50ece0138c59bc18869bb6ba40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-aa9078c35fc1dc66e45d7eff30f356b9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,14 +105,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C00Q0GKQPP"></script>
 
 <script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,7 +126,6 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata, Econometrics, Data Science">
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://maykolmedrano.github.io">
 
 <meta name="theme-color" content="#325d88" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
@@ -155,7 +154,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Hola Mundo – Maykol Medrano">
 <meta property="og:description" content="Policy Data Scientist | Applied Economist | Research Engineer">
-<meta property="og:image" content="https://maykolmedrano.github.io/posts/profile.jpg">
+<meta property="og:image" content="https://maykolmedrano.github.io/posts/profile.png">
 <meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Hola Mundo – Maykol Medrano">
@@ -747,7 +746,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <script src="https://utteranc.es/client.js" repo="MaykolMedrano/maykolmedrano.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 <input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
 <script>
   function loadGiscus() {
     // Function to get the theme based on body class
@@ -834,14 +833,19 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <script>
   (function() {
-    // 1. Reading Progress Bar Logic
+    // Optimized Scroll Handler (Progress Bar) - Throttled for performance
+    let scrollTimeout;
     window.addEventListener('scroll', () => {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      const header = document.querySelector('header');
-      if (header) {
-        header.style.setProperty('--scroll-width', scrollPercent + '%');
-      }
-    });
+      if (scrollTimeout) return;
+      scrollTimeout = setTimeout(() => {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        const header = document.querySelector('header');
+        if (header) {
+          header.style.setProperty('--scroll-width', scrollPercent + '%');
+        }
+        scrollTimeout = null;
+      }, 100);
+    }, { passive: true });
 
     // 2. Theme Logic
     const setTheme = (theme) => {
@@ -917,17 +921,22 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       });
     });
 
-    // Scroll Depth
+    // Scroll Depth - Throttled for performance
     let scrollDepthTracked = {25: false, 50: false, 75: false, 100: false};
+    let depthScrollTimeout;
     window.addEventListener('scroll', () => {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      Object.keys(scrollDepthTracked).forEach(depth => {
-        if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
-          scrollDepthTracked[depth] = true;
-          sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
-        }
-      });
-    });
+      if (depthScrollTimeout) return;
+      depthScrollTimeout = setTimeout(() => {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        Object.keys(scrollDepthTracked).forEach(depth => {
+          if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
+            scrollDepthTracked[depth] = true;
+            sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
+          }
+        });
+        depthScrollTimeout = null;
+      }, 200);
+    }, { passive: true });
   });
 </script>
 

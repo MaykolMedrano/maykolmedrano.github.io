@@ -1,32 +1,31 @@
 ---
 title: "Gold Price Shocks and Social Conflict"
-subtitle: "Causal evidence from the Peruvian Amazon (2008-2023)"
-description: "We estimate the causal effect of international gold price fluctuations on local social conflicts in Madre de Dios, using a Shift-Share IV approach and satellite imagery data."
-date: "2025-10-24"
+subtitle: "Causal evidence from the Peruvian Amazon"
+description: "Causal analysis using Shift-Share IV to estimate how international gold price fluctuations impact social conflicts in Peru's mining districts. Presented at LACEA 2024."
 author: "Maykol Medrano"
+date: "2025-10-24"
 categories: [Causal Inference, Stata, Python, Mining, Spatial Econometrics]
 image: "img_3.png"
-title-block-banner: true
-toc: true
 ---
 
 ::: {.callout-note}
 ## Project Status
-This paper is currently **under review**. The preliminary version was presented at the LACEA 2024 Annual Meeting.
+This paper is currently **under review**. Preliminary version presented at LACEA 2024 Annual Meeting.
 :::
 
-## 1. Overview
+## Overview
 
-Does the boom in extractive industries fuel social unrest? Focusing on the Peruvian Amazon, we exploit exogenous variation in international gold prices combined with local mineral endowments to predict conflict probability at the district level.
+This project investigates the causal relationship between international gold price fluctuations and the incidence of social conflicts in mining districts of Madre de Dios, Peru.
 
-We leverage data from three main sources:
-1.  **Ombudsman's Office (Defensoría del Pueblo):** Monthly panel of social conflicts.
-2.  **Sentinel-2 Satellite Imagery:** To measure illegal mining deforestation.
-3.  **MEF (SIAF):** For local canon transfers analysis.
+## Research Question
 
-## 2. Methodology
+Does the boom in extractive industries fuel social unrest? We exploit exogenous variation in international gold prices combined with local mineral endowments to predict conflict probability at the district level.
 
-We employ a **Shift-Share Instrumental Variable (SSIV)** strategy. The logic is to isolate the component of local economic growth driven purely by external price shocks.
+## Methodology
+
+We employ a **Shift-Share Instrumental Variable (SSIV)** strategy to isolate the component of local economic growth driven purely by external price shocks.
+
+**Key equation:**
 
 $$
 Z_{dt} = \text{Endowment}_d \times \log(\text{Price}_{t})
@@ -34,41 +33,50 @@ $$
 
 Where $Z_{dt}$ is the instrument for district $d$ at time $t$.
 
-## 3. Implementation Code
+**Data sources:**
+- Ombudsman's Office (Defensoría del Pueblo): Monthly panel of social conflicts
+- Sentinel-2 Satellite Imagery: Illegal mining deforestation measurement
+- Ministry of Economy (SIAF): Local canon transfers analysis
 
-Here is how we construct the instrument and run the core specification. Notice how we handle the spatial lag.
+## Key Findings
+
+- A **10% increase in gold prices** leads to a **2.5 percentage point increase** in the probability of socio-environmental conflict in the subsequent quarter
+- Effect driven primarily by competition for land rights rather than labor disputes
+- Impacts concentrated in districts with weak institutional presence
+
+## Implementation
 
 ::: {.panel-tabset}
 
-## Stata (Estimation)
+## Stata
 
 ```stata
-* 1. Define the Shift-Share Instrument
+* Define Shift-Share Instrument
 gen shift_share_iv = gold_endowment * log(gold_price_int)
 
-* 2. Main Specification (Fixed Effects)
+* Main Specification (Fixed Effects)
 reghdfe conflict_dummy shift_share_iv canon_transfers ///
     population_density, ///
     absorb(district_id year_month) ///
     vce(cluster district_id)
 
-* 3. Export Results
+* Export Results
 outreg2 using "results/main_table.tex", replace tex
 ```
 
-## Python (Spatial Viz)
+## Python
 
 ```python
 import geopandas as gpd
 import matplotlib.pyplot as plt
 
-# Load District Data with Conflict Intensity
+# Load district data with conflict intensity
 peru_map = gpd.read_file("data/peru_districts.geojson")
 
-# Plot
+# Spatial visualization
 fig, ax = plt.subplots(1, 1, figsize=(10, 10))
-peru_map.plot(column='conflict_intensity', 
-              ax=ax, 
+peru_map.plot(column='conflict_intensity',
+              ax=ax,
               legend=True,
               cmap='OrRd',
               scheme='quantiles')
@@ -79,13 +87,23 @@ plt.show()
 
 :::
 
-## 4. Preliminary Results
+---
 
-The results suggest that a **10% increase in gold prices** leads to a **2.5 percentage point increase** in the probability of a socio-environmental conflict emerging in the subsequent quarter.
+## Citation
 
-> "The effect is driven primarily by competition for land rights rather than direct labor disputes."
+```bibtex
+@unpublished{medrano2025gold,
+  title={Gold Price Shocks and Social Conflict: Causal Evidence from the Peruvian Amazon},
+  author={Medrano, Maykol},
+  year={2025},
+  note={Under review. Presented at LACEA 2024},
+  url={https://maykolmedrano.github.io/projects/gold-shocks.html}
+}
+```
 
-## References
+**APA Format:**
+Medrano, M. (2025). *Gold Price Shocks and Social Conflict: Causal Evidence from the Peruvian Amazon* [Working Paper]. Presented at LACEA 2024 Annual Meeting. https://maykolmedrano.github.io/projects/gold-shocks.html
 
-* Dell, M. (2010). The Persistent Effects of Peru's Mining Mita. *Econometrica*.
-* Dube, O., & Vargas, J. F. (2013). Commodity Price Shocks and Civil Conflict. *Review of Economic Studies*.
+---
+
+*Full working paper and replication code available upon request.*

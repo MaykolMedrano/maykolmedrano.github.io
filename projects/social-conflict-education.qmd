@@ -1,13 +1,11 @@
 ---
 title: "Social Conflicts and Human Capital Accumulation"
 subtitle: "Quasi-experimental evidence from extractive industries in Peru"
+description: "Event study analysis showing mining conflicts reduce test scores by 0.15 SD and increase dropout rates by 2.3pp. Master's thesis using Callaway-Sant'Anna DID estimator."
 author: "Maykol Medrano"
 date: "2024-09-20"
-categories: [Causal Inference, Education, Development]
+categories: [Causal Inference, Education, Development, Mining]
 image: "img_2.gif"
-comments:
-  utterances:
-    repo: MaykolMedrano/maykolmedrano.github.io
 ---
 
 ## Overview
@@ -18,20 +16,34 @@ This study examines the causal effect of resource-related social conflicts on ed
 
 Do mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?
 
-## Methods
+## Methodology
 
+**Causal Inference Strategy:**
 - Event study with staggered treatment adoption
 - Callaway and Sant'Anna (2021) DID estimator
-- Shift-share instrumental variables for robustness
-- Administrative records from MINEDU and National Police
+- Shift-share instrumental variables for robustness checks
+- Two-way fixed effects regression with clustered standard errors
 
-## Preliminary Findings
+**Data Sources:**
+- Administrative education records (MINEDU)
+- Social conflict registry (National Police & Ombudsman's Office)
+- Mining production and canon transfers (MEF)
+- Census data for demographic controls
 
-Exposure to social conflicts reduces standardized test scores by 0.15 SD and increases dropout rates by 2.3 percentage points, with effects persisting for 3+ years.
+## Key Findings
+
+- Exposure to social conflicts reduces standardized test scores by **0.15 SD**
+- Dropout rates increase by **2.3 percentage points** in affected districts
+- Effects persist for **3+ years** after conflict occurrence
+- Stronger impacts in rural areas and communities with weak governance
 
 ## Policy Implications
 
-Results suggest the need for targeted educational interventions in conflict-affected areas and improved conflict prevention mechanisms in extractive zones.
+Results suggest the need for:
+- Targeted educational interventions in conflict-affected areas
+- Improved conflict prevention mechanisms in extractive zones
+- Strengthened local institutional capacity
+- Early warning systems for educational disruption
 
 ---
 
@@ -42,7 +54,7 @@ Results suggest the need for targeted educational interventions in conflict-affe
   title={Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru},
   author={Medrano, Maykol},
   year={2025},
-  school={Pontificia Universidad Católica de Chile},
+  school={Pontificia Universidad Cat\'olica de Chile},
   type={Master's Thesis},
   note={In progress},
   url={https://maykolmedrano.github.io/projects/social-conflict-education.html}

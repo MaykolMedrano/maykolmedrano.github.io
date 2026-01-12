@@ -8,6 +8,7 @@
 
 <meta name="author" content="Maykol Medrano">
 <meta name="dcterms.date" content="2024-09-20">
+<meta name="description" content="Event study analysis showing mining conflicts reduce test scores by 0.15 SD and increase dropout rates by 2.3pp. Master’s thesis using Callaway-Sant’Anna DID estimator.">
 
 <title>Social Conflicts and Human Capital Accumulation – Maykol Medrano</title>
 <style>
@@ -77,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-aefeaf50ece0138c59bc18869bb6ba40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-aa9078c35fc1dc66e45d7eff30f356b9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,14 +106,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C00Q0GKQPP"></script>
 
 <script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
+gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,7 +127,6 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata, Econometrics, Data Science">
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://maykolmedrano.github.io">
 
 <meta name="theme-color" content="#325d88" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
@@ -154,12 +154,12 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Social Conflicts and Human Capital Accumulation – Maykol Medrano">
-<meta property="og:description" content="Quasi-experimental evidence from extractive industries in Peru">
+<meta property="og:description" content="Event study analysis showing mining conflicts reduce test scores by 0.15 SD and increase dropout rates by 2.3pp. Master’s thesis using Callaway-Sant’Anna DID estimator.">
 <meta property="og:image" content="https://maykolmedrano.github.io/projects/img_2.gif">
 <meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Social Conflicts and Human Capital Accumulation – Maykol Medrano">
-<meta name="twitter:description" content="Quasi-experimental evidence from extractive industries in Peru">
+<meta name="twitter:description" content="Event study analysis showing mining conflicts reduce test scores by 0.15 SD and increase dropout rates by 2.3pp. Master’s thesis using Callaway-Sant’Anna DID estimator.">
 <meta name="twitter:image" content="https://maykolmedrano.github.io/projects/img_2.gif">
 <meta name="twitter:creator" content="@maykolmedrano">
 <meta name="twitter:site" content="@maykolmedrano">
@@ -245,8 +245,8 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#preliminary-findings" id="toc-preliminary-findings" class="nav-link" data-scroll-target="#preliminary-findings">Preliminary Findings</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#policy-implications" id="toc-policy-implications" class="nav-link" data-scroll-target="#policy-implications">Policy Implications</a></li>
   <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
   </ul>
@@ -263,9 +263,15 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     <div class="quarto-category">Causal Inference</div>
     <div class="quarto-category">Education</div>
     <div class="quarto-category">Development</div>
+    <div class="quarto-category">Mining</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Event study analysis showing mining conflicts reduce test scores by 0.15 SD and increase dropout rates by 2.3pp. Master’s thesis using Callaway-Sant’Anna DID estimator.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -300,22 +306,23 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
 <p>Do mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?</p>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<ul>
-<li>Event study with staggered treatment adoption</li>
-<li>Callaway and Sant’Anna (2021) DID estimator</li>
-<li>Shift-share instrumental variables for robustness</li>
-<li>Administrative records from MINEDU and National Police</li>
-</ul>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p><strong>Causal Inference Strategy:</strong> - Event study with staggered treatment adoption - Callaway and Sant’Anna (2021) DID estimator - Shift-share instrumental variables for robustness checks - Two-way fixed effects regression with clustered standard errors</p>
+<p><strong>Data Sources:</strong> - Administrative education records (MINEDU) - Social conflict registry (National Police &amp; Ombudsman’s Office) - Mining production and canon transfers (MEF) - Census data for demographic controls</p>
 </section>
-<section id="preliminary-findings" class="level2">
-<h2 class="anchored" data-anchor-id="preliminary-findings">Preliminary Findings</h2>
-<p>Exposure to social conflicts reduces standardized test scores by 0.15 SD and increases dropout rates by 2.3 percentage points, with effects persisting for 3+ years.</p>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li>Exposure to social conflicts reduces standardized test scores by <strong>0.15 SD</strong></li>
+<li>Dropout rates increase by <strong>2.3 percentage points</strong> in affected districts</li>
+<li>Effects persist for <strong>3+ years</strong> after conflict occurrence</li>
+<li>Stronger impacts in rural areas and communities with weak governance</li>
+</ul>
 </section>
 <section id="policy-implications" class="level2">
 <h2 class="anchored" data-anchor-id="policy-implications">Policy Implications</h2>
-<p>Results suggest the need for targeted educational interventions in conflict-affected areas and improved conflict prevention mechanisms in extractive zones.</p>
+<p>Results suggest the need for: - Targeted educational interventions in conflict-affected areas - Improved conflict prevention mechanisms in extractive zones - Strengthened local institutional capacity - Early warning systems for educational disruption</p>
 <hr>
 </section>
 <section id="citation" class="level2">
@@ -324,7 +331,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>={Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru},</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>={Medrano, Maykol},</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>={2025},</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">school</span>={Pontificia Universidad Católica de Chile},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">school</span>={Pontificia Universidad Cat<span class="ch">\'</span>olica de Chile},</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">type</span>={Master's Thesis},</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>={In progress},</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>={https://maykolmedrano.github.io/projects/social-conflict-education.html}</span>
@@ -797,10 +804,8 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     }
   });
   </script>
-<script src="https://utteranc.es/client.js" repo="MaykolMedrano/maykolmedrano.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
 <input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
 <script>
   function loadGiscus() {
     // Function to get the theme based on body class
@@ -831,60 +836,72 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Social Conflicts and Human Capital Accumulation"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Quasi-experimental evidence from extractive industries in Peru"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maykol Medrano"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2024-09-20"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Causal Inference, Education, Development]</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "img_2.gif"</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="an">comments:</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">  utterances:</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">    repo: MaykolMedrano/maykolmedrano.github.io</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Event study analysis showing mining conflicts reduce test scores by 0.15 SD and increase dropout rates by 2.3pp. Master's thesis using Callaway-Sant'Anna DID estimator."</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maykol Medrano"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2024-09-20"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Causal Inference, Education, Development, Mining]</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "img_2.gif"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>This study examines the causal effect of resource-related social conflicts on educational outcomes in Peru, using a difference-in-differences design with event-study specification.</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>This study examines the causal effect of resource-related social conflicts on educational outcomes in Peru, using a difference-in-differences design with event-study specification.</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>Do mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>Do mining and hydrocarbon conflicts disrupt human capital accumulation in affected communities?</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methodology</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methods</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Event study with staggered treatment adoption</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Callaway and Sant'Anna (2021) DID estimator</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shift-share instrumental variables for robustness</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Administrative records from MINEDU and National Police</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preliminary Findings</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>Exposure to social conflicts reduces standardized test scores by 0.15 SD and increases dropout rates by 2.3 percentage points, with effects persisting for 3+ years.</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Policy Implications</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>Results suggest the need for targeted educational interventions in conflict-affected areas and improved conflict prevention mechanisms in extractive zones.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>**Causal Inference Strategy:**</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Event study with staggered treatment adoption</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Callaway and Sant'Anna (2021) DID estimator</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shift-share instrumental variables for robustness checks</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Two-way fixed effects regression with clustered standard errors</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>**Data Sources:**</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Administrative education records (MINEDU)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Social conflict registry (National Police &amp; Ombudsman's Office)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mining production and canon transfers (MEF)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Census data for demographic controls</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Findings</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exposure to social conflicts reduces standardized test scores by **0.15 SD**</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dropout rates increase by **2.3 percentage points** in affected districts</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effects persist for **3+ years** after conflict occurrence</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stronger impacts in rural areas and communities with weak governance</span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="in">@mastersthesis{medrano2025conflicts,</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="in">  title={Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru},</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="in">  author={Medrano, Maykol},</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="in">  year={2025},</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="in">  school={Pontificia Universidad Católica de Chile},</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="in">  type={Master's Thesis},</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="in">  note={In progress},</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="in">  url={https://maykolmedrano.github.io/projects/social-conflict-education.html}</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Policy Implications</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>Results suggest the need for:</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Targeted educational interventions in conflict-affected areas</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Improved conflict prevention mechanisms in extractive zones</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Strengthened local institutional capacity</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Early warning systems for educational disruption</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation</span></span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>**APA Format:**</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>Medrano, M. (2025). *Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru* <span class="co">[</span><span class="ot">Master's thesis, Pontificia Universidad Católica de Chile</span><span class="co">]</span>. https://maykolmedrano.github.io/projects/social-conflict-education.html</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>*Master's thesis in progress. Draft available Q2 2025.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="in">@mastersthesis{medrano2025conflicts,</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="in">  title={Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru},</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="in">  author={Medrano, Maykol},</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="in">  year={2025},</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="in">  school={Pontificia Universidad Cat\'olica de Chile},</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="in">  type={Master's Thesis},</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="in">  note={In progress},</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="in">  url={https://maykolmedrano.github.io/projects/social-conflict-education.html}</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>**APA Format:**</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>Medrano, M. (2025). *Social Conflicts and Human Capital Accumulation: Quasi-Experimental Evidence from Extractive Industries in Peru* <span class="co">[</span><span class="ot">Master's thesis, Pontificia Universidad Católica de Chile</span><span class="co">]</span>. https://maykolmedrano.github.io/projects/social-conflict-education.html</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>*Master's thesis in progress. Draft available Q2 2025.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -931,14 +948,19 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <script>
   (function() {
-    // 1. Reading Progress Bar Logic
+    // Optimized Scroll Handler (Progress Bar) - Throttled for performance
+    let scrollTimeout;
     window.addEventListener('scroll', () => {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      const header = document.querySelector('header');
-      if (header) {
-        header.style.setProperty('--scroll-width', scrollPercent + '%');
-      }
-    });
+      if (scrollTimeout) return;
+      scrollTimeout = setTimeout(() => {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        const header = document.querySelector('header');
+        if (header) {
+          header.style.setProperty('--scroll-width', scrollPercent + '%');
+        }
+        scrollTimeout = null;
+      }, 100);
+    }, { passive: true });
 
     // 2. Theme Logic
     const setTheme = (theme) => {
@@ -1014,17 +1036,22 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
       });
     });
 
-    // Scroll Depth
+    // Scroll Depth - Throttled for performance
     let scrollDepthTracked = {25: false, 50: false, 75: false, 100: false};
+    let depthScrollTimeout;
     window.addEventListener('scroll', () => {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      Object.keys(scrollDepthTracked).forEach(depth => {
-        if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
-          scrollDepthTracked[depth] = true;
-          sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
-        }
-      });
-    });
+      if (depthScrollTimeout) return;
+      depthScrollTimeout = setTimeout(() => {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        Object.keys(scrollDepthTracked).forEach(depth => {
+          if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
+            scrollDepthTracked[depth] = true;
+            sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
+          }
+        });
+        depthScrollTimeout = null;
+      }, 200);
+    }, { passive: true });
   });
 </script>
 

@@ -1,39 +1,58 @@
 ---
 title: "Higher Education Financing in Peru"
 subtitle: "Budget allocation efficiency and equity analysis for public universities"
+description: "Data Envelopment Analysis and policy evaluation for Peru's 52 public universities. Research at Ministry of Education informing $800M+ annual budget allocation."
 author: "Maykol Medrano"
 date: "2023-12-10"
 categories: [Policy Analysis, Public Finance, Education]
 image: "img_1.jpg"
-comments:
-  utterances:
-    repo: MaykolMedrano/maykolmedrano.github.io
 ---
 
 ## Overview
 
 Comprehensive analysis of budget allocation mechanisms for Peru's 52 public universities, examining efficiency, equity, and the impact of performance-based funding reforms.
 
+## Research Question
+
+How can budget allocation be optimized to improve both efficiency and equity in Peru's public higher education system?
+
 ## Context
 
-Led analytical work at Peru's Ministry of Education (Minedu) to inform resource allocation decisions and policy design for higher education financing.
+Led analytical work at Peru's Ministry of Education (MINEDU) to inform resource allocation decisions and policy design for higher education financing.
 
-## Analysis Framework
+## Methodology
 
-- Data Envelopment Analysis (DEA) for efficiency measurement
-- Concentration curves and Gini coefficients for equity analysis
-- Regression discontinuity design for reform evaluation
+**Efficiency Analysis:**
+- Data Envelopment Analysis (DEA) for institutional efficiency measurement
+- Stochastic frontier analysis for robustness checks
+- Panel data regression with university fixed effects
+
+**Equity Analysis:**
+- Concentration curves and Gini coefficients
+- Theil index decomposition by region and institution type
+- Spatial distribution analysis
+
+**Policy Evaluation:**
+- Regression discontinuity design for reform impact assessment
+- Difference-in-Differences for performance-based funding effects
 - Integration of administrative systems (SIAF, SIGA, AIRHSP, NEXUS)
 
 ## Key Findings
 
-- Significant efficiency gaps across universities (average DEA score: 0.67)
+- Significant efficiency gaps across universities (average DEA score: **0.67**)
 - Budget concentration favoring Lima-based institutions
-- Performance-based funding increased research output by 18%
+- Performance-based funding increased research output by **18%**
+- Regional disparities in per-student funding (up to 3x difference)
+- Economies of scale present in universities with 10,000+ students
 
-## Impact
+## Policy Impact
 
-Analysis directly informed budget allocation methodology used in national higher education policy, affecting $800M+ in annual public university funding.
+Analysis directly informed budget allocation methodology used in national higher education policy, affecting **$800M+ in annual public university funding**.
+
+Recommendations implemented:
+- New formula-based allocation system
+- Performance incentives for research and graduation rates
+- Equity adjustments for underserved regions
 
 ---
 

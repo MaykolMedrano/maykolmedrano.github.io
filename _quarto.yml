@@ -13,13 +13,13 @@ website:
   site-url: "https://maykolmedrano.github.io"
   repo-url: https://github.com/MaykolMedrano/maykolmedrano.github.io
   repo-actions: [edit, issue]
-  google-analytics: "G-XXXXXXXXXX"
+  google-analytics: "G-C00Q0GKQPP"
   search: true
   
   open-graph:
     locale: en_US
     site-name: "Maykol Medrano - Policy Data Scientist"
-    image: profile.jpg
+    image: profile.png
 
   twitter-card:
     creator: "@maykolmedrano"
@@ -30,9 +30,9 @@ website:
       - text: "Home"
         href: index.html
       - text: "Software"
-        href: software.qmd
+        href: software.html
       - text: "Policy & Research"
-        href: projects.qmd
+        href: projects.html
       - text: "Blog"
         href: blog.html
       - icon: rss
@@ -82,12 +82,15 @@ format:
       giscus:
         repo: MaykolMedrano/maykolmedrano.github.io
         repo-id: "R_kgDOQ296zQ"
-        category: General
+        category: "General"
         category-id: "DIC_kwDOQ296zc4C0x47"
         mapping: pathname
         reactions-enabled: true
         input-position: top
-        theme: light
+        theme:
+          light: light
+          dark: dark
+        loading: lazy
 
     # Header
     include-in-header:
@@ -103,7 +106,6 @@ format:
           <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata, Econometrics, Data Science">
           <meta name="robots" content="index, follow">
           <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-          <link rel="canonical" href="https://maykolmedrano.github.io">
 
           <meta name="theme-color" content="#325d88" media="(prefers-color-scheme: light)">
           <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
@@ -161,14 +163,19 @@ format:
 
           <script>
             (function() {
-              // 1. Reading Progress Bar Logic
+              // Optimized Scroll Handler (Progress Bar) - Throttled for performance
+              let scrollTimeout;
               window.addEventListener('scroll', () => {
-                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                const header = document.querySelector('header');
-                if (header) {
-                  header.style.setProperty('--scroll-width', scrollPercent + '%');
-                }
-              });
+                if (scrollTimeout) return;
+                scrollTimeout = setTimeout(() => {
+                  const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                  const header = document.querySelector('header');
+                  if (header) {
+                    header.style.setProperty('--scroll-width', scrollPercent + '%');
+                  }
+                  scrollTimeout = null;
+                }, 100);
+              }, { passive: true });
 
               // 2. Theme Logic
               const setTheme = (theme) => {
@@ -244,16 +251,22 @@ format:
                 });
               });
 
-              // Scroll Depth
+              // Scroll Depth - Throttled for performance
               let scrollDepthTracked = {25: false, 50: false, 75: false, 100: false};
+              let depthScrollTimeout;
               window.addEventListener('scroll', () => {
-                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                Object.keys(scrollDepthTracked).forEach(depth => {
-                  if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
-                    scrollDepthTracked[depth] = true;
-                    sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
-                  }
-                });
-              });
+                if (depthScrollTimeout) return;
+                depthScrollTimeout = setTimeout(() => {
+                  const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                  Object.keys(scrollDepthTracked).forEach(depth => {
+                    if (scrollPercent >= depth && !scrollDepthTracked[depth]) {
+                      scrollDepthTracked[depth] = true;
+                      sendGAEvent('scroll_depth', { 'percent_scrolled': depth });
+                    }
+                  });
+                  depthScrollTimeout = null;
+                }, 200);
+              }, { passive: true });
             });
           </script>
+
