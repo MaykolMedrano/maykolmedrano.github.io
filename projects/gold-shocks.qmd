@@ -5,7 +5,7 @@ description: "Causal analysis using Shift-Share IV to estimate how international
 author: "Maykol Medrano"
 date: "2025-10-24"
 categories: [Causal Inference, Stata, Python, Mining, Spatial Econometrics]
-image: "img_3.png"
+image: "/assets/img/proyectos/img_3.png"
 ---
 
 ::: {.callout-note}

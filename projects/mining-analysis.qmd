@@ -5,7 +5,7 @@ description: "Machine learning and satellite imagery (Landsat 8, Sentinel-2) to 
 author: "Maykol Medrano"
 date: "2024-11-15"
 categories: [Geospatial, Causal Inference, Machine Learning, Mining]
-image: "img_3.png"
+image: "/assets/img/proyectos/img_3.png"
 ---
 
 ## Overview

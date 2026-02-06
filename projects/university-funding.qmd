@@ -5,7 +5,7 @@ description: "Data Envelopment Analysis and policy evaluation for Peru's 52 publ
 author: "Maykol Medrano"
 date: "2023-12-10"
 categories: [Policy Analysis, Public Finance, Education]
-image: "img_1.jpg"
+image: "/assets/img/proyectos/img_1.jpg"
 ---
 
 ## Overview

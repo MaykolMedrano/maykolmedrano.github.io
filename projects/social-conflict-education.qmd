@@ -5,7 +5,7 @@ description: "Event study analysis showing mining conflicts reduce test scores b
 author: "Maykol Medrano"
 date: "2024-09-20"
 categories: [Causal Inference, Education, Development, Mining]
-image: "img_2.gif"
+image: "/assets/img/proyectos/img_2.gif"
 ---
 
 ## Overview
