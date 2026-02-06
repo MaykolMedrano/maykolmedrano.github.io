@@ -40,19 +40,19 @@ comments: false
 
 ## Bio
 
-I'm a **Policy Data Scientist** specializing in causal inference and machine learning for public policy evaluation. Master's candidate at **Pontificia Universidad Católica de Chile** researching natural resource economics and social conflict, with 4+ years at Peru's **Ministry of Education** developing data infrastructure for evidence-based policy decisions.
+I'm a **Research Engineer** and **Policy Data Scientist** specializing in causal inference, machine learning, and the development of **AI-Ready statistical agents**. Master's candidate at **Pontificia Universidad Católica de Chile** researching natural resource economics and social conflict, with experience developing data infrastructure for evidence-based policy at Peru's **Ministry of Education**.
 
-I combine **applied economics research**, **open-source software development**, and **public policy evaluation** to democratize access to economic data and inform intervention design across Latin America.
+I combine **applied economics research** with **AI engineering** to democratize access to economic data. My current focus is building **Model Context Protocol (MCP)** servers that enable LLMs to programmatically interact with Latin American and global statistical databases.
 
 ---
 
 ## Research & Technical Expertise
 
-**Current Research** | Examining how extractive industries affect human capital accumulation in mining communities using spatial econometrics and difference-in-differences methods.
+**Open Source & AI Agents** | Lead developer of [mcp-bcrp](https://github.com/MaykolMedrano/mcp_bcrp) and [mcp-wbgapi360](https://github.com/MaykolMedrano/mcp_wbgapi360) — standardizing AI access to macroeconomic data. Also creator of [enahodata](https://github.com/MaykolMedrano/enahodata_py) and [usebcrp](https://github.com/MaykolMedrano/usebcrp) for Python and Stata.
 
-**Open Source** | Creator of [enahodata](https://github.com/MaykolMedrano/enahodata), [usebcrp](https://github.com/MaykolMedrano/usebcrp), [usecasen](https://github.com/MaykolMedrano/usecasen), and [usebcch](https://github.com/MaykolMedrano/usebcch) — Python and Stata packages providing standardized access to household surveys and central bank data across Latin America.
+**Current Research** | Examining the spatial effects of extractive industries on human capital accumulation in mining communities using quasi-experimental methods.
 
-**Stack** | Python (pandas, scikit-learn, geopandas), Stata, R (tidyverse, sf), SQL, Git, Quarto, Docker
+**Stack** | **AI/LLM**: MCP, Prompt Engineering, LangChain. **Data**: Python (pandas, scikit-learn), Stata, R, SQL, Quarto, Docker.
 
 ---
 

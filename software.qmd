@@ -52,32 +52,52 @@ I build and maintain open-source tools that democratize access to economic data 
 ## Featured: AI & Agentic Tools
 
 **mcp-bcrp** — AI-Ready Central Bank Data
+
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/mcp_bcrp.svg)](https://github.com/MaykolMedrano/mcp_bcrp)
+[![License](https://img.shields.io/github/license/MaykolMedrano/mcp_bcrp.svg)](https://github.com/MaykolMedrano/mcp_bcrp/blob/main/LICENSE)
+
 [GitHub](https://github.com/MaykolMedrano/mcp_bcrp)
 
-MCP Server for the Central Reserve Bank of Peru (BCRP). It enables AI agents (like Claude or ChatGPT) to programmatically access over 5,000 macroeconomic indicators, facilitating automated economic analysis and reporting.
+MCP Server for the Central Reserve Bank of Peru (BCRP). It enables AI agents (like Claude or ChatGPT) to programmatically access over 5,000 macroeconomic indicators.
 
 **mcp-wbgapi360** — World Bank Data for Agents
-[GitHub](https://github.com/MaykolMedrano/mcp_wbgapi360)
 
-An enterprise-grade, asynchronous Python client for the World Bank Data360 API. It features hybrid MCP support, allowing AI models to retrieve and visualize international development data with high performance.
+[![PyPI version](https://img.shields.io/pypi/v/mcp-wbgapi360.svg)](https://pypi.org/project/mcp-wbgapi360)
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/mcp_wbgapi360.svg)](https://github.com/MaykolMedrano/mcp_wbgapi360)
+
+[GitHub](https://github.com/MaykolMedrano/mcp_wbgapi360) · [PyPI](https://pypi.org/project/mcp-wbgapi360)
+
+An enterprise-grade, asynchronous Python client for the World Bank Data360 API with hybrid MCP support.
 
 ---
 
 ## Python Packages for Economic Research
 
 **enahodata** — Peru Household Survey Access
-[![PyPI version](https://img.shields.io/pypi/v/enahodata.svg)](https://pypi.org/project/enahodata)
-[GitHub](https://github.com/MaykolMedrano/enahodata_py)
 
-Access Peru's National Household Survey (ENAHO) microdata. Download, process, and analyze data on poverty and employment using pandas-compatible functions.
+[![PyPI version](https://img.shields.io/pypi/v/enahodata.svg)](https://pypi.org/project/enahodata)
+[![Downloads](https://img.shields.io/pypi/dm/enahodata.svg)](https://pypi.org/project/enahodata)
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/enahodata_py.svg)](https://github.com/MaykolMedrano/enahodata_py)
+
+[GitHub](https://github.com/MaykolMedrano/enahodata_py) · [PyPI](https://pypi.org/project/enahodata)
+
+Access Peru's National Household Survey (ENAHO) microdata. Download, process, and analyze data on poverty and employment.
 
 **usebcrp** — BCRP Data Client
-[![PyPI version](https://img.shields.io/pypi/v/usebcrp.svg)](https://pypi.org/project/usebcrp)
-[GitHub](https://github.com/MaykolMedrano/usebcrp)
 
-Python client for the BCRP statistical API. Provides programmatic access to macroeconomic indicators and national accounts.
+[![PyPI version](https://img.shields.io/pypi/v/usebcrp.svg)](https://pypi.org/project/usebcrp)
+[![Downloads](https://img.shields.io/pypi/dm/usebcrp.svg)](https://pypi.org/project/usebcrp)
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/usebcrp.svg)](https://github.com/MaykolMedrano/usebcrp)
+
+[GitHub](https://github.com/MaykolMedrano/usebcrp) · [PyPI](https://pypi.org/project/usebcrp)
+
+Python client for the BCRP statistical API. Provides programmatic access to macroeconomic indicators.
 
 **usecasen** & **usebcch** — Chile Data Tools
+
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/usecasen.svg)](https://github.com/MaykolMedrano/usecasen)
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/usebcch.svg)](https://github.com/MaykolMedrano/usebcch)
+
 [CASEN](https://github.com/MaykolMedrano/usecasen) · [BCCH](https://github.com/MaykolMedrano/usebcch)
 
 Python tools for working with Chile's National Socioeconomic Characterization Survey (CASEN) and the Central Bank of Chile's (BCCH) statistical database.
@@ -87,20 +107,25 @@ Python tools for working with Chile's National Socioeconomic Characterization Su
 ## Stata Modules & Public Policy Tools
 
 **useminedu** — Peru Ministry of Education Data
+
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/useminedu.svg)](https://github.com/MaykolMedrano/useminedu)
+
 [GitHub](https://github.com/MaykolMedrano/useminedu)
 
-Stata module for downloading data from ESCALE (Ministerio de Educación). Simplifies access to educational statistics and school-level indicators in Peru.
+Stata module for downloading data from ESCALE (Ministerio de Educación).
 
 **fixencoding** — Batch Character Encoding Repair
+
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/fixencoding.svg)](https://github.com/MaykolMedrano/fixencoding)
+
 [GitHub](https://github.com/MaykolMedrano/fixencoding)
 
-A Stata utility to batch-correct character encoding issues (tildes, ñ, etc.) in `.dta` files created in older versions of Stata, ensuring data integrity for modern research.
+A Stata utility to batch-correct character encoding issues (tildes, ñ, etc.) in `.dta` files.
 
 **siafreport** — Public Expenditure Reporting
+
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/siafreport.svg)](https://github.com/MaykolMedrano/siafreport)
+
 [GitHub](https://github.com/MaykolMedrano/siafreport)
 
-Stata module to generate automated reports on public expenditure execution from SIAF data, specifically tailored for institutional monitoring in the public sector.
-
----
-
-All tools are open-source (MIT License) and built with reproducibility in mind. Feel free to contribute or report issues on GitHub.
+Stata module to generate automated reports on public expenditure execution from SIAF data.
