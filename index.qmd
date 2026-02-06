@@ -56,4 +56,4 @@ I combine **applied economics research** with **AI engineering** to democratize 
 
 ---
 
-View my [research portfolio](projects.qmd) · Explore my [software](software.qmd) · Read my [blog](blog.html)
+View my [research portfolio](projects/) · Explore my [software](software/) · Read my [blog](blog/)
