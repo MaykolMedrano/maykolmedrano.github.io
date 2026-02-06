@@ -1,17 +1,17 @@
 ---
 title: "Maykol Medrano"
-description: "Policy Data Scientist specializing in causal inference and machine learning. Explore research on natural resources, social conflict, and open-source economic data tools."
+description: "Applied Economist | Policy Data Scientist | Research Software Engineer specializing in causal inference and machine learning."
 image: assets/img/profile.png
 page-layout: full
 toc: false 
 
 open-graph:
   title: "Maykol Medrano - Policy Data Scientist"
-  description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
+  description: "Applied Economist | Policy Data Scientist | Research Software Engineer"
   image: assets/img/profile.png
 twitter-card:
   title: "Maykol Medrano - Policy Data Scientist"
-  description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
+  description: "Applied Economist | Policy Data Scientist | Research Software Engineer"
   image: assets/img/profile.png
 about:
   template: trestles
@@ -40,7 +40,7 @@ comments: false
 
 ## Bio
 
-I'm a **Research Engineer** and **Policy Data Scientist** specializing in causal inference, machine learning, and the development of **AI-Ready statistical agents**. Master's candidate at **Pontificia Universidad Católica de Chile** researching natural resource economics and social conflict, with experience developing data infrastructure for evidence-based policy at Peru's **Ministry of Education**.
+I'm an **Applied Economist**, **Policy Data Scientist**, and **Research Software Engineer** specializing in causal inference, machine learning, and the development of **AI-Ready statistical agents**. Master's candidate at **Pontificia Universidad Católica de Chile** researching natural resource economics and social conflict, with experience developing data infrastructure for evidence-based policy at Peru's **Ministry of Education**.
 
 I combine **applied economics research** with **AI engineering** to democratize access to economic data. My current focus is building **Model Context Protocol (MCP)** servers that enable LLMs to programmatically interact with Latin American and global statistical databases.
 

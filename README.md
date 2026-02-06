@@ -4,7 +4,7 @@ Personal website showcasing research, open-source software, and policy data scie
 
 ## About
 
-Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master's candidate at Pontificia Universidad Católica de Chile.
+Applied Economist | Policy Data Scientist | Research Software Engineer specializing in causal inference, machine learning, and AI-Ready statistical agents. Master's candidate at Pontificia Universidad Católica de Chile.
 
 ## Website
 
