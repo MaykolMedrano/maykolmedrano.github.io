@@ -4,28 +4,28 @@
     "href": "software.html",
     "title": "Open Source Software",
     "section": "",
-    "text": "I build and maintain open-source tools that democratize access to economic data across Latin America. These packages are designed for researchers, analysts, and policymakers working on development economics, social policy evaluation, and quantitative research."
+    "text": "I build and maintain open-source tools that democratize access to economic data across Latin America. My work focuses on Research Engineering, bridging the gap between statistical databases and modern computational tools for researchers and AI agents."
   },
   {
-    "objectID": "software.html#python-packages-for-latin-american-data",
-    "href": "software.html#python-packages-for-latin-american-data",
+    "objectID": "software.html#featured-ai-agentic-tools",
+    "href": "software.html#featured-ai-agentic-tools",
     "title": "Open Source Software",
-    "section": "Python Packages for Latin American Data",
-    "text": "Python Packages for Latin American Data\nenahodata — Peru Household Survey Access\n   \nGitHub · PyPI\nPython package for simplified access to Peru’s National Household Survey (ENAHO) microdata. Download, process, and analyze data on poverty, employment, education, health, and household characteristics using pandas-compatible functions.\n\nusebcrp — Central Reserve Bank of Peru API\n   \nGitHub · PyPI\nPython client for the Central Reserve Bank of Peru (BCRP) statistical API. Programmatic access to macroeconomic indicators, monetary policy data, and national accounts with pandas integration.\n\nusecasen — Chile Socioeconomic Survey Tools\n   \nGitHub · PyPI\nPython tools for working with Chile’s National Socioeconomic Characterization Survey (CASEN). Facilitates multidimensional poverty analysis and social policy evaluation.\n\nusebcch — Central Bank of Chile Database Client\n   \nGitHub · PyPI\nPython client for the Central Bank of Chile’s statistical database. Retrieve time series data on inflation, GDP, exchange rates, financial indicators, and external sector statistics."
+    "section": "Featured: AI & Agentic Tools",
+    "text": "Featured: AI & Agentic Tools\nmcp-bcrp — AI-Ready Central Bank Data GitHub\nMCP Server for the Central Reserve Bank of Peru (BCRP). It enables AI agents (like Claude or ChatGPT) to programmatically access over 5,000 macroeconomic indicators, facilitating automated economic analysis and reporting.\nmcp-wbgapi360 — World Bank Data for Agents GitHub\nAn enterprise-grade, asynchronous Python client for the World Bank Data360 API. It features hybrid MCP support, allowing AI models to retrieve and visualize international development data with high performance."
   },
   {
-    "objectID": "software.html#stata-packages",
-    "href": "software.html#stata-packages",
+    "objectID": "software.html#python-packages-for-economic-research",
+    "href": "software.html#python-packages-for-economic-research",
     "title": "Open Source Software",
-    "section": "Stata Packages",
-    "text": "Stata Packages\nenahotools — ENAHO Data Processing for Stata\n \nGitHub\nStata package for processing and analyzing Peru’s National Household Survey (ENAHO). Automated data cleaning, variable labeling, and survey-weighted estimation commands."
+    "section": "Python Packages for Economic Research",
+    "text": "Python Packages for Economic Research\nenahodata — Peru Household Survey Access  GitHub\nAccess Peru’s National Household Survey (ENAHO) microdata. Download, process, and analyze data on poverty and employment using pandas-compatible functions.\nusebcrp — BCRP Data Client  GitHub\nPython client for the BCRP statistical API. Provides programmatic access to macroeconomic indicators and national accounts.\nusecasen & usebcch — Chile Data Tools CASEN · BCCH\nPython tools for working with Chile’s National Socioeconomic Characterization Survey (CASEN) and the Central Bank of Chile’s (BCCH) statistical database."
   },
   {
-    "objectID": "software.html#impact-philosophy",
-    "href": "software.html#impact-philosophy",
+    "objectID": "software.html#stata-modules-public-policy-tools",
+    "href": "software.html#stata-modules-public-policy-tools",
     "title": "Open Source Software",
-    "section": "Impact & Philosophy",
-    "text": "Impact & Philosophy\nThese packages are part of my commitment to open science and data democratization. By lowering barriers to access public data, I aim to enable more rigorous research and evidence-based policymaking across Latin America.\nAll tools are open-source (MIT License), actively maintained, and built with reproducibility in mind."
+    "section": "Stata Modules & Public Policy Tools",
+    "text": "Stata Modules & Public Policy Tools\nuseminedu — Peru Ministry of Education Data GitHub\nStata module for downloading data from ESCALE (Ministerio de Educación). Simplifies access to educational statistics and school-level indicators in Peru.\nfixencoding — Batch Character Encoding Repair GitHub\nA Stata utility to batch-correct character encoding issues (tildes, ñ, etc.) in .dta files created in older versions of Stata, ensuring data integrity for modern research.\nsiafreport — Public Expenditure Reporting GitHub\nStata module to generate automated reports on public expenditure execution from SIAF data, specifically tailored for institutional monitoring in the public sector.\n\nAll tools are open-source (MIT License) and built with reproducibility in mind. Feel free to contribute or report issues on GitHub."
   },
   {
     "objectID": "projects/university-funding.html",
