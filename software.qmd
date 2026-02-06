@@ -1,6 +1,8 @@
 ---
 title: "Open Source Software"
 subtitle: "Python and Stata packages for economic data access and reproducible research"
+description: "Explore open-source tools for analyzing household surveys and central bank data from Peru and Chile."
+categories: [Open Source, Python, Stata, Econometrics]
 page-layout: full
 ---
 

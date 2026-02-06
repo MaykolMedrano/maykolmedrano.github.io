@@ -35,6 +35,7 @@ website:
         href: projects.html
       - text: "Blog"
         href: blog.html
+    breadcrumbs: true
       - icon: rss
         href: blog.xml
       - icon: github
