@@ -3,7 +3,9 @@ title: "Policy Data Science & Economics"
 subtitle: "Applied Causal Inference, Machine Learning, and Evidence-Based Policy"
 author: "Maykol Medrano"
 listing:
-  contents: projects
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
   type: grid
   categories: true
   sort: "date desc"

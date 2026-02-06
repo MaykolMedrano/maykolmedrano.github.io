@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -145,6 +145,92 @@ gtag('js', new Date());
 gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script type="application/ld+json">
+
+{
+
+  "@context": "https://schema.org",
+
+  "@graph": [
+
+    {
+
+      "@type": "WebSite",
+
+      "@id": "https://maykolmedrano.github.io/#website",
+
+      "url": "https://maykolmedrano.github.io",
+
+      "name": "Maykol Medrano",
+
+      "description": "Policy Data Scientist | Applied Economist | Research Engineer",
+
+      "publisher": {
+
+        "@id": "https://maykolmedrano.github.io/#person"
+
+      },
+
+      "inLanguage": "en-US"
+
+    },
+
+    {
+
+      "@type": "Person",
+
+      "@id": "https://maykolmedrano.github.io/#person",
+
+      "name": "Maykol Medrano",
+
+      "url": "https://maykolmedrano.github.io",
+
+      "image": {
+
+        "@type": "ImageObject",
+
+        "@id": "https://maykolmedrano.github.io/#personlogo",
+
+        "url": "https://maykolmedrano.github.io/assets/img/profile.png",
+
+        "contentUrl": "https://maykolmedrano.github.io/assets/img/profile.png",
+
+        "caption": "Maykol Medrano"
+
+      },
+
+      "sameAs": [
+
+        "https://www.linkedin.com/in/maykolmedrano",
+
+        "https://github.com/MaykolMedrano",
+
+        "https://twitter.com/maykolmedrano"
+
+      ],
+
+      "jobTitle": "Research Engineer & Policy Data Scientist",
+
+      "worksFor": [
+
+        {
+
+          "@type": "Organization",
+
+          "name": "Pontificia Universidad Católica de Chile"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -157,23 +243,6 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 
 <!-- Google Search Console -->
 <meta name="google-site-verification" content="AijWOm3glVo95-yDVijX-PzLUXraLxOF6SAo86fVE-c">
-
-<!-- JSON-LD Structured Data -->
-<meta property="og:title" content="Policy Data Science &amp; Economics – Maykol Medrano">
-<meta property="og:description" content="Applied Causal Inference, Machine Learning, and Evidence-Based Policy">
-<meta property="og:image" content="https://maykolmedrano.github.io/projects/assets/img/profile.png">
-<meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Policy Data Science &amp; Economics – Maykol Medrano">
-<meta name="twitter:description" content="Applied Causal Inference, Machine Learning, and Evidence-Based Policy">
-<meta name="twitter:creator" content="@maykolmedrano">
-<meta name="twitter:site" content="@maykolmedrano">
-<meta name="twitter:card" content="summary">
-<meta name="citation_title" content="Policy Data Science &amp;amp; Economics">
-<meta name="citation_author" content="Maykol Medrano">
-<meta name="citation_fulltext_html_url" content="https://maykolmedrano.github.io/projects/">
-<meta name="citation_language" content="en">
-</head><body class="nav-fixed quarto-light">{{&lt; include assets/metadata/google-structured-data.html &gt;}}
 
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -232,9 +301,24 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../assets/styles/styles.css">
+<meta property="og:title" content="Policy Data Science &amp; Economics – Maykol Medrano">
+<meta property="og:description" content="Applied Causal Inference, Machine Learning, and Evidence-Based Policy">
+<meta property="og:image" content="https://maykolmedrano.github.io/projects/assets/img/profile.png">
+<meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="Policy Data Science &amp; Economics – Maykol Medrano">
+<meta name="twitter:description" content="Applied Causal Inference, Machine Learning, and Evidence-Based Policy">
+<meta name="twitter:image" content="https://maykolmedrano.github.io/projects/img_3.png">
+<meta name="twitter:creator" content="@maykolmedrano">
+<meta name="twitter:site" content="@maykolmedrano">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Policy Data Science &amp;amp; Economics">
+<meta name="citation_author" content="Maykol Medrano">
+<meta name="citation_fulltext_html_url" content="https://maykolmedrano.github.io/projects/">
+<meta name="citation_language" content="en">
+</head>
 
-
-
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -300,7 +384,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Q2F1c2FsJTIwSW5mZXJlbmNl">Causal Inference <span class="quarto-category-count">(5)</span></div><div class="category" data-category="RGV2ZWxvcG1lbnQ=">Development <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWR1Y2F0aW9u">Education <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2Vvc3BhdGlhbA==">Geospatial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWluaW5n">Mining <span class="quarto-category-count">(5)</span></div><div class="category" data-category="UG9saWN5JTIwQW5hbHlzaXM=">Policy Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHVibGljJTIwRmluYW5jZQ==">Public Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3BhdGlhbCUyMEVjb25vbWV0cmljcw==">Spatial Econometrics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3RhdGE=">Stata <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -338,7 +422,202 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Q2F1c2FsJTIwSW5mZXJlbmNlJTJDU3RhdGElMkNQeXRob24lMkNNaW5pbmclMkNTcGF0aWFsJTIwRWNvbm9tZXRyaWNz" data-listing-date-sort="1768021200000" data-listing-file-modified-sort="1768177603479" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="560">
+<a href="../projects/data-analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Impact of Gold Price Shocks on Social Conflict
+</h5>
+<div class="card-subtitle listing-subtitle">
+Causal inference and spatial econometrics in the Peruvian Amazon
+</div>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGE='); return false;">Stata</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWluaW5n'); return false;">Mining</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMEVjb25vbWV0cmljcw=='); return false;">Spatial Econometrics</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 10, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Q2F1c2FsJTIwSW5mZXJlbmNlJTJDU3RhdGElMkNQeXRob24lMkNNaW5pbmclMkNTcGF0aWFsJTIwRWNvbm9tZXRyaWNz" data-listing-date-sort="1761282000000" data-listing-file-modified-sort="1768177499143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="364">
+<a href="../projects/gold-shocks.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/img_3.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Gold Price Shocks and Social Conflict
+</h5>
+<div class="card-subtitle listing-subtitle">
+Causal evidence from the Peruvian Amazon
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGE='); return false;">Stata</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWluaW5n'); return false;">Mining</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMEVjb25vbWV0cmljcw=='); return false;">Spatial Econometrics</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 24, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Q2F1c2FsJTIwSW5mZXJlbmNlJTJDU3RhdGElMkNQeXRob24lMkNNaW5pbmclMkNTcGF0aWFsJTIwRWNvbm9tZXRyaWNz" data-listing-date-sort="1760936400000" data-listing-file-modified-sort="1768177581142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="352">
+<a href="../projects/mining-conflict.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Gold Price Shocks and Social Conflict
+</h5>
+<div class="card-subtitle listing-subtitle">
+Causal evidence from the Peruvian Amazon
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGE='); return false;">Stata</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWluaW5n'); return false;">Mining</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMEVjb25vbWV0cmljcw=='); return false;">Spatial Econometrics</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 20, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="R2Vvc3BhdGlhbCUyQ0NhdXNhbCUyMEluZmVyZW5jZSUyQ01hY2hpbmUlMjBMZWFybmluZyUyQ01pbmluZw==" data-listing-date-sort="1731646800000" data-listing-file-modified-sort="1768177518774" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="214">
+<a href="../projects/mining-analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/img_3.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Illegal Mining Detection in Peruvian Amazon
+</h5>
+<div class="card-subtitle listing-subtitle">
+Geospatial analysis combining satellite imagery and machine learning
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('R2Vvc3BhdGlhbA=='); return false;">Geospatial</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWluaW5n'); return false;">Mining</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 15, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Q2F1c2FsJTIwSW5mZXJlbmNlJTJDRWR1Y2F0aW9uJTJDRGV2ZWxvcG1lbnQlMkNNaW5pbmc=" data-listing-date-sort="1726808400000" data-listing-file-modified-sort="1768177539029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="223">
+<a href="../projects/social-conflict-education.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/img_2.gif" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Social Conflicts and Human Capital Accumulation
+</h5>
+<div class="card-subtitle listing-subtitle">
+Quasi-experimental evidence from extractive industries in Peru
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2F0aW9u'); return false;">Education</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGV2ZWxvcG1lbnQ='); return false;">Development</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWluaW5n'); return false;">Mining</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Sep 20, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="UG9saWN5JTIwQW5hbHlzaXMlMkNQdWJsaWMlMjBGaW5hbmNlJTJDRWR1Y2F0aW9u" data-listing-date-sort="1702184400000" data-listing-file-modified-sort="1768177560600" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="265">
+<a href="../projects/university-funding.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../projects/img_1.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Higher Education Financing in Peru
+</h5>
+<div class="card-subtitle listing-subtitle">
+Budget allocation efficiency and equity analysis for public universities
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UG9saWN5JTIwQW5hbHlzaXM='); return false;">Policy Analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHVibGljJTIwRmluYW5jZQ=='); return false;">Public Finance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2F0aW9u'); return false;">Education</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Dec 10, 2023
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
@@ -834,13 +1113,15 @@ window.Quarto = {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Applied Causal Inference, Machine Learning, and Evidence-Based Policy"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maykol Medrano"</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: projects</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  type: grid</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [image, date, title, subtitle, categories]</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  contents:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    - "*.qmd"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    - "!index.qmd"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  type: grid</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  fields: [image, date, title, subtitle, categories]</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

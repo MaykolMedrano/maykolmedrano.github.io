@@ -95,6 +95,7 @@ format:
 
     # Header
     include-in-header:
+      - file: assets/metadata/google-structured-data.html
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,9 +109,6 @@ format:
           
           <!-- Google Search Console -->
           <meta name="google-site-verification" content="AijWOm3glVo95-yDVijX-PzLUXraLxOF6SAo86fVE-c" />
-
-          <!-- JSON-LD Structured Data -->
-          {{< include assets/metadata/google-structured-data.html >}}
 
           <meta name="robots" content="index, follow">
           <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
