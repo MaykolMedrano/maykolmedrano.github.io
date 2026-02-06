@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Maykol Medrano">
-<meta name="dcterms.date" content="2023-12-10">
-<meta name="description" content="Data Envelopment Analysis and policy evaluation for Peru’s 52 public universities. Research at Ministry of Education informing $800M+ annual budget allocation.">
+<meta name="dcterms.date" content="2026-01-10">
+<meta name="description" content="Applied microeconometrics project using custom Stata tools (usecasen, projectinit) for conflict analysis. Spatial lag model with row-standardized weights matrix.">
 
-<title>Higher Education Financing in Peru – Maykol Medrano</title>
+<title>Impact of Gold Price Shocks on Social Conflict – Maykol Medrano</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,6 +129,28 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 <!-- Google Search Console -->
 <meta name="google-site-verification" content="AijWOm3glVo95-yDVijX-PzLUXraLxOF6SAo86fVE-c">
 
+<!-- JSON-LD Structured Data -->
+<meta property="og:title" content="Impact of Gold Price Shocks on Social Conflict – Maykol Medrano">
+<meta property="og:description" content="Applied microeconometrics project using custom Stata tools (usecasen, projectinit) for conflict analysis. Spatial lag model with row-standardized weights matrix.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+<meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="Impact of Gold Price Shocks on Social Conflict – Maykol Medrano">
+<meta name="twitter:description" content="Applied microeconometrics project using custom Stata tools (usecasen, projectinit) for conflict analysis. Spatial lag model with row-standardized weights matrix.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800">
+<meta name="twitter:creator" content="@maykolmedrano">
+<meta name="twitter:site" content="@maykolmedrano">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="citation_title" content="Impact of Gold Price Shocks on Social Conflict">
+<meta name="citation_author" content="Maykol Medrano">
+<meta name="citation_publication_date" content="2026-01-10">
+<meta name="citation_cover_date" content="2026-01-10">
+<meta name="citation_year" content="2026">
+<meta name="citation_online_date" content="2026-01-10">
+<meta name="citation_fulltext_html_url" content="https://maykolmedrano.github.io/projects/data-analysis.html">
+<meta name="citation_language" content="en">
+</head><body class="nav-fixed quarto-light">{{&lt; include assets/metadata/google-structured-data.html &gt;}}
+
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
@@ -157,28 +179,9 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../assets/styles/styles.css">
-<meta property="og:title" content="Higher Education Financing in Peru – Maykol Medrano">
-<meta property="og:description" content="Data Envelopment Analysis and policy evaluation for Peru’s 52 public universities. Research at Ministry of Education informing $800M+ annual budget allocation.">
-<meta property="og:image" content="https://maykolmedrano.github.io/projects/img_1.jpg">
-<meta property="og:site_name" content="Maykol Medrano - Policy Data Scientist">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Higher Education Financing in Peru – Maykol Medrano">
-<meta name="twitter:description" content="Data Envelopment Analysis and policy evaluation for Peru’s 52 public universities. Research at Ministry of Education informing $800M+ annual budget allocation.">
-<meta name="twitter:image" content="https://maykolmedrano.github.io/projects/img_1.jpg">
-<meta name="twitter:creator" content="@maykolmedrano">
-<meta name="twitter:site" content="@maykolmedrano">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Higher Education Financing in Peru">
-<meta name="citation_author" content="Maykol Medrano">
-<meta name="citation_publication_date" content="2023-12-10">
-<meta name="citation_cover_date" content="2023-12-10">
-<meta name="citation_year" content="2023">
-<meta name="citation_online_date" content="2023-12-10">
-<meta name="citation_fulltext_html_url" content="https://maykolmedrano.github.io/projects/university-funding.html">
-<meta name="citation_language" content="en">
-</head>
 
-<body class="nav-fixed quarto-light">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -200,15 +203,15 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../software.html"> 
+    <a class="nav-link" href="../software/"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects.html"> 
+    <a class="nav-link" href="../projects/"> 
 <span class="menu-text">Policy &amp; Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog.html"> 
+    <a class="nav-link" href="../blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item compact">
@@ -249,31 +252,33 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
-  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#policy-impact" id="toc-policy-impact" class="nav-link" data-scroll-target="#policy-impact">Policy Impact</a></li>
+  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
+  <li><a href="#reproducibility-best-practices" id="toc-reproducibility-best-practices" class="nav-link" data-scroll-target="#reproducibility-best-practices">Reproducibility Best Practices</a></li>
   <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/university-funding.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/data-analysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Higher Education Financing in Peru</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Budget allocation efficiency and equity analysis for public universities</p>
+<div class="quarto-title-block"><div><h1 class="title">Impact of Gold Price Shocks on Social Conflict</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Causal inference and spatial econometrics in the Peruvian Amazon</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Policy Analysis</div>
-    <div class="quarto-category">Public Finance</div>
-    <div class="quarto-category">Education</div>
+    <div class="quarto-category">Causal Inference</div>
+    <div class="quarto-category">Stata</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Mining</div>
+    <div class="quarto-category">Spatial Econometrics</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Data Envelopment Analysis and policy evaluation for Peru’s 52 public universities. Research at Ministry of Education informing $800M+ annual budget allocation.
+    Applied microeconometrics project using custom Stata tools (usecasen, projectinit) for conflict analysis. Spatial lag model with row-standardized weights matrix.
   </div>
 </div>
 
@@ -290,7 +295,7 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 10, 2023</p>
+      <p class="date">January 10, 2026</p>
     </div>
   </div>
   
@@ -304,51 +309,138 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Comprehensive analysis of budget allocation mechanisms for Peru’s 52 public universities, examining efficiency, equity, and the impact of performance-based funding reforms.</p>
+<p>This research analyzes the impact of international commodity prices on local social conflicts in the Peruvian Amazon, utilizing custom data processing tools (<code>usecasen</code> and <code>enahodata</code>) developed for streamlined econometric analysis.</p>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>How can budget allocation be optimized to improve both efficiency and equity in Peru’s public higher education system?</p>
-</section>
-<section id="context" class="level2">
-<h2 class="anchored" data-anchor-id="context">Context</h2>
-<p>Led analytical work at Peru’s Ministry of Education (MINEDU) to inform resource allocation decisions and policy design for higher education financing.</p>
+<p>How do gold price shocks causally affect social conflict frequency and intensity in resource-dependent regions?</p>
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p><strong>Efficiency Analysis:</strong> - Data Envelopment Analysis (DEA) for institutional efficiency measurement - Stochastic frontier analysis for robustness checks - Panel data regression with university fixed effects</p>
-<p><strong>Equity Analysis:</strong> - Concentration curves and Gini coefficients - Theil index decomposition by region and institution type - Spatial distribution analysis</p>
-<p><strong>Policy Evaluation:</strong> - Regression discontinuity design for reform impact assessment - Difference-in-Differences for performance-based funding effects - Integration of administrative systems (SIAF, SIGA, AIRHSP, NEXUS)</p>
+<p><strong>Identification Strategy:</strong> - Difference-in-Differences (DiD) approach - Spatial econometrics to account for spillover effects between districts - Shift-Share IV for robustness checks</p>
+<p><strong>Key Model Specifications:</strong></p>
+<table class="table-striped caption-top table">
+<caption>Main Estimates: Impact on Social Conflict Frequency</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: center;">OLS (1)</th>
+<th style="text-align: center;">FE (2)</th>
+<th style="text-align: center;">Spatial ML (3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gold Price Shocks</td>
+<td style="text-align: center;">0.452***</td>
+<td style="text-align: center;">0.381***</td>
+<td style="text-align: center;">0.312**</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;">(0.012)</td>
+<td style="text-align: center;">(0.015)</td>
+<td style="text-align: center;">(0.021)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Controls</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: center;">YES</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fixed Effects</td>
+<td style="text-align: center;">NO</td>
+<td style="text-align: center;">YES</td>
+<td style="text-align: center;">YES</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">N</td>
+<td style="text-align: center;">15,420</td>
+<td style="text-align: center;">15,420</td>
+<td style="text-align: center;">15,420</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Sources:</strong> - ENAHO household surveys (2015-2022) - International commodity price data (World Bank) - Social conflict registry (Defensoría del Pueblo)</p>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
 <ul>
-<li>Significant efficiency gaps across universities (average DEA score: <strong>0.67</strong>)</li>
-<li>Budget concentration favoring Lima-based institutions</li>
-<li>Performance-based funding increased research output by <strong>18%</strong></li>
-<li>Regional disparities in per-student funding (up to 3x difference)</li>
-<li>Economies of scale present in universities with 10,000+ students</li>
+<li>Gold price shocks significantly increase conflict probability</li>
+<li>Effects strongest in districts with weak institutional capacity</li>
+<li>Spatial spillover effects documented in neighboring regions</li>
+<li>Expansion of illegal mining represents major challenge for environmental governance</li>
 </ul>
+<blockquote class="blockquote">
+<p>“The expansion of illegal mining in Madre de Dios represents one of the most significant challenges for environmental governance and social peace in Peru.”</p>
+</blockquote>
 </section>
-<section id="policy-impact" class="level2">
-<h2 class="anchored" data-anchor-id="policy-impact">Policy Impact</h2>
-<p>Analysis directly informed budget allocation methodology used in national higher education policy, affecting <strong>$800M+ in annual public university funding</strong>.</p>
-<p>Recommendations implemented: - New formula-based allocation system - Performance incentives for research and graduation rates - Equity adjustments for underserved regions</p>
+<section id="implementation" class="level2">
+<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
+<p><strong>Software Tools:</strong> - Custom Stata commands: <code>usecasen</code>, <code>projectinit</code> - Python for spatial analysis and visualization - Integration with Applied Microeconometrics teaching materials (PUC-Chile)</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Stata</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>* Load <span class="kw">data</span> <span class="kw">using</span> custom command</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>usecasen 2022, <span class="kw">clear</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>projectinit, setup(<span class="st">"Conflict_Analysis"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>* Main analysis with fixed <span class="kw">effects</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>reghdfe conflict gold_shock population_density canon_transfers, <span class="co">///</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    absorb(district <span class="fu">year</span>) <span class="co">///</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">cluster</span>(district)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>* Export results</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>outreg2 <span class="kw">using</span> <span class="st">"results/main_table.tex"</span>, <span class="kw">replace</span> tex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.spatial <span class="im">import</span> distance_matrix</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load spatial data</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>peru_map <span class="op">=</span> gpd.read_file(<span class="st">"data/peru_districts.geojson"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatial visualization</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>))</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>peru_map.plot(column<span class="op">=</span><span class="st">'conflict_intensity'</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>              ax<span class="op">=</span>ax,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>              legend<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>              cmap<span class="op">=</span><span class="st">'OrRd'</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>              scheme<span class="op">=</span><span class="st">'quantiles'</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Spatial Distribution of Social Conflicts"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reproducibility-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility-best-practices">Reproducibility Best Practices</h2>
+<p>As a Teaching Assistant for <strong>Applied Microeconometrics</strong> at PUC-Chile, this project demonstrates:</p>
+<ul>
+<li>Folder structure initialization with <code>projectinit</code></li>
+<li>Automated data processing pipelines</li>
+<li>Reproducible path management</li>
+<li>Clear documentation and code commenting</li>
+</ul>
+<p><strong>Technical Details:</strong> - Spatial lag model with row-standardized weights matrix - Robust standard errors clustered at district level - Multiple hypothesis testing corrections</p>
 <hr>
 </section>
 <section id="citation" class="level2">
 <h2 class="anchored" data-anchor-id="citation">Citation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@techreport</span>{<span class="ot">medrano2023higher</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>={Higher Education Financing in Peru: Budget Allocation Efficiency and Equity Analysis for Public Universities},</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>={Medrano, Maykol},</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>={2023},</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">institution</span>={Ministry of Education of Peru},</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">type</span>={Policy Analysis},</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>={https://maykolmedrano.github.io/projects/university-funding.html}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>APA Format:</strong> Medrano, M. (2023). <em>Higher Education Financing in Peru: Budget Allocation Efficiency and Equity Analysis for Public Universities</em> [Policy Analysis]. Ministry of Education of Peru. https://maykolmedrano.github.io/projects/university-funding.html</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">@unpublished</span>{<span class="ot">medrano2026impact</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>={Impact of Gold Price Shocks on Social Conflict: Causal Inference and Spatial Econometrics in the Peruvian Amazon},</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>={Medrano, Maykol},</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>={2026},</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>={Working Paper},</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>={https://maykolmedrano.github.io/projects/data-analysis.html}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>APA Format:</strong> Medrano, M. (2026). <em>Impact of Gold Price Shocks on Social Conflict: Causal Inference and Spatial Econometrics in the Peruvian Amazon</em> [Working Paper]. https://maykolmedrano.github.io/projects/data-analysis.html</p>
 <hr>
-<p><em>Technical reports and policy briefs available on institutional website.</em></p>
+<p><em>Full working paper and replication code available upon request.</em></p>
 
 
 <!-- -->
@@ -843,83 +935,140 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
   }
   loadGiscus();
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Higher Education Financing in Peru"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Budget allocation efficiency and equity analysis for public universities"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Data Envelopment Analysis and policy evaluation for Peru's 52 public universities. Research at Ministry of Education informing $800M+ annual budget allocation."</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maykol Medrano"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-12-10"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Policy Analysis, Public Finance, Education]</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "img_1.jpg"</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Comprehensive analysis of budget allocation mechanisms for Peru's 52 public universities, examining efficiency, equity, and the impact of performance-based funding reforms.</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>How can budget allocation be optimized to improve both efficiency and equity in Peru's public higher education system?</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Context</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>Led analytical work at Peru's Ministry of Education (MINEDU) to inform resource allocation decisions and policy design for higher education financing.</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methodology</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>**Efficiency Analysis:**</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Envelopment Analysis (DEA) for institutional efficiency measurement</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stochastic frontier analysis for robustness checks</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Panel data regression with university fixed effects</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>**Equity Analysis:**</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Concentration curves and Gini coefficients</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theil index decomposition by region and institution type</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spatial distribution analysis</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>**Policy Evaluation:**</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Regression discontinuity design for reform impact assessment</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Difference-in-Differences for performance-based funding effects</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integration of administrative systems (SIAF, SIGA, AIRHSP, NEXUS)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Findings</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant efficiency gaps across universities (average DEA score: **0.67**)</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Budget concentration favoring Lima-based institutions</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Performance-based funding increased research output by **18%**</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Regional disparities in per-student funding (up to 3x difference)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Economies of scale present in universities with 10,000+ students</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Policy Impact</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>Analysis directly informed budget allocation methodology used in national higher education policy, affecting **$800M+ in annual public university funding**.</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>Recommendations implemented:</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>New formula-based allocation system</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Performance incentives for research and graduation rates</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Equity adjustments for underserved regions</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="in">@techreport{medrano2023higher,</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="in">  title={Higher Education Financing in Peru: Budget Allocation Efficiency and Equity Analysis for Public Universities},</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="in">  author={Medrano, Maykol},</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="in">  year={2023},</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="in">  institution={Ministry of Education of Peru},</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="in">  type={Policy Analysis},</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="in">  url={https://maykolmedrano.github.io/projects/university-funding.html}</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>**APA Format:**</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>Medrano, M. (2023). *Higher Education Financing in Peru: Budget Allocation Efficiency and Equity Analysis for Public Universities* <span class="co">[</span><span class="ot">Policy Analysis</span><span class="co">]</span>. Ministry of Education of Peru. https://maykolmedrano.github.io/projects/university-funding.html</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>*Technical reports and policy briefs available on institutional website.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Impact of Gold Price Shocks on Social Conflict"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Causal inference and spatial econometrics in the Peruvian Amazon"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Applied microeconometrics project using custom Stata tools (usecasen, projectinit) for conflict analysis. Spatial lag model with row-standardized weights matrix."</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maykol Medrano"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-10"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Causal Inference, Stata, Python, Mining, Spatial Econometrics]</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&amp;fit=crop&amp;q=80&amp;w=800"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>This research analyzes the impact of international commodity prices on local social conflicts in the Peruvian Amazon, utilizing custom data processing tools (<span class="in">`usecasen`</span> and <span class="in">`enahodata`</span>) developed for streamlined econometric analysis.</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>How do gold price shocks causally affect social conflict frequency and intensity in resource-dependent regions?</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methodology</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>**Identification Strategy:**</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Difference-in-Differences (DiD) approach</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spatial econometrics to account for spillover effects between districts</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shift-Share IV for robustness checks</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>**Key Model Specifications:**</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable <span class="pp">|</span> OLS (1) <span class="pp">|</span> FE (2) <span class="pp">|</span> Spatial ML (3) <span class="pp">|</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---</span>      <span class="pp">|:---:</span>    <span class="pp">|:---:</span>   <span class="pp">|:---:</span>           <span class="pp">|</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Gold Price Shocks <span class="pp">|</span> 0.452*** <span class="pp">|</span> 0.381*** <span class="pp">|</span> 0.312** <span class="pp">|</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                   <span class="pp">|</span> (0.012)  <span class="pp">|</span> (0.015)  <span class="pp">|</span> (0.021) <span class="pp">|</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Controls          <span class="pp">|</span> YES      <span class="pp">|</span> YES      <span class="pp">|</span> YES     <span class="pp">|</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fixed Effects     <span class="pp">|</span> NO       <span class="pp">|</span> YES      <span class="pp">|</span> YES     <span class="pp">|</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> N                 <span class="pp">|</span> 15,420   <span class="pp">|</span> 15,420   <span class="pp">|</span> 15,420  <span class="pp">|</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>: Main Estimates: Impact on Social Conflict Frequency {.table-striped}</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>**Data Sources:**</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ENAHO household surveys (2015-2022)</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>International commodity price data (World Bank)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Social conflict registry (Defensoría del Pueblo)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Findings</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gold price shocks significantly increase conflict probability</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Effects strongest in districts with weak institutional capacity</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spatial spillover effects documented in neighboring regions</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expansion of illegal mining represents major challenge for environmental governance</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "The expansion of illegal mining in Madre de Dios represents one of the most significant challenges for environmental governance and social peace in Peru."</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Implementation</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>**Software Tools:**</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Custom Stata commands: <span class="in">`usecasen`</span>, <span class="in">`projectinit`</span></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Python for spatial analysis and visualization</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integration with Applied Microeconometrics teaching materials (PUC-Chile)</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stata</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a><span class="in">```stata</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="in">* Load data using custom command</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a><span class="in">usecasen 2022, clear</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="in">projectinit, setup("Conflict_Analysis")</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="in">* Main analysis with fixed effects</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="in">reghdfe conflict gold_shock population_density canon_transfers, ///</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="in">    absorb(district year) ///</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="in">    cluster(district)</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="in">* Export results</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="in">outreg2 using "results/main_table.tex", replace tex</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Python</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.spatial <span class="im">import</span> distance_matrix</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="co"># Load spatial data</span></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>peru_map <span class="op">=</span> gpd.read_file(<span class="st">"data/peru_districts.geojson"</span>)</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatial visualization</span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>))</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>peru_map.plot(column<span class="op">=</span><span class="st">'conflict_intensity'</span>,</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>              ax<span class="op">=</span>ax,</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>              legend<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>              cmap<span class="op">=</span><span class="st">'OrRd'</span>,</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>              scheme<span class="op">=</span><span class="st">'quantiles'</span>)</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Spatial Distribution of Social Conflicts"</span>)</span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibility Best Practices</span></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>As a Teaching Assistant for **Applied Microeconometrics** at PUC-Chile, this project demonstrates:</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Folder structure initialization with <span class="in">`projectinit`</span></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Automated data processing pipelines</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reproducible path management</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Clear documentation and code commenting</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>**Technical Details:**</span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spatial lag model with row-standardized weights matrix</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Robust standard errors clustered at district level</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Multiple hypothesis testing corrections</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation</span></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="in">```bibtex</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a><span class="in">@unpublished{medrano2026impact,</span></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a><span class="in">  title={Impact of Gold Price Shocks on Social Conflict: Causal Inference and Spatial Econometrics in the Peruvian Amazon},</span></span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a><span class="in">  author={Medrano, Maykol},</span></span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a><span class="in">  year={2026},</span></span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a><span class="in">  note={Working Paper},</span></span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a><span class="in">  url={https://maykolmedrano.github.io/projects/data-analysis.html}</span></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>**APA Format:**</span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>Medrano, M. (2026). *Impact of Gold Price Shocks on Social Conflict: Causal Inference and Spatial Econometrics in the Peruvian Amazon* <span class="co">[</span><span class="ot">Working Paper</span><span class="co">]</span>. https://maykolmedrano.github.io/projects/data-analysis.html</span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>*Full working paper and replication code available upon request.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -929,36 +1078,12 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/university-funding.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/projects/data-analysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
   </div>
 </footer>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://maykolmedrano.github.io/#person",
-      "name": "Maykol Medrano",
-      "url": "https://maykolmedrano.github.io",
-      "image": "https://maykolmedrano.github.io/assets/img/profile.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/maykolmedrano",
-        "https://github.com/MaykolMedrano",
-        "https://twitter.com/maykolmedrano"
-      ],
-      "jobTitle": "Policy Data Scientist",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Pontificia Universidad Católica de Chile"
-      }
-    }
-  ]
-}
-</script>
 
 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
   <span class="theme-icon">🌙</span>

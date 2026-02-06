@@ -28,13 +28,13 @@ website:
   navbar:
     right:
       - text: "Home"
-        href: index.html
+        href: /index.html
       - text: "Software"
-        href: software.html
+        href: /software/
       - text: "Policy & Research"
-        href: projects.html
+        href: /projects/
       - text: "Blog"
-        href: blog.html
+        href: /blog/
       - icon: rss
         href: blog.xml
       - icon: github
@@ -109,6 +109,9 @@ format:
           <!-- Google Search Console -->
           <meta name="google-site-verification" content="AijWOm3glVo95-yDVijX-PzLUXraLxOF6SAo86fVE-c" />
 
+          <!-- JSON-LD Structured Data -->
+          {{< include assets/metadata/google-structured-data.html >}}
+
           <meta name="robots" content="index, follow">
           <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
@@ -137,30 +140,6 @@ format:
 
     include-after-body:
       - text: |
-          <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Person",
-                "@id": "https://maykolmedrano.github.io/#person",
-                "name": "Maykol Medrano",
-                "url": "https://maykolmedrano.github.io",
-                "image": "https://maykolmedrano.github.io/assets/img/profile.png",
-                "sameAs": [
-                  "https://www.linkedin.com/in/maykolmedrano",
-                  "https://github.com/MaykolMedrano",
-                  "https://twitter.com/maykolmedrano"
-                ],
-                "jobTitle": "Policy Data Scientist",
-                "worksFor": {
-                  "@type": "Organization",
-                  "name": "Pontificia Universidad Católica de Chile"
-                }
-              }
-            ]
-          }
-          </script>
 
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
             <span class="theme-icon">🌙</span>

@@ -1,47 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://maykolmedrano.github.io/software.html</loc>
-    <lastmod>2026-02-06T15:37:35.401Z</lastmod>
+    <loc>https://maykolmedrano.github.io/software/index.html</loc>
+    <lastmod>2026-02-06T15:58:17.807Z</lastmod>
   </url>
   <url>
-    <loc>https://maykolmedrano.github.io/projects/university-funding.html</loc>
-    <lastmod>2026-01-12T00:26:00.600Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/projects/mining-conflict.html</loc>
-    <lastmod>2026-01-12T00:26:21.142Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/projects/gold-shocks.html</loc>
-    <lastmod>2026-01-12T00:24:59.143Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/posts/hola.html</loc>
-    <lastmod>2026-01-10T00:02:57.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/blog.html</loc>
+    <loc>https://maykolmedrano.github.io/blog/index.html</loc>
     <lastmod>2026-01-11T13:57:57.992Z</lastmod>
   </url>
   <url>
-    <loc>https://maykolmedrano.github.io/index.html</loc>
-    <lastmod>2026-02-06T15:42:24.943Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/projects/data-analysis.html</loc>
-    <lastmod>2026-01-12T00:26:43.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/projects/mining-analysis.html</loc>
-    <lastmod>2026-01-12T00:25:18.774Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/projects/social-conflict-education.html</loc>
-    <lastmod>2026-01-12T00:25:39.029Z</lastmod>
-  </url>
-  <url>
-    <loc>https://maykolmedrano.github.io/projects.html</loc>
+    <loc>https://maykolmedrano.github.io/projects/index.html</loc>
     <lastmod>2026-01-10T02:33:13.635Z</lastmod>
   </url>
 </urlset>
