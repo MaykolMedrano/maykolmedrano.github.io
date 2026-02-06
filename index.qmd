@@ -1,6 +1,6 @@
 ---
 title: "Maykol Medrano"
-description: "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master's candidate at Pontificia Universidad Católica de Chile."
+description: "Policy Data Scientist specializing in causal inference and machine learning. Explore research on natural resources, social conflict, and open-source economic data tools."
 image: assets/img/profile.png
 page-layout: full
 toc: false 

@@ -35,7 +35,6 @@ website:
         href: projects.html
       - text: "Blog"
         href: blog.html
-    breadcrumbs: true
       - icon: rss
         href: blog.xml
       - icon: github
@@ -43,7 +42,8 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/maykolmedrano
       - icon: envelope
-        href: mailto:mmedrano2@uc.cl
+        href: mailto:mmedrano2@uc.cl 
+    breadcrumbs: true
 
   page-footer:
     left: "© 2026 Maykol Medrano. Licensed under [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)."
