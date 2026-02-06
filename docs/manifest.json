@@ -1,0 +1,25 @@
+{
+  "name": "Maykol Medrano - Policy Data Scientist",
+  "short_name": "Maykol M.",
+  "description": "Policy Data Scientist | Applied Economist | Research Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f5f0",
+  "theme_color": "#325d88",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/img/profile.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "research",
+    "productivity"
+  ],
+  "lang": "en",
+  "dir": "ltr"
+}
