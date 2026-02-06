@@ -1,18 +1,18 @@
 ---
 title: "Maykol Medrano"
 description: "Policy Data Scientist specializing in causal inference and machine learning for public policy evaluation. Master's candidate at Pontificia Universidad Católica de Chile."
-image: profile.png
+image: assets/img/profile.png
 page-layout: full
 toc: false 
 
 open-graph:
   title: "Maykol Medrano - Policy Data Scientist"
   description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
-  image: profile.png
+  image: assets/img/profile.png
 twitter-card:
   title: "Maykol Medrano - Policy Data Scientist"
   description: "Policy Data Scientist | Applied Economist | Causal Inference & ML Expert"
-  image: profile.png
+  image: assets/img/profile.png
 about:
   template: trestles
   image-shape: rounded
@@ -34,7 +34,7 @@ about:
       url: "blog.html"
     - text: CV
       icon: file-pdf
-      url: "CV_Maykol_Medrano.pdf"
+      url: "assets/docs/CV_Maykol_Medrano.pdf"
 comments: false
 ---
 

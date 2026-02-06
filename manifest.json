@@ -9,13 +9,17 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "profile.png",
+      "src": "assets/img/profile.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["education", "research", "productivity"],
+  "categories": [
+    "education",
+    "research",
+    "productivity"
+  ],
   "lang": "en",
   "dir": "ltr"
 }

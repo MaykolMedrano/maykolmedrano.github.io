@@ -19,7 +19,7 @@ website:
   open-graph:
     locale: en_US
     site-name: "Maykol Medrano - Policy Data Scientist"
-    image: profile.png
+    image: assets/img/profile.png
 
   twitter-card:
     creator: "@maykolmedrano"
@@ -53,8 +53,8 @@ filters:
 
 format:
   html:
-    theme: [sandstone, _variables.scss]
-    css: styles.css
+    theme: [sandstone, assets/styles/_variables.scss]
+    css: assets/styles/styles.css
     mainfont: "Manrope"
     monofont: "JetBrains Mono"
     
@@ -104,6 +104,10 @@ format:
 
           <meta name="author" content="Maykol Medrano">
           <meta name="keywords" content="Maykol Medrano, Policy Data Scientist, Applied Economist, Causal Inference, Machine Learning, Peru, Chile, ENAHO, Python, Stata, Econometrics, Data Science">
+          
+          <!-- Google Search Console -->
+          <meta name="google-site-verification" content="AijWOm3glVo95-yDVijX-PzLUXraLxOF6SAo86fVE-c" />
+
           <meta name="robots" content="index, follow">
           <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
@@ -115,7 +119,7 @@ format:
           <meta name="mobile-web-app-capable" content="yes">
 
           <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-          <link rel="apple-touch-icon" sizes="180x180" href="profile.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="assets/img/profile.png">
 
           <link rel="manifest" href="manifest.json">
 
@@ -123,7 +127,7 @@ format:
           <meta http-equiv="X-Content-Type-Options" content="nosniff">
           <meta name="referrer" content="strict-origin-when-cross-origin">
 
-          <link rel="preload" as="image" href="profile.png" type="image/png">
+          <link rel="preload" as="image" href="assets/img/profile.png" type="image/png">
 
           <meta name="citation_author" content="Medrano, Maykol">
           <meta name="citation_title" content="Maykol Medrano - Policy Data Scientist">
@@ -141,7 +145,7 @@ format:
                 "@id": "https://maykolmedrano.github.io/#person",
                 "name": "Maykol Medrano",
                 "url": "https://maykolmedrano.github.io",
-                "image": "https://maykolmedrano.github.io/profile.png",
+                "image": "https://maykolmedrano.github.io/assets/img/profile.png",
                 "sameAs": [
                   "https://www.linkedin.com/in/maykolmedrano",
                   "https://github.com/MaykolMedrano",
@@ -238,9 +242,9 @@ format:
               };
 
               // CV Downloads
-              document.querySelectorAll('a[href*="CV_Maykol_Medrano.pdf"]').forEach(link => {
+              document.querySelectorAll('a[href*="assets/docs/CV_Maykol_Medrano.pdf"]').forEach(link => {
                 link.addEventListener('click', () => {
-                  sendGAEvent('file_download', { 'file_name': 'CV_Maykol_Medrano.pdf', 'file_type': 'PDF' });
+                  sendGAEvent('file_download', { 'file_name': 'assets/docs/CV_Maykol_Medrano.pdf', 'file_type': 'PDF' });
                 });
               });
 
