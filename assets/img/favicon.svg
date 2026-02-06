@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#325d88" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Central Node -->
+  <circle cx="50" cy="55" r="9" fill="#325d88" stroke="none"/>
+  
+  <!-- Peripheral Nodes -->
+  <circle cx="50" cy="15" r="7" fill="none"/>
+  <circle cx="15" cy="80" r="7" fill="none"/>
+  <circle cx="85" cy="80" r="7" fill="none"/>
+  
+  <!-- Connections -->
+  <line x1="50" y1="55" x2="50" y2="22" />
+  <line x1="50" y1="55" x2="21" y2="74" />
+  <line x1="50" y1="55" x2="79" y2="74" />
+  
+  <!-- Outer Connections (Network effect) -->
+  <line x1="50" y1="15" x2="85" y2="80" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="4 4"/>
+  <line x1="85" y1="80" x2="15" y2="80" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="4 4"/>
+  <line x1="15" y1="80" x2="50" y2="15" stroke-width="4" stroke-opacity="0.5" stroke-dasharray="4 4"/>
+</svg>
