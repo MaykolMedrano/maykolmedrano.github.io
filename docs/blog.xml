@@ -12,10 +12,23 @@
 <generator>quarto-1.8.26</generator>
 <lastBuildDate>Thu, 08 Jan 2026 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>{B4F502887207:/posts/hola.html}</title>
+  <title>Hola Mundo</title>
   <dc:creator>Maykol Medrano</dc:creator>
   <link>https://maykolmedrano.github.io/posts/hola.html</link>
-  <description>{B4F502887207:/posts/hola.html}</description>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Este es un post de prueba. Contenido en construcción.</p>
+<p>Bienvenido a mi blog donde compartiré reflexiones sobre política pública basada en evidencia, ciencia de datos aplicada, y desarrollo de herramientas de código abierto para América Latina.</p>
+
+
+<!-- -->
+
+
+ ]]></description>
   <category>General</category>
   <guid>https://maykolmedrano.github.io/posts/hola.html</guid>
   <pubDate>Thu, 08 Jan 2026 05:00:00 GMT</pubDate>
