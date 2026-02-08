@@ -64,12 +64,12 @@ MCP Server for the Central Reserve Bank of Peru (BCRP) statistical API. It enabl
 
 **mcp-wbgapi360** — World Bank Data for Agents
 
-[![PyPI version](https://img.shields.io/pypi/v/mcp-wbgapi360.svg)](https://pypi.org/project/mcp-wbgapi360)
-[![Downloads](https://img.shields.io/pypi/dm/mcp-wbgapi360.svg)](https://pypi.org/project/mcp-wbgapi360)
-[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/mcp_wbgapi360.svg)](https://github.com/MaykolMedrano/mcp_wbgapi360)
-[![License](https://img.shields.io/github/license/MaykolMedrano/mcp_wbgapi360.svg)](https://github.com/MaykolMedrano/mcp_wbgapi360/blob/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/wbgapi360.svg)](https://pypi.org/project/wbgapi360)
+[![Downloads](https://img.shields.io/pypi/dm/wbgapi360.svg)](https://pypi.org/project/wbgapi360)
+[![GitHub stars](https://img.shields.io/github/stars/MaykolMedrano/wbgapi360.svg)](https://github.com/MaykolMedrano/wbgapi360)
+[![License](https://img.shields.io/github/license/MaykolMedrano/wbgapi360.svg)](https://github.com/MaykolMedrano/wbgapi360/blob/main/LICENSE)
 
-[GitHub](https://github.com/MaykolMedrano/mcp_wbgapi360) · [PyPI](https://pypi.org/project/mcp-wbgapi360)
+[GitHub](https://github.com/MaykolMedrano/wbgapi360) · [PyPI](https://pypi.org/project/wbgapi360)
 
 An enterprise-grade, asynchronous Python client for the World Bank Data360 API. Featuring hybrid MCP support, it allows AI models to retrieve international development data with high performance, enabling complex cross-country comparisons in seconds.
 
