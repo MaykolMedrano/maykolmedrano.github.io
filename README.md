@@ -4,7 +4,7 @@ Personal website showcasing research, open-source software, and policy data scie
 
 ## About
 
-Applied Economist | Policy Data Scientist | Research Software Engineer specializing in causal inference, machine learning, and AI-Ready statistical agents. Master's candidate at Pontificia Universidad Católica de Chile.
+Applied economist and research software engineer working on causal inference and AI tooling for economic data. Holds a Master's from Pontificia Universidad Católica de Chile.
 
 ## Website
 

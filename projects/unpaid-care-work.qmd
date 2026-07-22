@@ -1,0 +1,55 @@
+---
+title: "Time, Work, and Wellbeing"
+subtitle: "A causal analysis of unpaid care work and female labor force participation in Chile"
+description: "IV analysis (Bartik shift-share instrument) using Chile's 2023 time-use survey (ENUT) showing unpaid care work causally reduces female labor force participation — and erodes subjective wellbeing along the way."
+author: "Maykol Medrano, Juan Morales"
+date: "2026-03-08"
+categories: [Causal Inference, Labor Economics, Gender, Chile]
+image: "/assets/img/proyectos/labor-decomposition.png"
+---
+
+## Overview
+
+Chile has one of the lowest female labor force participation (LFP) rates in Latin America — often called the "Chilean Exception." This project asks how much of that gap is causally explained by unpaid care work, using microdata from Chile's 2023 National Time Use Survey (ENUT).
+
+## Research Question
+
+How does unpaid care work affect female labor force participation and subjective wellbeing in Chile, and for whom does the time constraint bind hardest?
+
+## Empirical Strategy
+
+Care time and labor supply are jointly chosen, so a naive regression conflates causation with reverse causality and omitted variables (like unobserved "preference for home life"). To identify a causal effect, we build a household-level **Bartik (shift-share) instrument**: each region's historical coverage by JUNJI (Chile's public childcare network) in 2017, interacted with the national expansion rate of JUNJI from 2017–2023 (computed leave-one-out, so a region's own dynamics don't drive its instrument) and the number of children under 5 in the household. This isolates variation from the *national* expansion of public childcare supply reaching households with young children differently depending on their region's starting infrastructure — while region fixed effects absorb anything else specific to a given place.
+
+We estimate the effect via IV-2SLS: the first stage predicts weekly hours of unpaid care work from the instrument, and the second stage regresses LFP on predicted care hours, controlling for age, education, household income, partner presence, and domestic service. A placebo test using children aged 6–12 (who don't qualify for JUNJI nursery slots) confirms the instrument only affects the population it should. The identification also passes an Anderson-Rubin weak-instrument-robust test (p = 0.036), and we use Oster (2019) bounds to check how much unobserved selection would be needed to overturn the result.
+
+## Key Findings
+
+**1. Care work has a real causal cost to labor supply.** One additional hour of care work reduces female LFP by **3.1 percentage points** (IV estimate) — almost four times the OLS correlation (-0.8 pp), consistent with OLS being biased downward by measurement error and endogeneity.
+
+![Domestic work and care work have different effects on labor force participation, and OLS understates both relative to the IV estimate.](/assets/img/proyectos/labor-coefplot.png)
+
+**2. The "middle-class trap."** The time constraint binds hardest for middle-income households: they don't qualify for public childcare support, but can't afford market substitutes (like paid domestic help) either.
+
+**3. Care work has a wellbeing cost beyond labor supply.** Care and domestic work significantly raise a Time Stress Index and a sense of "doing more than one's share," reducing life satisfaction and perceived fairness in how household tasks are divided.
+
+## Data Pipeline & Reproducibility
+
+The replication package follows **DIME/World Bank folder standards**, initialized with `projectinit-ai`, and is built for one-click reproduction: a single `00_master.do` verifies and installs every Stata dependency (`ivreg2`, `oster`, `estout`, `coefplot`) and runs the full pipeline — data preparation and instrument construction, LFP and heterogeneity models, and a validation stage covering Oster bounds, placebo tests, and saturation checks — in about 5 minutes, exporting every table and figure automatically.
+
+## Policy Implications
+
+The gap between the OLS and IV estimates matters for policy: if you only look at the correlation, you underestimate how much expanding public childcare could raise female labor supply. And because the binding constraint concentrates in middle-income households excluded from current public support, an income-blind expansion of subsidized care could reach exactly the group current programs miss.
+
+---
+
+## Citation
+
+```bibtex
+@unpublished{medrano2026care,
+  title={Time, Work, and Wellbeing: A Causal Analysis of Unpaid Care Work for Women in Chile},
+  author={Medrano, Maykol and Morales, Juan},
+  year={2026},
+  note={Working Paper, Master's in Applied Economics, Pontificia Universidad Católica de Chile},
+  url={https://github.com/MaykolMedrano/Trabajo_Laboral}
+}
+```
