@@ -45,6 +45,11 @@ body.quarto-dark {
    1. UX HEADER (REAL GLASSMORPHISM)
    ============================================ */
 
+/* Keep header always visible: cancel Headroom.js's slide-up-on-scroll-down transform */
+#quarto-header.headroom--unpinned {
+  transform: translateY(0) !important;
+}
+
 /* Force semi-transparent background with blur */
 #quarto-header .navbar,
 .navbar,
@@ -218,6 +223,17 @@ main.content {
   min-height: 85vh !important;
 }
 
+/* Give regular page titles breathing room below the fixed header.
+   The About/home page's title lives inside .about-contents (different
+   layout), so reset it back to flush there. */
+#title-block-header {
+  margin-top: 2rem !important;
+}
+
+.about-contents #title-block-header {
+  margin-top: 0 !important;
+}
+
 /* ============================================
    4. PROFILE SECTION (CLEAN & MODERN)
    ============================================ */
@@ -229,24 +245,13 @@ main.content {
   margin-top: 0.5rem !important; /* Minimal top margin */
 }
 
-/* --- 1. CONFIGURACIÓN DE LA IMAGEN --- */
-.quarto-about-trestles .about-entity .about-image {
+/* --- 1. CONFIGURACIÓN DE LA IMAGEN ---
+   Quarto's trestles template renders a single <img class="about-image">
+   with no wrapping div, so container + image styling both target it directly. */
+.quarto-about-trestles .about-entity img.about-image {
   flex: 0 0 auto !important;
   width: 180px !important; /* Reduced to 180px for compact above-fold layout */
   height: 180px !important; /* Altura igual al ancho para círculo perfecto */
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  border-radius: 50% !important; /* Contenedor circular */
-  overflow: visible !important; /* Changed from hidden to allow glow effect */
-  cursor: pointer !important; /* Make it clear it's interactive */
-}
-
-.quarto-about-trestles .about-entity .about-image img {
-  width: 100% !important;
   aspect-ratio: 1 / 1 !important; /* Cuadrado perfecto */
 
   /* AJUSTE DE ENCUADRE:
@@ -257,10 +262,11 @@ main.content {
 
   border-radius: 50% !important; /* Foto circular */
   box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
-
-  /* Animación Spring al pasar el mouse + Flotación continua */
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  cursor: pointer !important; /* Make it clear it's interactive */
   margin-bottom: 0 !important;
+
+  /* Flotación continua + transición suave al pasar el mouse */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s ease;
 
   /* Micro-animación de flotación sutil */
   animation: profileFloat 3s ease-in-out infinite;
@@ -277,18 +283,15 @@ main.content {
 }
 
 /* Efecto Zoom + Glow en la foto - MANTIENE FORMA CIRCULAR */
-.quarto-about-trestles .about-entity .about-image:hover img,
-.about-entity .about-image:hover img,
-.quarto-about-trestles .about-entity .about-image img:hover,
-.about-entity .about-image img:hover {
-  transform: scale(1.15) !important; /* Increased for more noticeable effect */
+.quarto-about-trestles .about-entity img.about-image:hover {
+  transform: scale(1.06) !important; /* Subtle zoom, smoother than before */
   border-radius: 50% !important; /* CRÍTICO: Mantiene la imagen redonda durante hover */
   box-shadow: 0 30px 60px -10px rgba(0,0,0,0.4),
               0 0 40px rgba(37, 99, 235, 0.5) !important; /* Stronger blue glow */
   animation: none !important; /* Stop float animation on hover */
   cursor: pointer !important;
-  filter: brightness(1.1) contrast(1.05) !important; /* Brighter and more vivid */
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; /* Bouncy spring effect */
+  filter: brightness(1.05) contrast(1.02) !important; /* Slightly brighter, kept subtle */
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smooth ease, no bounce */
 }
 
 /* --- 2. CONTENIDO Y BOTONES --- */
@@ -611,7 +614,7 @@ body.quarto-dark ::selection {
   }
 
   /* 2. Ajustar ancho de la foto en móvil */
-  .quarto-about-trestles .about-entity .about-image {
+  .quarto-about-trestles .about-entity img.about-image {
     width: 220px !important; /* Un poco más pequeña en móvil */
     height: 220px !important; /* Mantener proporción circular */
     margin: 2rem auto 0 auto !important; /* Espacio superior desde header, centrada horizontalmente */
@@ -781,6 +784,12 @@ footer {
   font-family: var(--font-code);
   font-size: 0.8rem;
   color: var(--accent-secondary);
+}
+
+/* Quarto's bootstrap bundle hardcodes .nav-footer { background-color: #fff },
+   which stays white in dark mode. Let it show the page background instead. */
+.nav-footer {
+  background-color: transparent !important;
 }
 
 body.quarto-dark footer {
@@ -1264,4 +1273,46 @@ footer.footer {
   .listing-item .listing-title {
     font-size: 1.25rem !important;
   }
+}
+
+/* Plain icon+text link for the Software page (no border/pill background) */
+.tool-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600 !important;
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+  margin-right: 1rem;
+}
+
+.tool-link:hover {
+  text-decoration: underline !important;
+}
+
+/* Plain, non-clickable tech tag (language/ecosystem), same row as tool-link */
+.tech-tag {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600 !important;
+  color: var(--accent-secondary) !important;
+  margin-right: 1rem;
+}
+
+/* Stack row on the home page: same tech-tag look, but as small pills so it reads visually */
+.stack-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.stack-row .tech-tag {
+  margin-right: 0;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
 }

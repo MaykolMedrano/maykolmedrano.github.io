@@ -9,8 +9,8 @@
 <link>https://maykolmedrano.github.io/blog/</link>
 <atom:link href="https://maykolmedrano.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Applied Economist | Policy Data Scientist | Research Software Engineer</description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Thu, 08 Jan 2026 05:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Thu, 08 Jan 2026 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Hola Mundo</title>
   <dc:creator>Maykol Medrano</dc:creator>
@@ -31,7 +31,7 @@
  ]]></description>
   <category>General</category>
   <guid>https://maykolmedrano.github.io/blog/posts/hola.html</guid>
-  <pubDate>Thu, 08 Jan 2026 05:00:00 GMT</pubDate>
+  <pubDate>Thu, 08 Jan 2026 03:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
