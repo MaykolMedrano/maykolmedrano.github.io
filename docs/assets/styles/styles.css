@@ -550,6 +550,212 @@ body.quarto-dark code {
   border-color: #334155;
 }
 
+/* ============================================
+   SOFTWARE INDEX — COMPACT EDITORIAL LAYOUT
+   ============================================ */
+
+body.software-page main.content {
+  max-width: 1080px !important;
+  padding-inline: 1.5rem !important;
+}
+
+body.software-page #title-block-header {
+  max-width: 760px;
+  margin-bottom: 0.75rem;
+}
+
+body.software-page h1.title {
+  margin-bottom: 0.35rem !important;
+}
+
+.software-intro {
+  max-width: 760px;
+  margin-bottom: 3.25rem;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.software-index {
+  border-top: 1px solid #cbd5e1;
+}
+
+.software-group {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.72fr) minmax(0, 2fr);
+  gap: 3.5rem;
+  padding: 2.15rem 0 2.4rem;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.software-group-heading {
+  align-self: start;
+}
+
+.software-group-heading section {
+  margin-bottom: 0 !important;
+}
+
+.software-group-number {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: #64748b;
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.software-group-heading h2 {
+  margin: 0 0 0.7rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #0f172a !important;
+  font-size: 1.25rem !important;
+  letter-spacing: -0.015em;
+}
+
+.software-group-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.software-list {
+  border-top: 1px solid #e2e8f0;
+}
+
+.software-entry {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.72fr) minmax(0, 2fr) minmax(82px, auto);
+  gap: 1.35rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.software-entry:last-child {
+  border-bottom: 0;
+}
+
+.software-entry h3,
+.software-entry p {
+  margin: 0 !important;
+}
+
+.software-entry h3 {
+  font-family: var(--font-code) !important;
+  font-size: 0.94rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.02em;
+}
+
+.software-entry h3 a,
+.software-entry h3 a:visited {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+}
+
+.software-entry h3 a::after {
+  display: none !important;
+}
+
+.software-entry h3 a:hover {
+  color: var(--accent-color) !important;
+}
+
+.software-entry > p {
+  color: #334155;
+  font-size: 0.91rem;
+  line-height: 1.55;
+}
+
+.software-links {
+  white-space: nowrap;
+  color: #94a3b8;
+  font-size: 0.76rem;
+}
+
+.software-links a,
+.software-links a:visited {
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.software-links a::after {
+  height: 1px !important;
+}
+
+body.quarto-dark .software-intro,
+body.quarto-dark .software-group-heading p,
+body.quarto-dark .software-group-number,
+body.quarto-dark .software-entry > p {
+  color: #cbd5e1;
+}
+
+body.quarto-dark .software-index,
+body.quarto-dark .software-group {
+  border-color: #475569;
+}
+
+body.quarto-dark .software-list,
+body.quarto-dark .software-entry {
+  border-color: #334155;
+}
+
+body.quarto-dark .software-group-heading h2,
+body.quarto-dark .software-entry h3 a,
+body.quarto-dark .software-entry h3 a:visited {
+  color: #f8fafc !important;
+}
+
+body.quarto-dark .software-links a,
+body.quarto-dark .software-links a:visited {
+  color: #94a3b8 !important;
+}
+
+@media (max-width: 800px) {
+  body.software-page main.content {
+    padding-inline: 0.4rem !important;
+  }
+
+  .software-intro {
+    margin-bottom: 2.25rem;
+  }
+
+  .software-group {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.75rem 0;
+  }
+
+  .software-group-heading {
+    max-width: 32rem;
+  }
+
+  .software-entry {
+    grid-template-columns: minmax(115px, 0.7fr) minmax(0, 2fr);
+    gap: 0.55rem 1rem;
+  }
+
+  .software-links {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .software-entry {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding: 1rem 0;
+  }
+
+  .software-links {
+    grid-column: 1;
+  }
+}
+
 /* Floating Dark Mode Toggle */
 .theme-toggle {
   position: fixed !important;

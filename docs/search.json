@@ -4,28 +4,28 @@
     "href": "software/index.html",
     "title": "Open Source Software",
     "section": "",
-    "text": "Since I was a student, I’ve felt there’s a real gap in how researchers get access to data: official statistics are scattered across dozens of disconnected portals, and there’s little real infrastructure for accessing them easily. These tools grew out of that: each one turns a repetitive, one-off data-pulling task into something reproducible, and — more recently — something an AI agent can call directly."
+    "text": "Official economic data is often fragmented across portals, formats, and institutions. These tools make those sources easier to use in reproducible economic research."
   },
   {
     "objectID": "software/index.html#ai-agent-tooling",
     "href": "software/index.html#ai-agent-tooling",
     "title": "Open Source Software",
-    "section": "AI Agent Tooling",
-    "text": "AI Agent Tooling\nMCP servers that give LLMs direct, structured access to statistical APIs.\nmcp-bcrp — MCP server that exposes over 5,000 macroeconomic indicators from Peru’s central bank (BCRP) as tool calls an AI agent can invoke directly, instead of scraping the portal by hand.  GitHub  PyPI  \nmcp-wbgapi360 — Asynchronous Python client for the World Bank Data360 API, with MCP support so an AI agent can pull international development indicators for cross-country comparisons on its own.  GitHub  PyPI  \nmcp-sinim — Python client and MCP server for Chile’s SINIM municipal data, letting an AI agent search ~480 variables by natural language and pull tidy panels for any of the country’s 345 municipalities.  GitHub  PyPI"
+    "section": "AI agent tooling",
+    "text": "AI agent tooling\nStructured access to official statistics for language models and automated research workflows."
   },
   {
     "objectID": "software/index.html#python",
     "href": "software/index.html#python",
     "title": "Open Source Software",
     "section": "Python",
-    "text": "Python\nTyped clients and downloaders that turn a public statistical portal into a dataframe.\nenahodata — Automates downloading and processing Peru’s ENAHO household survey modules (INEI), built for large-scale poverty and labor-market research without manual, file-by-file downloads.  GitHub  PyPI  \nusebcrp — Python client for the BCRP statistical API, giving programmatic access to macroeconomic indicators and national accounts for reproducible econometric work.  GitHub  PyPI  \nusecasen — Python tool for Chile’s CASEN socioeconomic survey, built for multidimensional poverty analysis.  GitHub  PyPI  \nusebcch — Python tool for Central Bank of Chile data, for monitoring monetary policy indicators. Python Python GitHub"
+    "text": "Python\nClients and data pipelines for working directly with public statistical sources."
   },
   {
     "objectID": "software/index.html#stata",
     "href": "software/index.html#stata",
     "title": "Open Source Software",
     "section": "Stata",
-    "text": "Stata\nuseminedu — Stata module that downloads school-level statistics and education census indicators from Peru’s ESCALE platform, for territorial and impact-evaluation research.  Stata GitHub  \nfixencoding — Stata utility that batch-repairs character encoding issues in legacy data files, handling special characters like tildes and ñ across software versions.  Stata GitHub  \nsiafreport — Stata module that generates automated public expenditure execution reports from Peru’s SIAF data, for budget tracking and auditing.  Stata GitHub"
+    "text": "Stata\nUtilities for acquiring, cleaning, and reporting public-sector data."
   },
   {
     "objectID": "projects/university-funding.html",
@@ -249,21 +249,28 @@
     "href": "index.html",
     "title": "Maykol Medrano",
     "section": "",
-    "text": "I’m an applied economist and research software engineer working on causal inference and AI tooling for economic data. I hold a Master’s in Applied Economics from the Institute of Economics at Pontificia Universidad Católica de Chile, where my thesis traced whether Santiago’s recent Metro expansion — Lines 3 and 6 and the Line 2 extension — actually reaches local government finances through property and business taxes. Before that, I built data infrastructure for evidence-based policy at Peru’s Ministry of Education.\nMy current focus is building Model Context Protocol (MCP) servers that let LLMs query Latin American and global statistical databases directly, instead of researchers hand-scraping them."
+    "text": "I’m an applied economist and research software engineer conducting applied economic research on higher education and nonprofit organizations. I study how public policy shapes educational choices and how nonprofit organizations are financed and sustained, using machine learning, text-to-data methods, and reproducible data workflows. I currently work with research teams at Pontificia Universidad Católica de Chile and the Centro de Políticas Públicas UC.\nI hold a Master’s in Applied Economics from the Institute of Economics at Pontificia Universidad Católica de Chile."
   },
   {
     "objectID": "index.html#bio",
     "href": "index.html#bio",
     "title": "Maykol Medrano",
     "section": "",
-    "text": "I’m an applied economist and research software engineer working on causal inference and AI tooling for economic data. I hold a Master’s in Applied Economics from the Institute of Economics at Pontificia Universidad Católica de Chile, where my thesis traced whether Santiago’s recent Metro expansion — Lines 3 and 6 and the Line 2 extension — actually reaches local government finances through property and business taxes. Before that, I built data infrastructure for evidence-based policy at Peru’s Ministry of Education.\nMy current focus is building Model Context Protocol (MCP) servers that let LLMs query Latin American and global statistical databases directly, instead of researchers hand-scraping them."
+    "text": "I’m an applied economist and research software engineer conducting applied economic research on higher education and nonprofit organizations. I study how public policy shapes educational choices and how nonprofit organizations are financed and sustained, using machine learning, text-to-data methods, and reproducible data workflows. I currently work with research teams at Pontificia Universidad Católica de Chile and the Centro de Políticas Públicas UC.\nI hold a Master’s in Applied Economics from the Institute of Economics at Pontificia Universidad Católica de Chile."
   },
   {
-    "objectID": "index.html#research-technical-expertise",
-    "href": "index.html#research-technical-expertise",
+    "objectID": "index.html#research",
+    "href": "index.html#research",
     "title": "Maykol Medrano",
-    "section": "Research & Technical Expertise",
-    "text": "Research & Technical Expertise\nOpen Source | Creator and maintainer of mcp-bcrp, mcp-wbgapi360, and mcp-sinim for AI access to central bank, World Bank, and Chilean municipal data, plus enahodata and usebcrp for Python and Stata.\nMaster’s Thesis | Traced whether Santiago’s Metro expansion reaches local government finances — a 6.7% residential price premium near Line 3 stations, but weak translation into property tax revenue. Institute of Economics, PUC Chile.\nStack\n Model Context Protocol MCP  GIS LangChain LangChain Python Python  Stata R R  SQL Quarto Quarto Docker Docker \n\nView my research portfolio · Explore my software · Read my blog"
+    "section": "Research",
+    "text": "Research\nAt Proyecto AVANZA, I develop the machine-learning component of a study examining how Chile’s tuition-free higher education policy shapes university choice across socioeconomic backgrounds.\nAt Sociedad en Acción, Centro de Políticas Públicas UC, I build text-to-data pipelines that convert semi-structured administrative, financial, PDF, and web records into a longitudinal database, and use it to analyze nonprofit financial sustainability, public funding, and organizational characteristics."
+  },
+  {
+    "objectID": "index.html#software",
+    "href": "index.html#software",
+    "title": "Maykol Medrano",
+    "section": "Software",
+    "text": "Software\nI develop reproducible data systems and open-source tools that make economic and administrative data easier to access and analyze. View software.\nTools\n Model Context Protocol MCP  GIS LangChain LangChain Python Python  Stata R R  SQL Quarto Quarto Docker Docker \n\nView my research portfolio · Explore my software · Read my blog"
   },
   {
     "objectID": "blog/index.html",

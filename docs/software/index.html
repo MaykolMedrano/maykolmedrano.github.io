@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Explore open-source tools for analyzing household surveys, central bank data, and AI-ready statistical agents.">
+<meta name="description" content="Python, Stata, and MCP tools for economic data access and research engineering.">
 
 <title>Open Source Software – Maykol Medrano</title>
 <style>
@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -244,12 +209,12 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../assets/styles/styles.css">
 <meta property="og:title" content="Open Source Software – Maykol Medrano">
-<meta property="og:description" content="Explore open-source tools for analyzing household surveys, central bank data, and AI-ready statistical agents.">
+<meta property="og:description" content="Python, Stata, and MCP tools for economic data access and research engineering.">
 <meta property="og:image" content="https://maykolmedrano.github.io/software/assets/img/profile.png">
 <meta property="og:site_name" content="Maykol Medrano">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Open Source Software – Maykol Medrano">
-<meta name="twitter:description" content="Explore open-source tools for analyzing household surveys, central bank data, and AI-ready statistical agents.">
+<meta name="twitter:description" content="Python, Stata, and MCP tools for economic data access and research engineering.">
 <meta name="twitter:creator" content="@maykolmedrano">
 <meta name="twitter:site" content="@maykolmedrano">
 <meta name="twitter:card" content="summary">
@@ -258,7 +223,7 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 <meta name="citation_language" content="en">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed software-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -322,34 +287,23 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#ai-agent-tooling" id="toc-ai-agent-tooling" class="nav-link active" data-scroll-target="#ai-agent-tooling">AI Agent Tooling</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/software/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Open Source Software</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Python, Stata, and MCP tools for economic data access and research engineering</p>
+<h1 class="title">Open Source Software</h1>
 </div>
 
 <div>
   <div class="description">
-    Explore open-source tools for analyzing household surveys, central bank data, and AI-ready statistical agents.
+    Python, Stata, and MCP tools for economic data access and research engineering.
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -381,32 +335,96 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
   ]
 }
 </script>
-<p>Since I was a student, I’ve felt there’s a real gap in how researchers get access to data: official statistics are scattered across dozens of disconnected portals, and there’s little real infrastructure for accessing them easily. These tools grew out of that: each one turns a repetitive, one-off data-pulling task into something reproducible, and — more recently — something an AI agent can call directly.</p>
+<div class="software-intro">
+<p>Official economic data is often fragmented across portals, formats, and institutions. These tools make those sources easier to use in reproducible economic research.</p>
+</div>
+<div class="software-index">
+<div class="software-group">
+<div class="software-group-heading">
+<p><span class="software-group-number">01</span></p>
 <section id="ai-agent-tooling" class="level2">
-<h2 class="anchored" data-anchor-id="ai-agent-tooling">AI Agent Tooling</h2>
-<p>MCP servers that give LLMs direct, structured access to statistical APIs.</p>
-<p><strong>mcp-bcrp</strong> — MCP server that exposes over 5,000 macroeconomic indicators from <a href="https://www.bcrp.gob.pe/">Peru’s central bank (BCRP)</a> as tool calls an AI agent can invoke directly, instead of scraping the portal by hand. <a href="https://github.com/MaykolMedrano/mcp_bcrp" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://pypi.org/project/mcp-bcrp" class="tool-link"><i class="bi bi-box-seam"></i> PyPI</a> <a href="https://pypi.org/project/mcp-bcrp"><img src="https://img.shields.io/pypi/v/mcp-bcrp.svg" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/MaykolMedrano/mcp_bcrp"><img src="https://img.shields.io/github/stars/MaykolMedrano/mcp_bcrp.svg" class="img-fluid" alt="Stars"></a></p>
-<p><strong>mcp-wbgapi360</strong> — Asynchronous Python client for the <a href="https://data.worldbank.org/">World Bank</a> Data360 API, with MCP support so an AI agent can pull international development indicators for cross-country comparisons on its own. <a href="https://github.com/MaykolMedrano/mcp_wbgapi360" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://pypi.org/project/wbgapi360" class="tool-link"><i class="bi bi-box-seam"></i> PyPI</a> <a href="https://pypi.org/project/wbgapi360"><img src="https://img.shields.io/pypi/v/wbgapi360.svg" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/MaykolMedrano/mcp_wbgapi360"><img src="https://img.shields.io/github/stars/MaykolMedrano/mcp_wbgapi360.svg" class="img-fluid" alt="Stars"></a></p>
-<p><strong>mcp-sinim</strong> — Python client and MCP server for Chile’s <a href="https://datos.sinim.gov.cl">SINIM</a> municipal data, letting an AI agent search ~480 variables by natural language and pull tidy panels for any of the country’s 345 municipalities. <a href="https://github.com/MaykolMedrano/mcp_sinim" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://pypi.org/project/mcp-sinim" class="tool-link"><i class="bi bi-box-seam"></i> PyPI</a> <a href="https://pypi.org/project/mcp-sinim"><img src="https://img.shields.io/pypi/v/mcp-sinim.svg" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/MaykolMedrano/mcp_sinim"><img src="https://img.shields.io/github/stars/MaykolMedrano/mcp_sinim.svg" class="img-fluid" alt="Stars"></a></p>
+<h2 class="anchored" data-anchor-id="ai-agent-tooling">AI agent tooling</h2>
+<p>Structured access to official statistics for language models and automated research workflows.</p>
 </section>
+</div>
+<div class="software-list">
+<section id="mcp-bcrp" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="mcp-bcrp"><a href="https://github.com/MaykolMedrano/mcp_bcrp">mcp-bcrp</a></h3>
+<p>Exposes more than 5,000 indicators from Peru’s central bank as structured tool calls for economic analysis.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/mcp_bcrp">Source</a> · <a href="https://pypi.org/project/mcp-bcrp">PyPI</a></span></p>
+</section>
+<section id="mcp-wbgapi360" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="mcp-wbgapi360"><a href="https://github.com/MaykolMedrano/mcp_wbgapi360">mcp-wbgapi360</a></h3>
+<p>Retrieves World Bank Data360 indicators asynchronously and builds consistent cross-country datasets.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/mcp_wbgapi360">Source</a> · <a href="https://pypi.org/project/wbgapi360">PyPI</a></span></p>
+</section>
+<section id="mcp-sinim" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="mcp-sinim"><a href="https://github.com/MaykolMedrano/mcp_sinim">mcp-sinim</a></h3>
+<p>Searches Chilean municipal statistics in natural language and extracts panel data for 345 municipalities.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/mcp_sinim">Source</a> · <a href="https://pypi.org/project/mcp-sinim">PyPI</a></span></p>
+</section>
+</div>
+</div>
+<div class="software-group">
+<div class="software-group-heading">
+<p><span class="software-group-number">02</span></p>
 <section id="python" class="level2">
 <h2 class="anchored" data-anchor-id="python">Python</h2>
-<p>Typed clients and downloaders that turn a public statistical portal into a dataframe.</p>
-<p><strong>enahodata</strong> — Automates downloading and processing Peru’s ENAHO household survey modules (<a href="https://www.gob.pe/inei/">INEI</a>), built for large-scale poverty and labor-market research without manual, file-by-file downloads. <a href="https://github.com/MaykolMedrano/enahodata_py" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://pypi.org/project/enahodata" class="tool-link"><i class="bi bi-box-seam"></i> PyPI</a> <a href="https://pypi.org/project/enahodata"><img src="https://img.shields.io/pypi/v/enahodata.svg" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/MaykolMedrano/enahodata_py"><img src="https://img.shields.io/github/stars/MaykolMedrano/enahodata_py.svg" class="img-fluid" alt="Stars"></a></p>
-<p><strong>usebcrp</strong> — Python client for the <a href="https://www.bcrp.gob.pe/">BCRP</a> statistical API, giving programmatic access to macroeconomic indicators and national accounts for reproducible econometric work. <a href="https://github.com/MaykolMedrano/usebcrp" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://pypi.org/project/usebcrp" class="tool-link"><i class="bi bi-box-seam"></i> PyPI</a> <a href="https://pypi.org/project/usebcrp"><img src="https://img.shields.io/pypi/v/usebcrp.svg" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/MaykolMedrano/usebcrp"><img src="https://img.shields.io/github/stars/MaykolMedrano/usebcrp.svg" class="img-fluid" alt="Stars"></a></p>
-<p><strong>usecasen</strong> — Python tool for Chile’s <a href="https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen">CASEN</a> socioeconomic survey, built for multidimensional poverty analysis. <a href="https://github.com/MaykolMedrano/usecasen" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://pypi.org/project/usecasen" class="tool-link"><i class="bi bi-box-seam"></i> PyPI</a> <a href="https://pypi.org/project/usecasen"><img src="https://img.shields.io/pypi/v/usecasen.svg" class="img-fluid" alt="PyPI"></a> <a href="https://github.com/MaykolMedrano/usecasen"><img src="https://img.shields.io/github/stars/MaykolMedrano/usecasen.svg" class="img-fluid" alt="Stars"></a></p>
-<p><strong>usebcch</strong> — Python tool for <a href="https://www.bcentral.cl">Central Bank of Chile</a> data, for monitoring monetary policy indicators. <span class="tech-tag"><svg role="img" viewbox="0 0 24 24" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"></path></svg> Python</span><a href="https://github.com/MaykolMedrano/usebcch" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://github.com/MaykolMedrano/usebcch"><img src="https://img.shields.io/github/stars/MaykolMedrano/usebcch.svg" class="img-fluid" alt="Stars"></a> <a href="https://github.com/MaykolMedrano/usebcch/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MaykolMedrano/usebcch.svg" class="img-fluid" alt="License"></a></p>
+<p>Clients and data pipelines for working directly with public statistical sources.</p>
 </section>
+</div>
+<div class="software-list">
+<section id="enahodata" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="enahodata"><a href="https://github.com/MaykolMedrano/enahodata_py">enahodata</a></h3>
+<p>Downloads and processes Peru’s ENAHO survey modules for poverty and labor-market research.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/enahodata_py">Source</a> · <a href="https://pypi.org/project/enahodata">PyPI</a></span></p>
+</section>
+<section id="usebcrp" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="usebcrp"><a href="https://github.com/MaykolMedrano/usebcrp">usebcrp</a></h3>
+<p>Provides programmatic access to Peru’s central-bank series for macroeconomic and national-accounts research.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/usebcrp">Source</a> · <a href="https://pypi.org/project/usebcrp">PyPI</a></span></p>
+</section>
+<section id="usecasen" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="usecasen"><a href="https://github.com/MaykolMedrano/usecasen">usecasen</a></h3>
+<p>Prepares Chile’s CASEN survey data for reproducible socioeconomic and multidimensional-poverty analysis.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/usecasen">Source</a> · <a href="https://pypi.org/project/usecasen">PyPI</a></span></p>
+</section>
+<section id="usebcch" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="usebcch"><a href="https://github.com/MaykolMedrano/usebcch">usebcch</a></h3>
+<p>Retrieves Central Bank of Chile series for economic analysis and policy monitoring.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/usebcch">Source</a></span></p>
+</section>
+</div>
+</div>
+<div class="software-group">
+<div class="software-group-heading">
+<p><span class="software-group-number">03</span></p>
 <section id="stata" class="level2">
 <h2 class="anchored" data-anchor-id="stata">Stata</h2>
-<p><strong>useminedu</strong> — Stata module that downloads school-level statistics and education census indicators from Peru’s <a href="https://escale.minedu.gob.pe/inicio">ESCALE</a> platform, for territorial and impact-evaluation research. <span class="tech-tag"><i class="bi bi-terminal"></i> Stata</span><a href="https://github.com/MaykolMedrano/useminedu" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://github.com/MaykolMedrano/useminedu"><img src="https://img.shields.io/github/stars/MaykolMedrano/useminedu.svg" class="img-fluid" alt="Stars"></a> <a href="https://github.com/MaykolMedrano/useminedu/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MaykolMedrano/useminedu.svg" class="img-fluid" alt="License"></a></p>
-<p><strong>fixencoding</strong> — Stata utility that batch-repairs character encoding issues in legacy data files, handling special characters like tildes and ñ across software versions. <span class="tech-tag"><i class="bi bi-terminal"></i> Stata</span><a href="https://github.com/MaykolMedrano/fixencoding" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://github.com/MaykolMedrano/fixencoding"><img src="https://img.shields.io/github/stars/MaykolMedrano/fixencoding.svg" class="img-fluid" alt="Stars"></a> <a href="https://github.com/MaykolMedrano/fixencoding/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MaykolMedrano/fixencoding.svg" class="img-fluid" alt="License"></a></p>
-<p><strong>siafreport</strong> — Stata module that generates automated public expenditure execution reports from Peru’s <a href="https://www.gob.pe/institucion/mef/siaf">SIAF</a> data, for budget tracking and auditing. <span class="tech-tag"><i class="bi bi-terminal"></i> Stata</span><a href="https://github.com/MaykolMedrano/siafreport" class="tool-link"><i class="bi bi-github"></i> GitHub</a> <a href="https://github.com/MaykolMedrano/siafreport"><img src="https://img.shields.io/github/stars/MaykolMedrano/siafreport.svg" class="img-fluid" alt="Stars"></a> <a href="https://github.com/MaykolMedrano/siafreport/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MaykolMedrano/siafreport.svg" class="img-fluid" alt="License"></a></p>
-
-
-<!-- -->
-
+<p>Utilities for acquiring, cleaning, and reporting public-sector data.</p>
 </section>
+</div>
+<div class="software-list">
+<section id="useminedu" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="useminedu"><a href="https://github.com/MaykolMedrano/useminedu">useminedu</a></h3>
+<p>Downloads school statistics and education-census indicators from Peru’s ESCALE platform.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/useminedu">Source</a></span></p>
+</section>
+<section id="fixencoding" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="fixencoding"><a href="https://github.com/MaykolMedrano/fixencoding">fixencoding</a></h3>
+<p>Repairs character-encoding problems across collections of legacy Stata files.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/fixencoding">Source</a></span></p>
+</section>
+<section id="siafreport" class="level3 software-entry">
+<h3 class="anchored" data-anchor-id="siafreport"><a href="https://github.com/MaykolMedrano/siafreport">siafreport</a></h3>
+<p>Generates public-expenditure reports from Peru’s SIAF data for budget analysis and auditing.</p>
+<p><span class="software-links"><a href="https://github.com/MaykolMedrano/siafreport">Source</a></span></p>
+</section>
+</div>
+</div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -479,57 +497,6 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -867,117 +834,6 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "MaykolMedrano/maykolmedrano.github.io";
-    script.dataset.repoId = "R_kgDOQ296zQ";
-    script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDOQ296zc4C0x47";
-    script.dataset.mapping = "pathname";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Open Source Software"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Python, Stata, and MCP tools for economic data access and research engineering"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Explore open-source tools for analyzing household surveys, central bank data, and AI-ready statistical agents."</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/ld+json"&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in">{</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">  "@context": "https://schema.org",</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">  "@type": "ItemList",</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">  "name": "Open Source Software Packages",</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="in">  "description": "Python, Stata, and MCP tools for economic data access and research engineering",</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">  "itemListElement": [</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 1, "name": "mcp-bcrp", "description": "MCP Server for the Central Reserve Bank of Peru (BCRP) statistical API. Built for AI agents.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/mcp_bcrp", "downloadUrl": "https://pypi.org/project/mcp-bcrp" },</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 2, "name": "mcp-wbgapi360", "description": "Asynchronous Python client for World Bank Data360 with MCP support.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/mcp_wbgapi360", "downloadUrl": "https://pypi.org/project/wbgapi360" },</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 3, "name": "mcp-sinim", "description": "Python client and MCP server for Chile's SINIM municipal data.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/mcp_sinim", "downloadUrl": "https://pypi.org/project/mcp-sinim" },</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 4, "name": "enahodata", "description": "Downloader and processor for Peru's ENAHO household survey microdata.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/enahodata_py", "downloadUrl": "https://pypi.org/project/enahodata" },</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 5, "name": "usebcrp", "description": "Python client for the BCRP statistical API.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/usebcrp", "downloadUrl": "https://pypi.org/project/usebcrp" },</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 6, "name": "usecasen", "description": "Python tool for Chile's CASEN socioeconomic survey.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/usecasen", "downloadUrl": "https://pypi.org/project/usecasen" },</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 7, "name": "usebcch", "description": "Python tool for Central Bank of Chile data.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Python", "codeRepository": "https://github.com/MaykolMedrano/usebcch" },</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 8, "name": "useminedu", "description": "Stata module for Peru's ESCALE education census data.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Stata", "codeRepository": "https://github.com/MaykolMedrano/useminedu" },</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 9, "name": "fixencoding", "description": "Stata utility for batch character-encoding repair.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Stata", "codeRepository": "https://github.com/MaykolMedrano/fixencoding" },</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="in">    { "@type": "SoftwareApplication", "position": 10, "name": "siafreport", "description": "Stata module for Peru's SIAF public expenditure reporting.", "applicationCategory": "DeveloperApplication", "programmingLanguage": "Stata", "codeRepository": "https://github.com/MaykolMedrano/siafreport" }</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">  ]</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Since I was a student, I've felt there's a real gap in how researchers get access to data: official statistics are scattered across dozens of disconnected portals, and there's little real infrastructure for accessing them easily. These tools grew out of that: each one turns a repetitive, one-off data-pulling task into something reproducible, and — more recently — something an AI agent can call directly.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## AI Agent Tooling</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>MCP servers that give LLMs direct, structured access to statistical APIs.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>**mcp-bcrp** — MCP server that exposes over 5,000 macroeconomic indicators from <span class="co">[</span><span class="ot">Peru's central bank (BCRP)</span><span class="co">](https://www.bcrp.gob.pe/)</span> as tool calls an AI agent can invoke directly, instead of scraping the portal by hand.</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;a href="https://github.com/MaykolMedrano/mcp_bcrp" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt; &lt;a href="https://pypi.org/project/mcp-bcrp" class="tool-link"&gt;&lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; PyPI&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI](https://img.shields.io/pypi/v/mcp-bcrp.svg)</span><span class="co">](https://pypi.org/project/mcp-bcrp)</span> <span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/mcp_bcrp.svg)</span><span class="co">](https://github.com/MaykolMedrano/mcp_bcrp)</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>**mcp-wbgapi360** — Asynchronous Python client for the <span class="co">[</span><span class="ot">World Bank</span><span class="co">](https://data.worldbank.org/)</span> Data360 API, with MCP support so an AI agent can pull international development indicators for cross-country comparisons on its own.</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;a href="https://github.com/MaykolMedrano/mcp_wbgapi360" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt; &lt;a href="https://pypi.org/project/wbgapi360" class="tool-link"&gt;&lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; PyPI&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI](https://img.shields.io/pypi/v/wbgapi360.svg)</span><span class="co">](https://pypi.org/project/wbgapi360)</span> <span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/mcp_wbgapi360.svg)</span><span class="co">](https://github.com/MaykolMedrano/mcp_wbgapi360)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>**mcp-sinim** — Python client and MCP server for Chile's <span class="co">[</span><span class="ot">SINIM</span><span class="co">](https://datos.sinim.gov.cl)</span> municipal data, letting an AI agent search ~480 variables by natural language and pull tidy panels for any of the country's 345 municipalities.</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;a href="https://github.com/MaykolMedrano/mcp_sinim" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt; &lt;a href="https://pypi.org/project/mcp-sinim" class="tool-link"&gt;&lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; PyPI&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI](https://img.shields.io/pypi/v/mcp-sinim.svg)</span><span class="co">](https://pypi.org/project/mcp-sinim)</span> <span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/mcp_sinim.svg)</span><span class="co">](https://github.com/MaykolMedrano/mcp_sinim)</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Python</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Typed clients and downloaders that turn a public statistical portal into a dataframe.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>**enahodata** — Automates downloading and processing Peru's ENAHO household survey modules (<span class="co">[</span><span class="ot">INEI</span><span class="co">](https://www.gob.pe/inei/)</span>), built for large-scale poverty and labor-market research without manual, file-by-file downloads.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;a href="https://github.com/MaykolMedrano/enahodata_py" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt; &lt;a href="https://pypi.org/project/enahodata" class="tool-link"&gt;&lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; PyPI&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI](https://img.shields.io/pypi/v/enahodata.svg)</span><span class="co">](https://pypi.org/project/enahodata)</span> <span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/enahodata_py.svg)</span><span class="co">](https://github.com/MaykolMedrano/enahodata_py)</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>**usebcrp** — Python client for the <span class="co">[</span><span class="ot">BCRP</span><span class="co">](https://www.bcrp.gob.pe/)</span> statistical API, giving programmatic access to macroeconomic indicators and national accounts for reproducible econometric work.</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;a href="https://github.com/MaykolMedrano/usebcrp" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt; &lt;a href="https://pypi.org/project/usebcrp" class="tool-link"&gt;&lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; PyPI&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI](https://img.shields.io/pypi/v/usebcrp.svg)</span><span class="co">](https://pypi.org/project/usebcrp)</span> <span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/usebcrp.svg)</span><span class="co">](https://github.com/MaykolMedrano/usebcrp)</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>**usecasen** — Python tool for Chile's <span class="co">[</span><span class="ot">CASEN</span><span class="co">](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen)</span> socioeconomic survey, built for multidimensional poverty analysis.</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;a href="https://github.com/MaykolMedrano/usecasen" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt; &lt;a href="https://pypi.org/project/usecasen" class="tool-link"&gt;&lt;i class="bi bi-box-seam"&gt;&lt;/i&gt; PyPI&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![PyPI](https://img.shields.io/pypi/v/usecasen.svg)</span><span class="co">](https://pypi.org/project/usecasen)</span> <span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/usecasen.svg)</span><span class="co">](https://github.com/MaykolMedrano/usecasen)</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>**usebcch** — Python tool for <span class="co">[</span><span class="ot">Central Bank of Chile</span><span class="co">](https://www.bcentral.cl)</span> data, for monitoring monetary policy indicators.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;span class="tech-tag"&gt;&lt;svg role="img" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;&lt;title&gt;Python&lt;/title&gt;&lt;path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/&gt;&lt;/svg&gt; Python&lt;/span&gt;&lt;a href="https://github.com/MaykolMedrano/usebcch" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/usebcch.svg)</span><span class="co">](https://github.com/MaykolMedrano/usebcch)</span> <span class="co">[</span><span class="al">![License](https://img.shields.io/github/license/MaykolMedrano/usebcch.svg)</span><span class="co">](https://github.com/MaykolMedrano/usebcch/blob/main/LICENSE)</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Stata</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>**useminedu** — Stata module that downloads school-level statistics and education census indicators from Peru's <span class="co">[</span><span class="ot">ESCALE</span><span class="co">](https://escale.minedu.gob.pe/inicio)</span> platform, for territorial and impact-evaluation research.</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;span class="tech-tag"&gt;&lt;i class="bi bi-terminal"&gt;&lt;/i&gt; Stata&lt;/span&gt;&lt;a href="https://github.com/MaykolMedrano/useminedu" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/useminedu.svg)</span><span class="co">](https://github.com/MaykolMedrano/useminedu)</span> <span class="co">[</span><span class="al">![License](https://img.shields.io/github/license/MaykolMedrano/useminedu.svg)</span><span class="co">](https://github.com/MaykolMedrano/useminedu/blob/main/LICENSE)</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>**fixencoding** — Stata utility that batch-repairs character encoding issues in legacy data files, handling special characters like tildes and ñ across software versions.</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;span class="tech-tag"&gt;&lt;i class="bi bi-terminal"&gt;&lt;/i&gt; Stata&lt;/span&gt;&lt;a href="https://github.com/MaykolMedrano/fixencoding" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/fixencoding.svg)</span><span class="co">](https://github.com/MaykolMedrano/fixencoding)</span> <span class="co">[</span><span class="al">![License](https://img.shields.io/github/license/MaykolMedrano/fixencoding.svg)</span><span class="co">](https://github.com/MaykolMedrano/fixencoding/blob/main/LICENSE)</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>**siafreport** — Stata module that generates automated public expenditure execution reports from Peru's <span class="co">[</span><span class="ot">SIAF</span><span class="co">](https://www.gob.pe/institucion/mef/siaf)</span> data, for budget tracking and auditing.</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;span class="tech-tag"&gt;&lt;i class="bi bi-terminal"&gt;&lt;/i&gt; Stata&lt;/span&gt;&lt;a href="https://github.com/MaykolMedrano/siafreport" class="tool-link"&gt;&lt;i class="bi bi-github"&gt;&lt;/i&gt; GitHub&lt;/a&gt;`</span>{=html}</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Stars](https://img.shields.io/github/stars/MaykolMedrano/siafreport.svg)</span><span class="co">](https://github.com/MaykolMedrano/siafreport)</span> <span class="co">[</span><span class="al">![License](https://img.shields.io/github/license/MaykolMedrano/siafreport.svg)</span><span class="co">](https://github.com/MaykolMedrano/siafreport/blob/main/LICENSE)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -986,7 +842,7 @@ gtag('config', 'G-C00Q0GKQPP', { 'anonymize_ip': true});
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/edit/main/software/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/MaykolMedrano/maykolmedrano.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    </div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>
 </div>
