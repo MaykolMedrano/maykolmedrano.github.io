@@ -301,10 +301,10 @@ main.content {
 }
 
 /* Reduce spacing in about page content */
-.quarto-about-trestles .about-entity .about-contents h2 {
+.quarto-about-trestles .about-contents h2 {
   margin-top: 0 !important;
   margin-bottom: 0.5rem !important;
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
 }
 
 .quarto-about-trestles .about-entity .about-contents p {
