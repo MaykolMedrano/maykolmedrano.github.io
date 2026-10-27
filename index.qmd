@@ -46,7 +46,7 @@ I hold a Master's in Applied Economics from the **[Institute of Economics](https
 
 ---
 
-## Research
+## Applied Research
 
 At **[Proyecto AVANZA](https://gobierno.uc.cl/noticias/concurso-avanza-uc-2025-profesores-de-la-escuela-de-gobierno-obtienen-6-adjudicaciones/)**, I develop the machine-learning component of a study examining how Chile's tuition-free higher education policy shapes university choice across socioeconomic backgrounds.
 
